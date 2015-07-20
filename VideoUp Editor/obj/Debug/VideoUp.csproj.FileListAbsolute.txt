@@ -1,0 +1,24 @@
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\VideoUp.exe.config
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.Properties.Resources.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.csproj.GenerateResource.Cache
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\FFmpeg\ffmpeg.exe
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\FFmpeg\gpl-3.0.txt
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\VideoUp.exe
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\VideoUp.pdb
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.ConverterForm.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.CropForm.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.MainForm.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.exe
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\VideoUp.pdb
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\bin\Debug\VideoUp.exe.config
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.exe
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\bin\Debug\FFmpeg\ffmpeg.exe
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\bin\Debug\FFmpeg\gpl-3.0.txt
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\bin\Debug\VideoUp.exe
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\bin\Debug\VideoUp.pdb
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.ConverterForm.resources
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.CropForm.resources
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
+C:\Users\nzxlub001\Desktop\Flash\VideoUp Editor\obj\Debug\VideoUp.csproj.GenerateResource.Cache

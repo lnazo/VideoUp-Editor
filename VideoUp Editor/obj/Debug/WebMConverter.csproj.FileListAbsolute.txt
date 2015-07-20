@@ -1,0 +1,13 @@
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\WebMConverter.exe.config
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\FFmpeg\ffmpeg.exe
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\FFmpeg\gpl-3.0.txt
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\WebMConverter.exe
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\bin\Debug\WebMConverter.pdb
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.csprojResolveAssemblyReference.cache
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.ConverterForm.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.CropForm.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.MainForm.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.Properties.Resources.resources
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.csproj.GenerateResource.Cache
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.exe
+C:\Users\nzxlub001\Desktop\Flash\WebMConverter-master\obj\Debug\WebMConverter.pdb

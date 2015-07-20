@@ -1,0 +1,2 @@
+# VideoUp-Editor
+Editing application

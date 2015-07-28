@@ -100,7 +100,11 @@ namespace VideoUp
         private void SetFile(string path)
         {
             textBoxIn.Text = path;
+           
             string fullPath = Path.GetDirectoryName(path);
+            axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
+            
+         
             string name = Path.GetFileNameWithoutExtension(path);
             if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
                 boxMetadataTitle.Text = _autoTitle = name;
@@ -408,6 +412,33 @@ namespace VideoUp
         {
             new CropForm(this).ShowDialog();
             UpdateArguments(sender, e);
+        }
+
+        private void axWindowsMediaPlayer1_MediaError(object sender, AxWMPLib._WMPOCXEvents_MediaErrorEvent e)
+        {
+            
+                MessageBox.Show("Error.");
+            
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

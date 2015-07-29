@@ -44,7 +44,6 @@ namespace VideoUp
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.label23 = new System.Windows.Forms.Label();
             this.boxAudio = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
@@ -338,7 +337,6 @@ namespace VideoUp
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Controls.Add(this.label23, 2, 0);
             this.tableLayoutPanel13.Controls.Add(this.boxAudio, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 16);
@@ -347,17 +345,6 @@ namespace VideoUp
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(917, 27);
             this.tableLayoutPanel13.TabIndex = 0;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(282, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(632, 27);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Keep this disabled until Moot allows audio.";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // boxAudio
             // 
@@ -432,8 +419,7 @@ namespace VideoUp
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(422, 33);
             this.label20.TabIndex = 2;
-            this.label20.Text = "Adds a string of text to the metadata of the video, which can be used to indicate" +
-    " the source of a video, for example. Leave blank for no title.";
+            this.label20.Text = "Add a name for the video. Leave blank for no title.";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox4
@@ -519,8 +505,7 @@ namespace VideoUp
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(633, 28);
             this.label24.TabIndex = 13;
-            this.label24.Text = "Crop a region out of the video. Click the Crop... button to select the region to " +
-    "be cropped. Useful for reaction videos.";
+            this.label24.Text = "Crop a region of the video.";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label22
@@ -637,9 +622,7 @@ namespace VideoUp
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(633, 28);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Will adjust the quality to attempt to stay below this limit, and cut off the end " +
-    "of a video if needed. Leave blank for no limit. The limit on 4chan is 3 MB. If e" +
-    "ntering decimals use dots, not commas.";
+            this.label6.Text = "Adjusts the quality, and cuts off when necessary.";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
@@ -710,7 +693,7 @@ namespace VideoUp
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(633, 28);
             this.label11.TabIndex = 5;
-            this.label11.Text = resources.GetString("label11.Text");
+            this.label11.Text = "HH:MM:SS or MM:SS or SS.";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
@@ -732,8 +715,7 @@ namespace VideoUp
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(633, 28);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Enter nothing to keep resolution intact. Enter -1 in one of the fields to scale a" +
-    "ccording to aspect ratio.";
+            this.label5.Text = "Enter a desired resolution. Leave blank to keep in tact.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -1470,7 +1452,6 @@ namespace VideoUp
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox boxAudio;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;

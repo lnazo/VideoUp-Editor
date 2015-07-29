@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="634880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="634256">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pQxDkmWIDg5C6XfHE2nApoTbjqw=</dsig:DigestValue>
+        <dsig:DigestValue>hQGbaRPYhqPd2lL2DBhvMP0CEGU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -59,11 +59,10 @@ namespace VideoUp
             //{4} is amount of threads to use
             //{5} is '-fs XM' if X MB limit enabled otherwise blank
             //{6} is '-metadata title="TITLE"' when specifying a title, otherwise blank
-            //{7} is '-quality best -lag-in-frames 16' when using HQ mode, otherwise blank
 
             //TODO: add an option for subtitles. It's either '-vf "ass=subtitle.ass"' or '-vf subtitles=subtitle.srt'
 
-            _template = "{2} -i \"{0}\" {3} {4} {5} {6} -f avi -y \"{1}\"";
+            _template = "{2} -i \"{0}\" {3} {4} {5} -f avi -y \"{1}\"";
             //{0} is input file
             //{1} is output file
             //{2} is TIME if seek enabled otherwise blank
@@ -226,13 +225,9 @@ namespace VideoUp
             {
                 int passes = 2; //Can you even use more than 2 passes?
 
-                string HQ = "";
-                if (boxHQ.Checked)
-                    HQ = "-auto-alt-ref 1"; //This should improve quality, only in 2-pass mode
-
                 arguments = new string[passes];
                 for (int i = 0; i < passes; i++)
-                    arguments[i] = string.Format(_template, input, output, start, end, options, "-pass " + (i + 1), HQ);
+                    arguments[i] = string.Format(_template, input, output, start, end, options, "-pass " + (i + 1));
             }
 
             var form = new ConverterForm(this, arguments);
@@ -349,12 +344,6 @@ namespace VideoUp
 
             float limit = 0;
             string limitTo = "";
-            if (!string.IsNullOrWhiteSpace(boxLimit.Text))
-            {
-                if (!float.TryParse(boxLimit.Text, out limit))
-                    throw new ArgumentException("Invalid size limit!");
-                limitTo = string.Format("-fs {0}M", limit.ToString(CultureInfo.InvariantCulture)); //Should turn comma into dot
-            }
 
             string size = "";
             if (width != 0 && height != 0)
@@ -372,22 +361,14 @@ namespace VideoUp
                 bitrate = (int)(8192 * limit / duration);
             }
 
-            if (!string.IsNullOrWhiteSpace(boxBitrate.Text))
-                if (!int.TryParse(boxBitrate.Text, out bitrate))
-                    throw new ArgumentException("Invalid bitrate!");
-
             int threads = trackThreads.Value;
 
             string metadataTitle = "";
             if (!string.IsNullOrWhiteSpace(boxMetadataTitle.Text))
                 metadataTitle = string.Format("-metadata title=\"{0}\"", boxMetadataTitle.Text.Replace("\"", "\\\""));
 
-            string HQ = "";
-            if (boxHQ.Checked)
-                HQ = "-quality best -lag-in-frames 16";
-
             string audioEnabled = boxAudio.Checked ? "" : "-an"; //-an if no audio
-            return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, metadataTitle, HQ);
+            return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, metadataTitle);
         }
 
         private static string MakeParseFriendly(string text)
@@ -428,7 +409,26 @@ namespace VideoUp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.CheckFileExists = true;
+                dialog.CheckPathExists = true;
+                dialog.ValidateNames = true;
 
+                if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
+                    SetFile1(dialog.FileName);
+            }
+        }
+
+        private void SetFile1(string path)
+        {
+            textBox2.Text = path.Substring(path.LastIndexOf(@"\") + 1);
+           
+            string fullPath = Path.GetDirectoryName(path);
+         
+            string name = Path.GetFileNameWithoutExtension(path);
+            if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
+                boxMetadataTitle.Text = _autoTitle = name;
         }
 
         private void label32_Click(object sender, EventArgs e)
@@ -437,6 +437,40 @@ namespace VideoUp
         }
 
         private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.CheckFileExists = true;
+                dialog.CheckPathExists = true;
+                dialog.ValidateNames = true;
+
+                if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
+                    SetFile2(dialog.FileName);
+            }
+        }
+
+        private void SetFile2(string path)
+        {
+            textBox3.Text = path.Substring(path.LastIndexOf(@"\") + 1);
+           
+            string fullPath = Path.GetDirectoryName(path);
+         
+            string name = Path.GetFileNameWithoutExtension(path);
+            if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
+                boxMetadataTitle.Text = _autoTitle = name;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

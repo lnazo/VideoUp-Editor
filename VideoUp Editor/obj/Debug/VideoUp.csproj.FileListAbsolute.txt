@@ -91,7 +91,6 @@ C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\
 C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
-C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\ffmpeg.exe
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\gpl-3.0.txt
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.manifest

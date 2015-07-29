@@ -138,6 +138,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="logo.ico" />
+    <Content Include="youtube logo.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\clock.png" />

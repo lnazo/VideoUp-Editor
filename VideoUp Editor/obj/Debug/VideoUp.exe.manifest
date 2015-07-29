@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="626576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="638864">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pE0n71I4iJpaNgAkfPmL8CLZkKA=</dsig:DigestValue>
+        <dsig:DigestValue>oEmxz0RfdqJ7HknvXC2NR+mXtqc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -112,6 +112,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>UCK20fjpV4lHlicG25Dj6loPbuE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="youtube logo.png" size="8813">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nVoDwInM7H/sxeWe6Pim4eebh04=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

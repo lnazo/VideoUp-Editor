@@ -83,3 +83,8 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.W
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
+C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
+C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\bin\Debug\Interop.WMPLib.dll
+C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\bin\Debug\AxInterop.WMPLib.dll

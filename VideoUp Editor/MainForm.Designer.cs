@@ -115,15 +115,15 @@ namespace VideoUp
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1271,43 +1271,37 @@ namespace VideoUp
             this.tabPage5.Text = "Upload";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // label35
             // 
-            this.button1.Location = new System.Drawing.Point(369, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(682, 118);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(113, 13);
+            this.label35.TabIndex = 8;
+            this.label35.Text = "Youtube LOGO HERE";
             // 
-            // button2
+            // button3
             // 
-            this.button2.Location = new System.Drawing.Point(369, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Browse";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(231, 178);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "UPLOAD";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // label32
+            // textBox3
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(90, 97);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(71, 13);
-            this.label32.TabIndex = 2;
-            this.label32.Text = "Video Name :";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
+            this.textBox3.Location = new System.Drawing.Point(168, 120);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(191, 20);
+            this.textBox3.TabIndex = 6;
             // 
-            // label33
+            // textBox2
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(111, 128);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(50, 13);
-            this.label33.TabIndex = 3;
-            this.label33.Text = "Subtitile :";
+            this.textBox2.Location = new System.Drawing.Point(167, 91);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(192, 20);
+            this.textBox2.TabIndex = 5;
             // 
             // label34
             // 
@@ -1319,37 +1313,43 @@ namespace VideoUp
             this.label34.Text = "Select Video and Subtitle";
             this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
-            // textBox2
+            // label33
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 5;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(111, 128);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(50, 13);
+            this.label33.TabIndex = 3;
+            this.label33.Text = "Subtitile :";
             // 
-            // textBox3
+            // label32
             // 
-            this.textBox3.Location = new System.Drawing.Point(168, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 20);
-            this.textBox3.TabIndex = 6;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(90, 97);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(71, 13);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Video Name :";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
-            // button3
+            // button2
             // 
-            this.button3.Location = new System.Drawing.Point(231, 178);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "UPLOAD";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(369, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Browse";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // label35
+            // button1
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(682, 118);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(113, 13);
-            this.label35.TabIndex = 8;
-            this.label35.Text = "Youtube LOGO HERE";
+            this.button1.Location = new System.Drawing.Point(369, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Browse";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 

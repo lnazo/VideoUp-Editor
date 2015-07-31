@@ -398,7 +398,7 @@ namespace VideoUp
         private void axWindowsMediaPlayer1_MediaError(object sender, AxWMPLib._WMPOCXEvents_MediaErrorEvent e)
         {
             
-                MessageBox.Show("Error.");
+            MessageBox.Show("The current format is not working. Please try again.");
             
         }
 

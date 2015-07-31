@@ -51,7 +51,7 @@ namespace VideoUp
             DragEnter += HandleDragEnter;
             DragDrop += HandleDragDrop;
 
-            _templateArguments = "{0} -c:v libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {6}";
+            _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {6}";
             //{0} is '-an' if no audio, otherwise blank
             //{1} is bitrate in kb/s
             //{2} is '-vf scale=WIDTH:HEIGHT' if set otherwise blank

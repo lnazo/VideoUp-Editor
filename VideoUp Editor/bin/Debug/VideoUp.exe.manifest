@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>er/jUhbz5gdssJRdp3fI9JzkA4U=</dsig:DigestValue>
+        <dsig:DigestValue>rcL3Sy6zclkonkoE4lkbnbhR5Fo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cMewDt2kfpp8BlCIzgrxEF8ndPI=</dsig:DigestValue>
+        <dsig:DigestValue>wCUBbXFLQ4Iwg8PDhKoiF7cA7MA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="634256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="302480">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>dpNK+hvitw7iQEnRAGSbEp0TR1M=</dsig:DigestValue>
+        <dsig:DigestValue>/JUenBAl/Pf7FYtlxcZhUiU/ZGM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -96,13 +96,13 @@
       <dsig:DigestValue>dxOhdTzojyx+awVOzI5MeG33YwA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="logo.ico" size="279958">
+  <file name="logo.ico" size="113960">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>B8g2A4Z29Yb2LRDtKzv9IPYbKVU=</dsig:DigestValue>
+      <dsig:DigestValue>cbITe8dNI7bftHqlspMqHCSQGss=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VideoUp.exe.config" size="182">

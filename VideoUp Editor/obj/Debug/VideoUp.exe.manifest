@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>rcL3Sy6zclkonkoE4lkbnbhR5Fo=</dsig:DigestValue>
+        <dsig:DigestValue>gHEvnD+PjARNk1fexe3D4nWvFAY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>wCUBbXFLQ4Iwg8PDhKoiF7cA7MA=</dsig:DigestValue>
+        <dsig:DigestValue>1DbjaHaWdflz9zWd+7T/PDpxHG8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="302480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="301456">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/JUenBAl/Pf7FYtlxcZhUiU/ZGM=</dsig:DigestValue>
+        <dsig:DigestValue>NcK+EvjQPeoVCkHTogNTjXlRY4g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -94,6 +94,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>dxOhdTzojyx+awVOzI5MeG33YwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="FFmpeg\mkvmerge.exe" size="9346560">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PMyj+zHfTqYgKyLgTNogcaoLq98=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logo.ico" size="113960">

@@ -10,6 +10,7 @@ namespace VideoUp
 {
     public partial class MainForm : Form
     {
+        private string subtitleFile;
         private string _template;
         private string _templateArguments;
 
@@ -51,17 +52,17 @@ namespace VideoUp
             DragEnter += HandleDragEnter;
             DragDrop += HandleDragDrop;
 
+            // default arguments
             _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {6}";
             //{0} is '-an' if no audio, otherwise blank
             //{1} is bitrate in kb/s
             //{2} is '-vf scale=WIDTH:HEIGHT' if set otherwise blank
             //{3} is '-filter:v "crop=out_w:out_h:x:y"' if set otherwise blank
-            //{4} is amount of threads to use
-            //{5} is '-fs XM' if X MB limit enabled otherwise blank
             //{6} is '-metadata title="TITLE"' when specifying a title, otherwise blank
 
             //TODO: add an option for subtitles. It's either '-vf "ass=subtitle.ass"' or '-vf subtitles=subtitle.srt'
 
+            // selected arguments by user
             _template = "{2} -i \"{0}\" {3} {4} {5} -f avi -y \"{1}\"";
             //{0} is input file
             //{1} is output file
@@ -69,7 +70,6 @@ namespace VideoUp
             //{3} is TIME if to enabled otherwise blank
             //{4} is extra arguments
             //{5} is '-pass X' if 2-pass enabled, otherwise blank
-            //{6} is '-auto-alt-ref 1' is 2-pass enabled AND HQ mode enabled, otherwise blank
 
         }
 
@@ -90,6 +90,7 @@ namespace VideoUp
                 dialog.CheckFileExists = true;
                 dialog.CheckPathExists = true;
                 dialog.ValidateNames = true;
+                dialog.Filter = "Video files (*.mxf, *.wmv, *.avi, *.flv, *.mkv, *.mov, *.mp4, *.mpg) | *.mxf; *.wmv; *.avi; *.flv; *.mkv; *.mov; *.mp4; *.mpg";
 
                 if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
                     SetFile(dialog.FileName);
@@ -103,7 +104,6 @@ namespace VideoUp
             string fullPath = Path.GetDirectoryName(path);
             axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
             
-         
             string name = Path.GetFileNameWithoutExtension(path);
             if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
                 boxMetadataTitle.Text = _autoTitle = name;
@@ -130,7 +130,6 @@ namespace VideoUp
             {
                 dialog.OverwritePrompt = true;
                 dialog.ValidateNames = true;
-                //dialog.Filter = "WebM files|*.webm";
                 dialog.Filter = "avi file|*.avi";
 
                 if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
@@ -236,6 +235,23 @@ namespace VideoUp
             return null;
         }
 
+        public void MkvMerge()
+        {
+            string inText = "\"" + textBoxOut.Text + "\"";
+            string outText = "\"" + textBoxOut.Text + "\"";
+            subtitleFile = "\"" + subtitleFile + "\"";
+            int dot = outText.LastIndexOf(@".");
+            outText = outText.Insert(dot, "sub");
+
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = "/c FFmpeg\\mkvmerge -o " + outText + " " + inText + " " + subtitleFile;
+            process.StartInfo = startInfo;
+            process.Start();
+        }
+
         public static float ParseTime(string text)
         {
             //Try fo figure out if begin/end are correct
@@ -282,7 +298,6 @@ namespace VideoUp
 
         private string GenerateArguments()
         {
-
             int width = 0;
             int height = 0;
 
@@ -397,9 +412,7 @@ namespace VideoUp
 
         private void axWindowsMediaPlayer1_MediaError(object sender, AxWMPLib._WMPOCXEvents_MediaErrorEvent e)
         {
-            
             MessageBox.Show("The current format is not working. Please try again.");
-            
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
@@ -414,6 +427,7 @@ namespace VideoUp
                 dialog.CheckFileExists = true;
                 dialog.CheckPathExists = true;
                 dialog.ValidateNames = true;
+                dialog.Filter = "Video files (*.wmv, *.avi, *.flv, *.mkv, *.mov, *.mp4, *.mpg) | *.wmv; *.avi; *.flv; *.mkv; *.mov; *.mp4; *.mpg";
 
                 if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
                     SetFile1(dialog.FileName);
@@ -423,27 +437,6 @@ namespace VideoUp
         private void SetFile1(string path)
         {
             textBox2.Text = path.Substring(path.LastIndexOf(@"\") + 1);
-           
-            string fullPath = Path.GetDirectoryName(path);
-         
-            string name = Path.GetFileNameWithoutExtension(path);
-            if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
-                boxMetadataTitle.Text = _autoTitle = name;
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -453,6 +446,7 @@ namespace VideoUp
                 dialog.CheckFileExists = true;
                 dialog.CheckPathExists = true;
                 dialog.ValidateNames = true;
+                dialog.Filter = "Subtitle files (*.ass, *.srt) | *.ass; *.srt";
 
                 if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
                     SetFile2(dialog.FileName);
@@ -462,17 +456,59 @@ namespace VideoUp
         private void SetFile2(string path)
         {
             textBox3.Text = path.Substring(path.LastIndexOf(@"\") + 1);
-           
-            string fullPath = Path.GetDirectoryName(path);
-         
-            string name = Path.GetFileNameWithoutExtension(path);
-            if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
-                boxMetadataTitle.Text = _autoTitle = name;
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        // unused method
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioSubNone_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonSubBrowse.Enabled = false;
+            textBox1.Enabled = false;
+        }
+
+        private void radioSubExternal_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonSubBrowse.Enabled = true;
+            textBox1.Enabled = true;
+        }
+
+        private void buttonSubBrowse_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.CheckFileExists = true;
+                dialog.CheckPathExists = true;
+                dialog.ValidateNames = true;
+                dialog.Filter = "Subtitle files (*.ass, *.srt) | *.ass; *.srt";
+
+                if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
+                    SetbuttonSubBrowse(dialog.FileName);
+            }
+        }
+
+        private void SetbuttonSubBrowse(string path)
+        {
+            subtitleFile = path;
+            textBox1.Text = path.Substring(path.LastIndexOf(@"\") + 1);
         }
     }
 }

@@ -144,6 +144,7 @@ namespace VideoUp
                 pictureBox.BackgroundImage = Properties.Resources.tick;
 
                 buttonPlay.Enabled = true;
+                _owner.MkvMerge();
             }
 
             buttonCancel.Text = "Close";

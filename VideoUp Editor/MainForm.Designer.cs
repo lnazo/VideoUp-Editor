@@ -101,6 +101,7 @@ namespace VideoUp
             this.label32 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.helpSection = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
@@ -113,7 +114,6 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.helpSection = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1032,6 +1032,16 @@ namespace VideoUp
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // helpSection
+            // 
+            this.helpSection.Location = new System.Drawing.Point(4, 22);
+            this.helpSection.Name = "helpSection";
+            this.helpSection.Padding = new System.Windows.Forms.Padding(3);
+            this.helpSection.Size = new System.Drawing.Size(935, 395);
+            this.helpSection.TabIndex = 5;
+            this.helpSection.Text = "Help";
+            this.helpSection.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.AutoSize = true;
@@ -1169,16 +1179,6 @@ namespace VideoUp
             this.label7.Size = new System.Drawing.Size(73, 57);
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // helpSection
-            // 
-            this.helpSection.Location = new System.Drawing.Point(4, 22);
-            this.helpSection.Name = "helpSection";
-            this.helpSection.Padding = new System.Windows.Forms.Padding(3);
-            this.helpSection.Size = new System.Drawing.Size(935, 395);
-            this.helpSection.TabIndex = 5;
-            this.helpSection.Text = "Help";
-            this.helpSection.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

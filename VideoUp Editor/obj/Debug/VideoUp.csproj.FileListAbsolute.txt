@@ -128,3 +128,5 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.app
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.dll
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.Fonts.dll

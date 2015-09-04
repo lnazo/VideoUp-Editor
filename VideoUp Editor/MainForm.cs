@@ -53,14 +53,16 @@ namespace VideoUp
             DragDrop += HandleDragDrop;
 
             // default arguments
-            _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {6}";
+            _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {6} {7} {8} {9} {10}";
             //{0} is '-an' if no audio, otherwise blank
             //{1} is bitrate in kb/s
             //{2} is '-vf scale=WIDTH:HEIGHT' if set otherwise blank
             //{3} is '-filter:v "crop=out_w:out_h:x:y"' if set otherwise blank
             //{6} is '-metadata title="TITLE"' when specifying a title, otherwise blank
-
-            //TODO: add an option for subtitles. It's either '-vf "ass=subtitle.ass"' or '-vf subtitles=subtitle.srt'
+            //{7} is '-metadata author="AUTHOR"' when specifying an author, otherwise blank
+            //{8} is '-metadata year="YEAR"' when specifying a date, otherwise blank
+            //{9} is '-metadata description="DESCRIPTION"' when specifying a description, otherwise blank
+            //{10} is '-metadata copyright="© DCCT"' when setting the copyright
 
             // selected arguments by user
             _template = "{2} -i \"{0}\" {3} {4} {5} -f avi -y \"{1}\"";
@@ -70,7 +72,6 @@ namespace VideoUp
             //{3} is TIME if to enabled otherwise blank
             //{4} is extra arguments
             //{5} is '-pass X' if 2-pass enabled, otherwise blank
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -382,8 +383,22 @@ namespace VideoUp
             if (!string.IsNullOrWhiteSpace(boxMetadataTitle.Text))
                 metadataTitle = string.Format("-metadata title=\"{0}\"", boxMetadataTitle.Text.Replace("\"", "\\\""));
 
-            string audioEnabled = boxAudio.Checked ? "" : "-an"; //-an if no audio
-            return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, metadataTitle);
+            string metadataAuthor = "";
+            if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
+                metadataAuthor = string.Format("-metadata author=\"{0}\"", boxMetadataAuthor.Text);
+
+            string metadataYear = "";
+            if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
+                metadataYear = string.Format("-metadata date=\"{0}\"", boxMetadataYear.Text);
+
+            string metadataDesc = "";
+            if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
+                metadataDesc = string.Format("-metadata comment=\"{0}\"", boxMetadataDesc.Text);
+
+            string metadataCopy = "-metadata copyright=\"© DCCT\"";
+
+            string audioEnabled = boxAudio.Checked ? "" : "-an";
+            return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, metadataTitle, metadataAuthor, metadataYear, metadataDesc, metadataCopy);
         }
 
         private static string MakeParseFriendly(string text)

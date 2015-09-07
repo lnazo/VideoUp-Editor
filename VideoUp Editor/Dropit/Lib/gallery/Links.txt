@@ -1,0 +1,10 @@
+Base Code For Gallery Themes (css, layouts, themes)
+http://dropit.sourceforge.net/
+
+
+fancyBox 2 (fancybox)
+http://fancyapps.com/fancybox/
+
+
+jQuery Components (jquery)
+http://jquery.com/

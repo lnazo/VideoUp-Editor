@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* IE specific styles */
+
+ul.photos li {
+    display: inline-block;
+    float: left;
+
+}

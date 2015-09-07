@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9WpmjhuqkfSUIPJZ0O4yzGh8s38=</dsig:DigestValue>
+        <dsig:DigestValue>XmWaTTd3heutun88XrGnuNjTEAM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,46 +62,1777 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4EC9P9TC9GzF0fbTM7/S7s6ov8g=</dsig:DigestValue>
+        <dsig:DigestValue>njTwWr0V+VDBbZcGwkG7oIkOdSg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.dll" size="357888">
-      <assemblyIdentity name="MetroFramework" version="1.3.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>rlTgwgf+GvnfjmrqPU4ZuS+SlE4=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Fonts.dll" size="672256">
-      <assemblyIdentity name="MetroFramework.Fonts" version="1.3.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>K7Y5YgXmSiAEgrHzFsrNMvtV2tQ=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="304128">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="304528">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IPSY5IKeCTQS3FI6zo58XXqew4U=</dsig:DigestValue>
+        <dsig:DigestValue>QWXKwjG/XMkDoYiqK0UEjXIoR1s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Dropit\DropIt.exe" size="1730560">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5TiU2ao6jHtzx/womzZ+V2wZ4Og=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Archive1.png" size="17401">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JUw2u1Z62awcK5yQuqoYtR5fw10=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Archive2.png" size="19326">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>b3dFUilAbzU7y2oPjKSwnirAekQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Archive3.png" size="11483">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>E1BehIwZypVNyy74P5xQ+82rAGA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Archive4.png" size="13871">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OaLv0CiQs4BsJgEvYV/OMqTTfVk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Archive5.png" size="12904">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3qnb07zGMNnHw9R1StXlcqVGGBY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Arrow1.png" size="10699">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Yke+WyxA6qAArgLqk5+ub17e8Oc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Arrow2.png" size="5690">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8dvEgsillCpYI+UPz4Lm4M5hUMo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Arrow3.png" size="13406">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iMQy5q8cEeyW7V3leaFbtevN0uc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Arrow4.png" size="11631">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vpQZxggcDypdxdPokLIxrO+QztM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Arrow5.png" size="12912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Aojw/fNIP6hAH0J/1saz06ImigA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Box1.png" size="8278">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hzkXIkajfr2Ds1v59M6UlsnukbI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Box2.png" size="7283">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oEH0p881+bGD5+U2erY80G0lD4A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Box3.png" size="8884">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tvpAJDeJRMrkgYfx0JqPiXCbO/w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Box4.png" size="26209">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Ad1GdGQBk3Pnki4tpZUobA7OtXQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Box5.png" size="21042">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aGHpFQXHvSGT9ULNq8gNhY50DCY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Box6.png" size="11113">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YSEIBzO5F/9BVD/5yWB19VtN3FE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Default.png" size="10288">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5fJ7Hq3zzQDVp2gf14P315UGrUw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Delete1.png" size="12493">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mLvsQo1TpTpggOhgZkZO5vov/G0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Delete2.png" size="16726">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8Ti9p7f9SH2nI5lsuMgblSqT8R4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Gallery1.png" size="6163">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>h34aoCbv5gvP7NsFQfPPjQi1wpY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_List1.png" size="6222">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5xgEcpwNOFfy2gJ3mdx6nYEHalU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Big_Playlist1.png" size="14658">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wfE3uMoF8T7/vx3Zdk2JM5eiMHc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Blue1.png" size="2233">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YmZMpAahI2XpMcoJYvWIoHihTLk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Blue2.png" size="2418">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>u8kkasNON+aYLPQQhA4fKva6FV4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Blue3.png" size="2508">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cJZrWVsLEBziqCeuLPST+wPScWM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Brown1.png" size="2229">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Feu+g1AeuMTgKfthTPA8Uk/IPgg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Brown2.png" size="2244">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Uol0IHzx+M/0Z+5nBxx0Anj2470=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Brown3.png" size="2552">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XcLJVc6rnigLOsB/upK4ifGCcek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Cyan1.png" size="2320">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hIDp2kiMc7qySJS6Xh7A9EtvRlw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Cyan2.png" size="2441">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mmsUzt97Iq8H6uK1rgGEGkFgHxo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Cyan3.png" size="2538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lu9CDbrAl+y0iT+qxkK64ZhCR78=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Default.png" size="4213">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iKRSb4Nyqb/liDpEUx9cmMG6s74=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Green1.png" size="2294">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8p3v/dTA8U966ufFW+aRrf9zTec=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Green2.png" size="2542">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>w5YgyVLdnMik2dAta3D47CA7jTs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Green3.png" size="2562">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XVmdxGRJx2QguVuTFYmNUQzDnrI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Grey1.png" size="2191">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pzncf9QxAqlr2v5ZV5QtTxYDdZ8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Grey2.png" size="2477">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BbNZhBlUahq1qdxbnazLHNUegG4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Grey3.png" size="2375">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GGzgEIl4zfCul80dEmqNc0zmqwQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Purple1.png" size="2249">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DqCwruQaZ4wqMCbOeGSXJ1m6g5A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Purple2.png" size="2531">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8CcvaE9ZaWgtQC6J5UZperyNk18=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Purple3.png" size="2519">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6cq8DesOJzUQOKP+BrvrqsZAlIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Red1.png" size="2050">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VMAyl1ex+d3jNKPMsuHJMjR5Guc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Red2.png" size="2476">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aaBgxBU0HGoBw9zg6S5JsLfG7ZM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\Red3.png" size="2331">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NAEw8qeB6JY1aXIR0Wuxkm/wM1o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\z_Gold.png" size="2717">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gpKA+EOsKVHukyNAgSxC0iTT0X8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\z_Gold2.png" size="2528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Kp9p9EL3gh8bb+mmmpAGUSWzNPU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\z_Lime.png" size="2449">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3fHjUmntDTT0OK8V8LXqEAiySOk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Images\z_Orange.png" size="2529">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bJB3/83isassGV6oWJLmRpRolPQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\BrazilianPortuguese.gif" size="367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2lQFWJEsot75sJ9C1GHiYXWezVM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Danish.gif" size="374">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fL86oer0chrcsDMqYwRuVfTQTsk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Dutch.gif" size="360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qN7cLZoVzoAXNgvZFhzMP4plRb4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\English.gif" size="260">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ze45T4tZ8k8U7Uk9to+2wMDqhiE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Finnish.gif" size="371">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/USam7cAD9Ui3Sa6oE0NmYiXzcg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\French.gif" size="366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fjZVSt6D5ISJmnOUbOXlmkuftuY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\German.gif" size="362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0rdPu+tCCmvjUORVQjPm2zaF+XA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Greek.gif" size="368">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+R3JiHS5GNSdjLt8CjvOITwAVRk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Hungarian.gif" size="357">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>V+4oR1U/hB2iNmlz9qQZaOfMNn8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Indonesian.gif" size="362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mySqBOTC7DYYQQmtxy4ViIx+o+8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Italian.gif" size="366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tESZB2wBMTRYbc8PR/fTDVEv0Fc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Japanese.gif" size="366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JSefpEBCMLVfz0eJeJJpQsAopnY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Polish.gif" size="360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>c9e1D5X7lJQuinLD5A20duNnOZc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Romanian.gif" size="363">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GCUi7GDfJIdCtEYtCn8nivKWQc8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Russian.gif" size="361">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CeVpLhioss/1nkp7PPJHiHgTbOY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Serbian.gif" size="238">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fY95W2eIRb9acvfoOWWLYTMncLU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\SimplifiedChinese.gif" size="366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EnkQjDYTTlYHE+7VOLzAEowrXME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Spanish.gif" size="360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uOdySeXuQyVMCSQu7Cc5TrPrH1w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Swedish.gif" size="367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KWfuSCKsiZPjK/mhC+03ch7U3NM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\TraditionalChinese.gif" size="367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>StysIgBPQ/oBO4C3BqYbWsfPO4w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Languages\Vietnamese.gif" size="370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QIjY9uTdx4ypKsNZfVkY5btfPBE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\7z\7z.dll" size="331264">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jxmEmJHra1s+2NxL7SYU1VjidFE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\7z\7z.exe" size="70656">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OLNZA8uXnDn61TOx2p2cqKlNnB8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\7z\License.txt" size="1927">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nIiLKHmItXjrSJGirBVr+cvABTs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\7z\readme.txt" size="1565">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>POk+1vPefmwvbQgpwQMvqZTZMuM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\copy\Copy.dll" size="19456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1/cZm8HY4ipW7qPTI6Tw73YhnD4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\css\base.css" size="4888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LQ5EfEedPO9Rw4PBbrsUaiAAbu4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\css\ie.css" size="112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>D06SgjnNSkBgsrvq+8jdoFx5RuY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\css\normalize.css" size="6875">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Zyvu7JnWI/u+vKut6jRRuDDL2uA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\css\print.css" size="37">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pCt/hfnYxE/3Rat5eXjZKcdf3pc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\bg-checker.png" size="950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SP+Ukss+uKll7RDkCJdV95Jyb2g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\bg-main.png" size="5425">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/++4linCnSIg86HRDajMjHpesKU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\bg-main-dark.png" size="9821">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>g2RSa9RS1V5AaDa/S/v83vPN5pY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\close.png" size="498">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fZzafh9mt85HgrCoKYalt/3aMpo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\favicon.ico" size="106210">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7o98LSm89sAly9fGmg479vFB2Go=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\icon-download.png" size="2325">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vt2xXMLqLv3G59AazjcJFeRi8yI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\loading.gif" size="8476">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>z3ILUM+N3g4ahM4cand4i/xYgtU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\next.png" size="1359">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>elo85exEzezrF6szls4hlIMjM5g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\images\prev.png" size="1368">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eONL7zAVIDiYOoF/PKWf250o4iE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\blank.gif" size="43">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>La6qi18Z8LwgnZdsAr1qy1GwCwo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\fancybox_loading.gif" size="6567">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GnVfslmfOjE8xs/bFN8EP4wUqZw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\fancybox_loading@2x.gif" size="13984">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JzsSNJakK6RcNBatsCfNmXRQWLA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\fancybox_overlay.png" size="1003">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>s6TuZFuklPUoQO+EEgFboPRl2+A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\fancybox_sprite.png" size="1362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F98Z+XYo53vgnDUr8nQl+uokglE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\fancybox_sprite@2x.png" size="6553">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MMWJE/Mn4o9GagD0wayAAbVgrtg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\fancybox_buttons.png" size="1080">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>44WxOVFsaBPc1kuPxDHDZM6v5fM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-buttons.css" size="2447">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Gp2OXCKzcfzGnU27uCPZw58EwMg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-buttons.js" size="3041">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>keQXQcLpP3Msgqqs7Ez8bj8+yHY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-media.js" size="5305">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>O99p7SRp5PtX9alfFzAO74kf+Q0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-thumbs.css" size="735">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SsMpwWpSd1kvwSo3zKPXLKTsKS8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-thumbs.js" size="3836">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>U+GU9KcuZJwE+1ht1XdiuMAigAs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.css" size="4895">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XxY0RGF7bPJnNC8GrBZqI3u2Lfk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.js" size="48706">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HPPUe1zLfLbpAZxk8qiNA6ZIU+Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.pack.js" size="23135">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UzYHZLQpwhL0JDmThEF8zCM7s74=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\html5.js" size="2444">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4UOeN/VVeDsqK0YWLmunxKUVw6A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\jquery.mousewheel-3.0.6.pack.js" size="1384">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HhtE63z63mgMUth0iEZCXs2Am/0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\jquery-1.10.1.min.js" size="93064">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Fht47FLyhleoNeSlQj8DeC/TWAY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\js\main.js" size="1829">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GDb0WpZNb6ss7wSHzUOoywEUKPw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\layouts\layout-blocks.css" size="134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DFQC8iLaJ/M0CrH6b4V4To4AGko=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\layouts\layout-default.css" size="0">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2jmj7l5rSw0yVb/vlWAYkK/YBwk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\layouts\layout-hover.css" size="775">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>exMdnv0OuhFeJkS3Txo51tWvlS8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\layouts\layout-list.css" size="658">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XQ0KFrXOoTLA5rwH8cicmPNKBCQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\layouts\layout-tiles.css" size="165">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yRGhT1nRUrCcA/gJSjvLVjS5F3M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\Links.txt" size="196">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QtQxMGfwVkSuYaopQJC179CkbXU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-arrows.css" size="727">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DcNyOR0E83/DisIogPFW7N48gOo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-arrows.jpg" size="23702">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZbEkvKg+6aAbKE/H8lGpMBMYaF4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-arrows-dark.css" size="778">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qsuBuw02hido6L4DCAOMJkcw6v0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-arrows-dark.jpg" size="22697">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JNPOZ7Xbl3BuV0suXzMRUkq4KWQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-brochure.css" size="1812">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5eMfYVSIRpIchxhPFCQUZU8CdWc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-brochure.jpg" size="26231">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vEhnPPgHXg0OkCnY+ed6R80kwSI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-brochure-dark.css" size="1851">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/PYbnTAlI4A7K0ut8xHpndFg6i4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-brochure-dark.jpg" size="26820">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pAkhqk++j1JpuaCF5ZmDMHN2yJU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-circles.css" size="1640">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9BDam13rIpc9x3T74J24tjkiOR0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-circles.jpg" size="18844">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>stAt0rr8V8GpMjEOR4LtxcHJ9B0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-circles-dark.css" size="1631">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Vc1JRJXu02ISQdaoUjXTWfG2hQ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-circles-dark.jpg" size="17759">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fDBaw/aLLakWIKkcccu0ZpyqBbA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-default.css" size="225">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6czqEZDdZw+2ip6HxjA73lF60ac=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-default.jpg" size="26089">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZGYQzMA+hA34ExK72KJXauMJTIs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-default-dark.css" size="367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>I2tnX0gjUFwelNTPePfV05xxZeM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-default-dark.jpg" size="25888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xLW4tFX2Ckq6LxoNJ7qOA5p8oFQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-oneliner.css" size="1005">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pX/Rz1Zd2/SqxyFUCb9LVQ948bQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-oneliner.jpg" size="13708">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hd3bYikbMWwJ5HuhXEIIEKQIJCo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-oneliner-dark.css" size="1305">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NvuOA4ayIMHTPzVE3RuDiSkWobg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-oneliner-dark.jpg" size="14108">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jPR64WGrbg8vDntyHtTYsyn9m+c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-pile.css" size="4117">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>L9XEs9aSuz2YqhuuA58uLUtP8F4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-pile.jpg" size="24021">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iS7w1tA4co3zzCbHOassoylv6f0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-pile-dark.css" size="4096">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mhT3cA9fJyLj64JTOEVl5l0SSLw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-pile-dark.jpg" size="25455">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7rp7sJTYD5o9eYolVbGOQjzji5g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-squareheads.css" size="1298">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+iKITu5CVI2PQDfAGfDUMdM0l10=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-squareheads.jpg" size="31614">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TNLjxbSlKKkm3RNYFQUVzdwSx+c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-squareheads-dark.css" size="1504">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HS9V7+5WHvB7oyCfkanfmtSY7O0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-squareheads-dark.jpg" size="32113">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>b4lt/4vwXrHjyDcKWqACKmM8bQA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-sticks.css" size="1141">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>whBEKgu9Y6GrMx0e3vZtF2s2sXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-sticks.jpg" size="27502">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9Bo/K9fwDBBqfozCY186YBNQ4Dk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-sticks-dark.css" size="1144">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>l6utfhIbNG05jt0Kq7hCwVM20xQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-sticks-dark.jpg" size="28068">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JFeUd5ZvvXxiguMDNMdIH4eP/Og=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-tooltips.css" size="1410">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5RatiMQtR3HTS3J1NZGkB0jQERI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-tooltips.jpg" size="30723">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oWk4bMBpbYRJZchtxfHXfeSIfBo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-tooltips-dark.css" size="1583">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PLsqHosWS9bwyeF7JxKxKabcnZ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\gallery\themes\theme-tooltips-dark.jpg" size="31384">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PRtHBmM3MiRD41yxMTptITqA2y8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\base.css" size="2581">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hv3jSqM9e4tCe8uGFtt4bFInOU8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\filter.js" size="6901">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>C00m3XO9u3uT23L5VFdaYWyb3Ps=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\lighterbox2.css" size="1398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>M/EaTjUKh2ZccLe7qBjhSmxmxwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\lighterbox2.js" size="4830">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>j5RpPIGZVDYNBiehE0Z7Io2YH9s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\sortable.js" size="6561">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uSR0/wkJ+mTIu8Gd0F5H1HYGjMg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Arrowistic.css" size="3246">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hfEffwTyA3skLpoxlfnSOqWpdes=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Arrowistic.jpg" size="11047">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>rQjDENUSQ7l2w1pvcpzcWayhtmI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\BigCartel.css" size="2261">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jpMTesia5hV6WTyFC7GIcN1rn3U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\BigCartel.jpg" size="11836">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lUwqO334uuL4uxUczDqK9yQX8v8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Casablanca.css" size="1954">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>h/FcfcQpBRIow94bUdS1YkVpAs8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Casablanca.jpg" size="11073">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>E8T2InvIYM0KYovLZF0rM4fUpfs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\CommandLine.css" size="2344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HjRRsHAngqm4n3z1qds+10J3V1I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\CommandLine.jpg" size="14348">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8NYQbS/C50KppOcd/NgU0fcAQ0c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Dark.css" size="2229">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oUfD9aj4KYUw9jmayRDVpekC2Fg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Dark.jpg" size="8592">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4s4xFPqKWoeZ0FRNmqk++rFesnE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\DeepGreen.css" size="3453">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PlgeiiXPFw95mXYMiQPs9uYnUy4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\DeepGreen.jpg" size="10066">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0gQqWpwfBYV/CEWAe2SimkjgFTM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Default.css" size="4410">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>t6SWzKKX1+DoMIEWkXtyRHvLfyI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Default.jpg" size="15106">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KFXbZ2uk2wWQ6VGDdhsZde4cgYw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Google.css" size="3774">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZX9mATW+pqf9gReK9aBB/D0YDd0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Google.jpg" size="12335">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LeLReClm13+aTC353tjusR649gM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Minimalist-Horizontal.css" size="1402">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+srXutlWT0Ar0mG1UllGsiQfnHA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Minimalist-Horizontal.jpg" size="13015">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6KDjPQyVjyaFJTqlOEd7rApuzfQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Minimalist-Vertical.css" size="1580">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oqHqA+GuLw3PPkqS6R9MdrzRwm4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Minimalist-Vertical.jpg" size="11272">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fifXbSWAdVyWUFy+E9OawWFPcyc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Pinky.css" size="6197">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ER7aLrVLI6MjqJcb2NFkMPe7s9I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Pinky.jpg" size="13407">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cVaidLJMwI6dr4xZTuHQnR5RKF4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Precision.css" size="3190">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bzmZF/pN3396dN+p6FcmZOevw3w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Precision.jpg" size="12752">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>z1/zj+JVcYHxK5qYr3rXNpDfvSk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\TheOC.css" size="2614">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ersyLs83QRrRAPti8veTGwF/lm0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\TheOC.jpg" size="13649">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>49Wd2RXaKvMiGvnp0Z5BIws4Fg0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\TinyTable.css" size="2412">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>leh9BL9AomGtH9j/ct1KAFWiwew=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\TinyTable.jpg" size="17234">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JvI/145bME0gDqucJkB3GF3AV9o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\White-On-White.css" size="2972">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>O4ZyzqDsDICr9yICX2R9Hix5f7s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\White-On-White.jpg" size="11867">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/fqDuNTilNmUWt/T+NjI4olsQiE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Windows-Classic.css" size="4277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LBnC2vuFXGLGl0CZUFSFi6uyjEg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\list\themes\Windows-Classic.jpg" size="16705">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XYi/PByGy2r8/m0M0oUdVvWNNP4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\pdftotext\pdftotext.exe" size="284160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GnqhuJz2gbpimcb/i40h4kUtyFg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\pdftotext\pdftotext.txt" size="4178">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>10kIC3DwzyceLODdAwmvaf9Kth0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\psftp\License.txt" size="1290">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>b0fmLJ/0YDmPREMyIWpuxtbw9E8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\psftp\Links.txt" size="91">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>kxOyhjIkGe6V1VE6FkGYQzW4qGs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\psftp\psftp.exe" size="335872">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bysZzwAf8nk8ctO8DtYSdFOWyZQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\sounds\ambiguity.mp3" size="18017">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NqxpXkmBGJHOIne4QRh+TksZMD8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Lib\sounds\complete.mp3" size="104011">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QpYezg0QqMKWGp0JOUAkUC4wThI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\License.txt" size="14968">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xz2oGNbFljogN2snzZCqAaglu/o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dropit\Readme.txt" size="2114">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NdLCupLXiYYT/KdYxbXuzGcrS3g=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="FFmpeg\ffmpeg.exe" size="36095488">
     <hash>
       <dsig:Transforms>

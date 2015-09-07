@@ -1,0 +1,53 @@
+/* Theme name: Arrows (dark) */
+/* Thumbnail size: 200x160 */
+/* Created by: tpr */
+
+@import "layout-blocks.css";
+
+html, body, div.wrap {
+    background: #060606;
+    color: #999;
+}
+
+a {
+    color: #0035D0;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0040FF;
+}
+
+h1 {
+    color: #fff;
+}
+
+ul.photos li {
+    border: none;
+    margin: 0;
+}
+
+ul.photos li a.title {
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+p.field strong {
+    font-weight: normal;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+ul.photos li a.title:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    border: 10px solid transparent;
+    border-bottom-color: #060606;
+    width: 0;
+}
+
+footer {
+	padding: 0 8px;
+}

@@ -1,0 +1,23 @@
+/* Theme name: Default (dark) */
+/* Thumbnail size: 160x160 */
+/* Created by: tpr */
+
+@import "layout-default.css";
+
+html {
+    background: url("../images/bg-main-dark.png") 0 0 repeat;
+}
+
+h1 {
+    color: #fff;
+    font-weight: normal;
+}
+
+body {
+    color: #999;
+}
+
+div.wrap {
+    background-color: #060606;
+    background: rgba(0, 0, 0, 0.5);
+}

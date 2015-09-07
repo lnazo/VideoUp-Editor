@@ -1,0 +1,83 @@
+/* Theme name: Tooltips (dark) */
+/* Thumbnail size: 310x180 */
+/* Created by: tpr */
+
+@import "layout-blocks.css";
+
+html {
+    background: url("../images/bg-main-dark.png") 0 0 repeat;
+}
+
+body { color: #ccc; }
+
+div.wrap {
+	box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.2);
+	background: #000;
+}
+
+header { padding: 0; }
+
+h1 { color: #fff; font-weight: normal; }
+
+ul.photos li {
+    overflow: visible;
+    float: left;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    margin: 0 -1px -1px 0;
+    border-color: #222;
+}
+
+ul.photos li a.image, ul.photos li a.no-image {
+    margin: 0;
+    z-index: 1;
+}
+
+ul.photos li div.inner > div {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 236px;
+    width: 160px;
+    background: #141414;
+    background: rgba(255, 255, 255, 0.94);
+    color: #fff;
+    padding: 10px 12px;
+    z-index: 9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+ul.photos li h2:after {
+    content: "";
+    border: 8px solid transparent;
+    border-right-color: #fff;
+    border-right-color: rgba(255, 255, 255, 0.94);
+    position: absolute;
+    left: -16px;
+    top: 14px;
+}
+
+ul.photos li a.title {
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+ul.photos li h2 a {
+    color: #000;
+    font-weight: bold;
+}
+
+ul.photos li div.inner > div:hover,
+ul.photos li a.image:hover + div,
+ul.photos li a.no-image:hover + div
+{
+    display: block;
+}
+
+p.field {
+    color: #333;
+    font-size: 11px;
+}

@@ -1,0 +1,90 @@
+/* Theme name: SquareHeads (dark) */
+/* Thumbnail size: 200x200 */
+/* Created by: tpr */
+
+@import "layout-hover.css";
+
+html, body, div.wrap {
+    background-color: #000;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    color: #eee;
+    text-align: center;
+}
+
+div.header-wrap, div.content-wrap, div.footer-wrap {
+    padding: 0 20px;
+}
+
+header {
+    padding: 0 3px 2px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    width: 33%;
+    min-width: 400px;
+    border-top: 4px double #666;
+    border-bottom: 4px double #666;
+    margin: 32px auto 20px;
+    padding: 8px 0;
+    font-size: 27px;
+}
+
+h2 {
+    top: -100%;
+    height: 100%;
+    text-align: center;
+}
+
+a { color: #eee; }
+
+section {
+    text-align: center;
+}
+
+ul.photos {
+    display: inline-block;
+}
+
+ul.photos li a.title {
+    width: 90%;
+    padding: 0 5%;
+    margin-top: 44% !important;
+    display: block;
+    height: 100%;
+    text-decoration: none !important;
+}
+
+ul.photos li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-left: -4px;
+    border: none;
+}
+
+ul.photos li a.image {
+    margin: 0;
+}
+ul.photos li a.image img {
+    margin: 0;
+}
+
+.fancybox-skin {
+    background-color: #000;
+    box-shadow: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+ul.photos li a.image, ul.photos li a.no-image {
+	margin-bottom: 0;
+}

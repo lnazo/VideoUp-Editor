@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------- */
+/* Theme: BigCartel
+/* Author: tpr
+/* Inspired by http://bigcartel.com/
+/* ---------------------------------------------------------- */
+
+html { background-color: #F9FBF4; }
+span.highlighted { color: #000; background-color: #E5FF76; }
+
+#dropitList { background-color: #F9FBF4; color: #222; font-family: Georgia, serif; }
+
+#dropitList h1 { color: #A0BD30; font-size: 300%; font-family: Georgia, serif; font-weight: bold; text-shadow: 1px 1px #fff; }
+
+#dropitList #di-infoline li { color: #222; border-right-color: #222; font-family: Georgia, serif; }
+
+#dropitList #di-mainTable { border-bottom: none; font-size: 11px; color: #222; font-family: Arial, sans-serif; }
+#dropitList #di-mainTable a {
+    color: #fff;
+	padding: 4px 10px;
+	background-color: #BBD652;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#dropitList #di-footer-wrap { color: #222; }
+#dropitList #di-footer-wrap a { color: #222; }
+
+#dropitList #di-mainTable a:hover { background-color: #A0BD30; }
+
+#dropitList th {
+	background-color: #222;
+	padding: 11px 8px;
+	color: #fff;
+	border-bottom: none;
+	font-family: Georgia, serif;
+	font-size: 13px;
+    font-weight: bold;
+    border-top: 1px solid #F9FBF4;
+    border-bottom: 1px solid #F9FBF4;
+}
+
+#dropitList th:hover, #dropitList th.di-active { border-top-color: #76CAC6; border-bottom-color: #76CAC6; background-color: #76CAC6; color: #222; text-shadow: 1px 1px #81DED9; }
+
+#dropitList thead th div { padding-right: 10px; }
+
+#dropitList td { padding: 10px; border-bottom: 1px dotted #ccc; vertical-align: middle; }
+#dropitList tr:last-child td { border-bottom: none; }
+
+#dropitList .di-tableSortArrow { top: 3px; }
+
+#dropitList td.di-activeColumn { background-color: #eee; }
+
+#dropitList form.di-filter input.di-searchField { border: 1px solid #CFCFC7; color: #222; }
+#dropitList form.di-filter input.di-searchField:focus {  }
+
+#dropitList form.di-filter input.di-clearFilterButton { color: #808075; }
+#dropitList form.di-filter input.di-clearFilterButton:hover { #222; }

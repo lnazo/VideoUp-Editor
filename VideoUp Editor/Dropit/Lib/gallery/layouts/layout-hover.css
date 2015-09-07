@@ -1,0 +1,35 @@
+ul.photos li div.inner {
+    padding: 0;
+}
+
+h2 {
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: top 0.2s ease-in-out, opacity 0.1s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out, opacity 0.1s ease-in-out;
+    -o-transition: top 0.2s ease-in-out, opacity 0.1s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out, opacity 0.1s ease-in-out;
+    transition: top 0.2s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+h2 a {
+    padding: 5px 12px;
+    display: block;
+    color: #fff;
+}
+
+h2:hover,
+ul.photos li a.image:hover + div h2 {
+    display: block !important;
+    top: 0;
+}
+
+ul.photos li a.image img {
+    margin-bottom: 10px;
+}
+
+p.field {
+    display: none;
+}

@@ -1,0 +1,41 @@
+ul.photos li {
+    display: block;
+    width: auto;
+    clear: both;
+    border-bottom: 1px dotted #b4b4b4;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+ul.photos li:last-child {
+    border-bottom: none;
+}
+
+ul.photos li div.inner {
+    width: 100% !important;
+	padding-left: 0px;
+}
+
+ul.photos li a.image,
+ul.photos li a.no-image {
+    display: table-cell;
+    padding: 0;
+	vertical-align: top;
+}
+
+ul.photos li a.image img {
+    width: auto;
+}
+
+ul.photos li div.inner {
+    overflow: auto;
+}
+
+ul.photos li div.inner > div {
+    display: table-cell;
+	padding-left: 20px;
+}
+
+ul.photos li a.title {
+    font-size: 18px;
+}

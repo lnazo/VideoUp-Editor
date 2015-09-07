@@ -1,0 +1,68 @@
+/* ---------------------------------------------------------- */
+/* Theme: Arrowistic
+/* Author: tpr
+/* ---------------------------------------------------------- */
+
+html { background-color: #F5F5F5; }
+span.highlighted { color: #000; background-color: #FFFF96; }
+
+#dropitList { color: #333; font-size: 12px; font-family: Arial, Helvetica, sans-serif; }
+#di-container { padding: 10px 20px 20px; }
+
+#di-container, #di-mainTable { min-width: 700px; }
+
+#dropitList a { color: #8D3527; text-decoration: none; font-weight: bold; }
+#dropitList a:hover { text-decoration: underline; }
+#dropitList a#di-top { color: #999; margin: 0; position: absolute; right: 0; top: 0; text-decoration: none; font-weight: normal; }
+#dropitList a#di-top:hover { color: #8D3527; text-decoration: none; }
+#dropitList a#di-homeLink { font-weight: bold; }
+
+#dropitList h1 { color: #fff; font-size: 180%; font-weight: normal; width: 180px; margin: 0 auto 40px; text-align: center; background-color: #8D3527; padding: 30px 15px 0; position: relative; top: -11px; font-family: Georgia, serif; }
+
+#dropitList #header { text-align: center; }
+
+#dropitList h1:after {
+	border-top: 25px inset transparent;
+	border-right: 105px inset transparent;
+	border-left: 105px inset transparent;
+	border-top: 25px solid #8D3527;
+	display: block;
+	padding: 0;
+	content: "";
+	position: relative;
+	top: 25px;
+	left: -15px;
+	margin: 0 auto;
+}
+
+#di-infoline { position: absolute; top: 3px; left: 0; }
+#di-infoline li { display: block; float: none; border: none; margin-bottom: 3px; padding-bottom: 3px; border-bottom: 1px solid #999; }
+
+#di-mainTable { border: none; margin: 10px 0 0; }
+#di-mainTable a { background-color: #999; color: #fff; display: inline-block; padding: 0 10px; height: 20px; line-height: 20px; }
+#di-mainTable a:hover { background-color: #8D3527; text-decoration: none; }
+
+#dropitList td { padding: 7px 7px; border-bottom: 1px solid #666; line-height: 20px; }
+#dropitList th { padding: 4px 7px; border: none; color: #000; font-weight: bold; border-bottom: 4px solid #333; }
+
+#dropitList td:last-child, #dropitList th:last-child { border-right: 0; }
+
+#dropitList .di-sortable td.di-activeColumn { background-color: #e6e6e6; }
+
+#dropitList .di-sortable th:hover, #dropitList .di-sortable th.di-active { border-color: #999; color: #666; }
+
+#dropitList .di-tableSortArrow { top: 0; position: relative; }
+#dropitList .di-noResults { padding: 60px 20px 60px 2px; margin-top: 0; border-bottom: 1px solid #999; }
+#dropitList .di-noResults .di-clearFilterLink { text-decoration: underline; }
+#dropitList #di-footer span { font-style: italic; }
+
+#dropitList #di-footer { margin-top: 20px; font-size: 11px;}
+
+#dropitList form.di-filter { top: 6px; }
+#dropitList form.di-filter#di-fixed { top: 16px; }
+
+#dropitList form.di-filter input.di-searchField { border: 1px solid #ccc; color: #666; background-color: #f5f5f5; padding: 4px 8px; width: 120px; font-size: 12px; }
+#dropitList form.di-filter input.di-searchField:focus { background-color: #fff; }
+
+#dropitList form.di-filter input.di-clearFilterButton { color: #666; top: -2px; right: -5px; }
+#dropitList form.di-filter input.di-clearFilterButton:hover { color: #000; }

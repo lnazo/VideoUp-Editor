@@ -1,0 +1,70 @@
+/* Theme name: Sticks (dark) */
+/* Thumbnail size: 174x330 */
+/* Created by: tpr */
+
+@import "layout-default.css";
+
+body, div.wrap {
+    background-color: #060606;
+    color: #aaa;
+}
+
+ul.photos li {
+    padding: 0;
+    margin-right: 12px;
+    margin-bottom: 15px;
+}
+
+ul.photos li div.inner {
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 30px;
+	color: #fff;
+	font-size: 27px;
+	font-weight: normal;
+}
+
+ul.photos li a.title {
+    color: #fff;
+    margin: 3px 0 12px !important;
+}
+
+ul.photos li a.image {
+    overflow: hidden;
+}
+
+ul.photos li a.image img {
+    -webkit-transition: all .33s;
+    -moz-transition: all .33s;
+    transition: all .33s;
+}
+
+ul.photos li a.image:hover img {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+p.field {
+    text-align: right;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #333;
+}
+
+p.field:last-child {
+    border-bottom: none;
+}
+
+p.field strong {
+    text-align: left;
+    float: left;
+    font-weight: normal;
+
+}
+
+footer {
+	padding-left: 8px;
+}

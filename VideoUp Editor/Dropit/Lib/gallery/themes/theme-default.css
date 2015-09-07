@@ -1,0 +1,13 @@
+/* Theme name: Default */
+/* Thumbnail size: 160x160 */
+/* Created by: tpr */
+
+@import "layout-default.css";
+
+html {
+    background: url("../images/bg-main.png") 0 0 repeat;
+}
+
+body {
+    background-color: #eee;
+}

@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------- */
+/* Theme: Casablanca
+/* Author: tpr
+/* based on Casablanca table style by Rodrigo Castilho Galvao Ferreira
+/* ---------------------------------------------------------- */
+
+span.highlighted { color: #000; background-color: #FFA593; }
+
+#dropitList { color: #666666; font-family: "Trebuchet MS", "Verdana", sans-serif; }
+
+#dropitList a { color: #C30; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #E63C1E; }
+#dropitList a:hover { color: #E63C1E; }
+
+#dropitList a#di-top { color: #666; border: none; font-weight: normal; }
+#dropitList a#di-top:hover { color: #333; }
+
+#dropitList h1 { color: #E63C1E; }
+
+#dropitList #di-infoline li { border-right-color: #ccc; }
+
+#dropitList #di-mainTable {
+  border: none;
+  border-top: 30px solid #E63C1E;
+  padding: 0;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+#dropitList td { padding-top: 15px; padding-bottom: 15px; }
+
+#dropitList th {
+	background-color: #C30;
+	font-weight: bold;
+    border: none;
+    color: #FFB3A6;
+	text-transform: uppercase;
+	line-height: 16px;
+}
+
+#dropitList .di-sortable th:hover, #dropitList .di-sortable th.di-active { color: #fff; }
+
+#dropitList tr:nth-child(2n) { background-color: #f0f0f0; }
+#dropitList tr.di-odd { background-color: #fff; }
+#dropitList tr.di-even { background-color: #f0f0f0; }
+
+#dropitList .di-sortable td.di-activeColumn { color: #333; font-weight: bold; }
+
+#dropitList .di-tableSortArrow { top: -1px; }
+
+#dropitList form.di-filter input.di-searchField {
+    background-color: #f7f7f7;
+	color: #777;
+	border: 1px solid #c7c7c7;
+}
+
+#dropitList form.di-filter input:focus { border-color: #ccc; color: #333; }
+
+#dropitList form.di-filter input.di-clearFilterButton:hover { color: #C30; }
+#dropitList form.di-filter input.di-clearFilterButton { color: #aaa; }
+
+#dropitList a.di-clearFilterLink:hover { color: #C30; }

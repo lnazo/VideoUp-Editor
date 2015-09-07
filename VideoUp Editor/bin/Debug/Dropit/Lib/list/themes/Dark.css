@@ -1,0 +1,50 @@
+/* ---------------------------------------------------------- */
+/* Theme: Dark
+/* Author: tpr
+/* ---------------------------------------------------------- */
+
+html { background-color: #3B4747; }
+span.highlighted { color: #8EFF1F; }
+
+#dropitList { background-color: #3B4747; color: #A3ADAD; }
+
+#dropitList #di-bg-header { border-top: 42px solid #1F2C2C; height: 1px; background-color: #424D4D; }
+
+#dropitList a { color: #93C763; text-decoration: none; }
+#dropitList a:hover { text-decoration: underline; }
+
+#dropitList a#di-top { color: #999; }
+#dropitList a#di-top:hover { color: #93C763; }
+
+#dropitList h1 { background-color: transparent; margin-bottom: 10px; margin-top: 32px; display: inline-block; color: #93C763; text-transform: uppercase; font-family: Verdana; }
+
+#dropitList #di-infoline { margin-bottom: 25px; position: absolute; left: 0; top: 0; *top: -40px; }
+#dropitList #di-infoline li { border-right: 1px dotted #A3ADAD; color: #A3ADAD; }
+
+#dropitList #di-header-wrap { margin-bottom: 10px; margin-top: 0; }
+#dropitList #di-mainTable { border-bottom-color: #1F2C2C; }
+#dropitList #di-mainTable a { font-weight: bold; }
+
+#dropitList th { border: none; background-color: #1F2C2C; text-transform: uppercase; font-size: 10px; }
+
+#dropitList tr:nth-child(2n) { background-color: #424D4D; }
+#dropitList tr.di-odd { background-color: transparent; }
+#dropitList tr.di-even { background-color: #424D4D; }
+
+#dropitList .di-sortable td.di-activeColumn { color: #D1DBDB; }
+
+#dropitList .di-sortable thead th:hover, #dropitList .di-sortable th.di-active { color: #D1DBDB; }
+#dropitList .di-sortable thead th:hover { text-shadow: 0 0 3px #A3ADAD; }
+
+#dropitList .di-tableSortArrow { top: 0px; }
+
+#dropitList form.di-filter { top: -51px }
+#dropitList form.di-filter#di-fixed { top: 8px; }
+
+#dropitList form.di-filter input { color: #333; }
+
+#dropitList form.di-filter input.di-searchField { background-color: #313D3D; border: none; color: #6D7777; }
+#dropitList form.di-filter input.di-searchField:focus { color: #A3ADAD; }
+
+#dropitList form.di-filter input.di-clearFilterButton { color: #707A7A; }
+#dropitList form.di-filter input.di-clearFilterButton:hover { color: #93C763; }

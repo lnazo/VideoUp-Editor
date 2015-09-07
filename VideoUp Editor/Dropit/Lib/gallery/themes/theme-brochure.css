@@ -1,0 +1,98 @@
+/* Theme name: Brochure */
+/* Thumbnail size: 200x260 */
+/* Created by: tpr */
+
+@import "layout-blocks.css";
+
+body, div.wrap {
+    background-color: #fff;
+}
+
+ul.photos li {
+    padding: 0;
+    margin: 0 -3px 15px 0;
+    border: none;
+}
+
+ul.photos li div.inner {
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 30px;
+	font-size: 27px;
+	font-weight: normal;
+}
+
+ul.photos li a.title {
+    color: #000;
+    margin: 3px 8px 8px 0 !important;
+    font-weight: bold;
+}
+
+ul.photos li a.image {
+    overflow: hidden;
+    z-index: 1;
+}
+
+ul.photos li a.image:before,
+ul.photos li a.no-image:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 20px solid #fff;
+    border-bottom: 20px solid transparent;
+    border-right: 200px solid transparent;
+    border-left: 200px solid transparent;
+    z-index: 10;
+}
+
+ul.photos li a.image:after,
+ul.photos li a.no-image:after
+{
+    content: "";
+    position: absolute;
+    top: 220px;
+    left: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    border-right: 200px solid transparent;
+    border-left: 200px solid transparent;
+    z-index: 10;
+}
+
+ul.photos li:nth-child(2n) a.image:before,
+ul.photos li:nth-child(2n) a.no-image:before
+{
+    left: -200px;
+    border-top: 20px solid #fff;
+    border-bottom: 20px solid transparent;
+}
+
+ul.photos li:nth-child(2n) a.image:after,
+ul.photos li:nth-child(2n) a.no-image:after
+{
+    left: -200px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+}
+
+p.field {
+    color: #666;
+    margin-right: 8px;
+}
+
+p.field:before {
+    content: "- ";
+}
+
+p.field strong {
+    font-weight: normal;
+}
+
+header, footer {
+	padding: 0;
+}

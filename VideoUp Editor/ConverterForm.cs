@@ -145,6 +145,7 @@ namespace VideoUp
 
                 buttonPlay.Enabled = true;
                 _owner.MkvMerge();
+                _owner.manageFiles();
             }
 
             buttonCancel.Text = "Close";

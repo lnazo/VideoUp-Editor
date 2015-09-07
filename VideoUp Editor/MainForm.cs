@@ -253,6 +253,26 @@ namespace VideoUp
             process.Start();
         }
 
+        public void manageFiles()
+        {
+            string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
+            text = "\"" + text + "\"";
+
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "Dropit\\DropIt.exe";
+            process.StartInfo = startInfo;
+            process.Start();
+
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+            {
+                FileName = text,
+                UseShellExecute = true,
+                Verb = "open"
+            });
+        }
+
         public static float ParseTime(string text)
         {
             //Try fo figure out if begin/end are correct

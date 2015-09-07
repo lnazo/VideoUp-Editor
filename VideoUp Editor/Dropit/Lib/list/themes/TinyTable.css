@@ -1,0 +1,44 @@
+/* ---------------------------------------------------------- */
+/* Theme: TinyTable
+/* Author: tpr
+/* ---------------------------------------------------------- */
+
+html { background-color: #D9E4EA; }
+span.highlighted { color: #000; background-color: #FFFF96; }
+
+#dropitList { color: #5D768E; font-size: 11px; font-family: Arial, sans-serif; }
+#di-container { padding: 10px 20px; }
+
+#dropitList a { color: #AACA66; text-decoration: none; font-weight: bold; }
+#dropitList a:hover { text-decoration: underline; }
+#dropitList a#di-top { color: #5D768E; margin: 0; position: absolute; right: 0; top: 0; text-decoration: none; font-weight: normal; }
+#dropitList a#di-top:hover { color: #6F8A3C; text-decoration: none; }
+#dropitList a#di-homeLink { font-weight: bold; color: #5D768E; }
+
+#dropitList h1 { color: #5D768E; display: inline-block; margin: 0 10px 0 0; font-size: 180%; font-weight: normal; }
+
+#di-infoline { position: relative; margin: 0; margin-top: 3px; display: none; }
+#di-infoline li { border-right-color: #5D768E; padding-right: 3px; margin-right: 3px; }
+#di-infoline li strong { font-weight: normal; }
+
+#di-mainTable { border: none; margin: 10px 0 0; -moz-box-shadow: 0px 3px 8px #CBD5DE; -webkit-box-shadow: 0px 3px 8px #CBD5DE; box-shadow: 0 3px 8px #CBD5DE; }
+
+#dropitList td { padding: 3px 5px; border-top: 1px solid #EAEDEF; }
+#dropitList th { padding: 4px 5px; border: none; color: #fff; background-color: #5D768E; text-transform: uppercase; font-size: 10px; }
+
+#dropitList tr, #dropitList tr.di-odd { background-color: #fff; }
+#dropitList tr:nth-child(2n), #dropitList tr.di-even { background-color: #F2F5F8; }
+
+#dropitList .di-sortable td.di-activeColumn { background-color: #EAEDEF; border-color: #E2E5E7; }
+
+#dropitList .di-sortable th:hover, #dropitList .di-sortable th.di-active { background-color: #AACA66; }
+
+#dropitList .di-tableSortArrow { top: 0; }
+#dropitList .di-noResults { background-color: #fff; padding: 60px 20px; margin-top: 0; }
+#dropitList #di-footer span { font-style: italic; }
+
+#dropitList form.di-filter { top: 5px; }
+#dropitList form.di-filter#di-fixed { top: 15px; }
+
+#dropitList form.di-filter input.di-searchField { border: none; color: #F2F5F8; background-color: #9CA9B3; padding: 1px 5px; width: 100px; font-size: 11px; }
+#dropitList form.di-filter input.di-clearFilterButton { color: #F2F5F8; top: -6px; right: -8px; }

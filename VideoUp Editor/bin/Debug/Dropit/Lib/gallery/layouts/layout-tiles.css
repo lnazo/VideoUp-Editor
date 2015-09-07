@@ -1,0 +1,11 @@
+ul.photos li {
+    padding: 0;
+    float: left;
+    display: block;
+    border: none;
+    margin: 0;
+}
+
+ul.photos li div.inner > div {
+    display: none;
+}

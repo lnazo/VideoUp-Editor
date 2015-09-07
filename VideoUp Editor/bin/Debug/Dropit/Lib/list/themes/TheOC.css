@@ -1,0 +1,50 @@
+/* ---------------------------------------------------------- */
+/* Theme: TheOC
+/* Author: tpr
+/* Inspired by The OC by Rodolfo Marin (http://www.fitodotnet.com/)
+/* ---------------------------------------------------------- */
+
+html { background-color: #373B3E; }
+span.highlighted { color: #FF5F08; }
+
+#dropitList { color: #fff; font-size: 11px; font-family: "Tahoma", "Verdana", "Arial"; }
+#di-container { padding: 10px 20px 20px; }
+
+#dropitList a { color: #f60; text-decoration: none; font-weight: bold; }
+#dropitList a:hover { text-decoration: underline; }
+#dropitList a#di-top { color: #999; margin: 0; position: absolute; right: 0; top: 0; text-decoration: none; font-weight: normal; }
+#dropitList a#di-top:hover { color: #fff; text-decoration: none; }
+#dropitList a#di-homeLink { font-weight: bold; color: #fff; }
+
+#dropitList h1 { color: #fff; display: inline-block; margin: 0 10px 6px 0; font-size: 240%; font-weight: normal; }
+
+#di-infoline { position: relative; margin: 0; padding-bottom: 5px; }
+#di-infoline li { color: #ddd; border-right-color: #999; padding-right: 7px; margin-right: 5px; }
+
+#di-mainTable { border: none; margin: 10px 0 0; background-color: #2D3134; color: #ddd; }
+
+#dropitList td { padding: 7px 7px; border-top: 1px solid #373B3E; border-right: 1px solid #373B3E; }
+#dropitList th { padding: 8px 7px; border: none; color: #fff; background-color: #1C1C1C; font-size: 12px; font-weight: bold; border-right: 1px solid #2E2E2E; }
+
+#dropitList tr:hover td { color: #888 !important; }
+
+#dropitList td:last-child, #dropitList th:last-child { border-right: 0; }
+
+#dropitList .di-sortable td.di-activeColumn { background-color: #323638; color: #fff; }
+
+#dropitList .di-sortable th:hover, #dropitList .di-sortable th.di-active { background-color: #141414; }
+
+#dropitList .di-tableSortArrow { top: 2px; }
+#dropitList .di-noResults { background-color: #373B3E; padding: 60px 20px 60px 2px; margin-top: 0; border-bottom: 1px solid #1C1C1C; }
+#dropitList #di-footer span { font-style: italic; }
+
+#dropitList #di-footer { color: #999; margin-top: 20px; }
+
+#dropitList form.di-filter { top: 6px; }
+#dropitList form.di-filter#di-fixed { top: 16px; }
+
+#dropitList form.di-filter input.di-searchField { border: none; color: #999; background-color: #141414; padding: 4px 8px; width: 100px; font-size: 12px; }
+#dropitList form.di-filter input.di-searchField:focus { color: #fff; }
+
+#dropitList form.di-filter input.di-clearFilterButton { color: #666; top: -3px; right: -5px; }
+#dropitList form.di-filter input.di-clearFilterButton:hover { color: #fff; }

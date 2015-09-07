@@ -1,0 +1,43 @@
+/* ---------------------------------------------------------- */
+/* Theme: CommandLine
+/* Author: tpr
+/* ---------------------------------------------------------- */
+
+html { background-color: #000; }
+span.highlighted { color: #b00; }
+
+#dropitList { background-color: #000; color: #ccc; font: normal 12px/1.3 Terminal, Courier, monospace; text-transform: uppercase; }
+
+::-moz-selection { background-color: #ccc; color: #000; }
+::-selection { background-color: #ccc; color: #000; }
+
+#dropitList a { text-decoration: none; color: #ccc; }
+#dropitList a:hover { text-decoration: none; border-bottom: 1px dotted #ccc; }
+
+#dropitList h1 { background-color: transparent; color: #dfdfdf; margin-bottom: 10px; font-size: 28x; font-weight: normal; }
+
+#dropitList #di-infoline { color: #dfdfdf;  }
+#dropitList #di-infoline strong { font-weight: normal;  }
+#dropitList #di-infoline li { border-right: 1px solid #dfdfdf; }
+
+#dropitList #di-header-wrap { margin-bottom: 10px; margin-top: 0; }
+#dropitList #di-mainTable { border-bottom-color: #fff; border-left: 1px solid #fff; }
+#dropitList #di-mainTable a:before, #dropitList #di-homeLink:before, #dropitList a#di-top:before, #dropitList .di-clearFilterLink:before { content: "["; }
+#dropitList #di-mainTable a:after, #dropitList #di-homeLink:after, #dropitList a#di-top:after, #dropitList .di-clearFilterLink:after { content: "]"; }
+
+#dropitList th { border: 1px solid #fff; border-left-color: transparent; }
+#dropitList td { border-right: 1px solid #fff; border-bottom: 1px solid transparent; border-top: 1px solid transparent; }
+
+#dropitList .di-sortable tr:hover td { border-bottom: 1px solid #666; border-top: 1px solid #666; }
+#dropitList .di-sortable td { padding: 1px 8px; }
+#dropitList .di-sortable th { padding: 5px 8px; }
+
+#dropitList .di-sortable thead th:hover, #dropitList .di-sortable th.di-active { color: #000; background-color: #fff; }
+
+#dropitList .di-tableSortArrow { top: 0px; }
+
+#dropitList #di-footer span { font-style: normal; }
+
+#dropitList form.di-filter input.di-searchField { text-transform: uppercase; color: #ccc; background-color: #000; border: 1px solid #999; font: normal 12px/1 Terminal, Courier, monospace; }
+
+#dropitList form.di-filter input.di-clearFilterButton { color: #ccc; font: normal 12px/1 Terminal, Courier, monospace; }

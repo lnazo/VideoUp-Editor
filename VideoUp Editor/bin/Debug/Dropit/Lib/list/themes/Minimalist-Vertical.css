@@ -1,0 +1,39 @@
+/* ---------------------------------------------------------- */
+/* Theme: Minimalist-Vertical
+/* Author: tpr
+/* ---------------------------------------------------------- */
+
+span.highlighted { color: #000; background-color: #FFFF96; }
+
+#dropitList { color: #669; font-family: Georgia; font-size: 12px;}
+
+#dropitList a { color: #039; }
+
+#dropitList a#di-top { color: #669; }
+#dropitList a#di-top:hover { color: #039; }
+
+#dropitList h1 { color: #039; }
+
+#dropitList #di-infoline li { border-right-color: #669; }
+
+#dropitList #di-mainTable { border-bottom: none; }
+#dropitList #di-mainTable a { width: 100%; height: 100%; display: block; }
+
+#dropitList th div { border-bottom: 2px solid #6678B1; padding: 6px 0; }
+#dropitList th.di-active div, #dropitList th:hover div { border-bottom-color: #039; color: #039; }
+
+#dropitList th, #dropitList td { border-right: 5px solid #fff; border-left: 5px solid #fff; border-bottom: none; }
+
+#dropitList .di-tableSortArrow { top: 8px; }
+
+#dropitList #di-footer p { background-color: #e8e8f0; padding: 10px; }
+
+#dropitList .di-sortable td.di-activeColumn { background-color: #f2f2f7; }
+
+#dropitList .di-sortable th:hover, #dropitList .di-sortable th.di-active { background-color: #f2f2f7; }
+
+#dropitList form.di-filter input.di-searchField { border: 1px solid #a9a9c5; color: #669; }
+#dropitList form.di-filter input.di-searchField:focus { color: #039; }
+
+#dropitList form.di-filter input.di-clearFilterButton { color: #8e8eb3; }
+#dropitList form.di-filter input.di-clearFilterButton:hover { color: #669; }

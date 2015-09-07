@@ -1,0 +1,171 @@
+/* Theme name: Pile */
+/* Thumbnail size: 180x180 */
+/* Created by: tpr */
+
+@import "layout-tiles.css";
+
+*, *:after, *:before { transition: none !important; }
+
+body {
+	background: #ffffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #f1f2f3 62%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(62%,#f1f2f3), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#f1f2f3 62%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#f1f2f3 62%,#ededed 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#f1f2f3 62%,#ededed 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #ffffff 0%,#f1f2f3 62%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+div.wrap {
+	background: transparent;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 40px;
+	font-weight: normal;
+}
+
+section {
+	text-align: center;
+}
+
+a { opacity: 1 !important; }
+
+ul.photos {
+	display: inline-block;
+	position: relative;
+}
+
+ul.photos:before {
+	display: block;
+	content: "";
+	position: relative;
+	float: right;
+	width: 10%;
+	height: 30px;
+}
+
+ul.photos li {
+	margin: -8px;
+	box-shadow: 0 0 20px -6px rgba(0, 0, 0, 0.66);
+	display: inline-block;
+	float: none;
+}
+
+ul.photos li:nth-child(1) {
+	margin-left: 6% !important;
+}
+
+ul.photos li:nth-child(4) {
+	
+}
+
+ul.photos li:nth-child(15n - 14) {
+	transform: scale(0.7, 0.7) rotate(7deg);
+	-ms-transform: scale(0.7, 0.7) rotate(7deg);
+	-webkit-transform: scale(0.7, 0.7) rotate(7deg);
+	
+	-webkit-transform-origin: 55% 80%;
+    -o-transform-origin: 55% 80%;
+    transform-origin: 55% 80%;
+	
+	margin: -30px;
+	
+	z-index: 1;
+}
+
+ul.photos li:nth-child(2n) {
+	transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+	-ms-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+	-webkit-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+}
+
+ul.photos li:nth-child(3n +3) {
+	transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	
+	-webkit-transform-origin: 40% 33%;
+    -o-transform-origin: 40% 33%;
+    transform-origin: 40% 33%;
+	
+	z-index: 2;
+}
+
+ul.photos li:nth-child(4n) {
+	transform: rotate(-18deg);
+	-ms-transform: rotate(-18deg);
+	-webkit-transform: rotate(-18deg);
+	
+	-webkit-transform-origin: 40% 33%;
+    -o-transform-origin: 40% 33%;
+    transform-origin: 40% 33%;
+	
+	z-index: 2;
+}
+
+ul.photos li:nth-child(5n) {
+	transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	-webkit-transform: rotate(2deg);
+}
+
+ul.photos li:nth-child(6n + 2) {
+	transform: scale(0.9, 0.9) rotate(-8deg);
+	-ms-transform: scale(0.9, 0.9) rotate(-8deg);
+	-webkit-transform: scale(0.9, 0.9) rotate(-8deg);
+	z-index: 2;
+}
+
+ul.photos li:nth-child(10n - 3) {
+	
+	-webkit-transform: scale(1.1, 1.1) rotate(20deg);
+    -o-transform: scale(1.1, 1.1) rotate(20deg); 
+    transform: scale(1.1, 1.1) rotate(20deg);
+
+    -webkit-transform-origin: 60% 56%;
+    -o-transform-origin: 60% 56%;
+    transform-origin: 60% 56%;
+
+	z-index: 9;
+	
+}
+
+ul.photos li:nth-child(12n - 1) {
+	transform: scale(1.15, 1.15) rotate(15deg);
+	-ms-transform: scale(1.15, 1.15) rotate(15deg);
+	-webkit-transform: scale(1.15, 1.15) rotate(15deg);
+	
+	margin: -20px;
+	
+	z-index: 3;
+}
+
+ul.photos li:nth-child(9n) {
+	transform: scale(0.8, 0.8) rotate(5deg);
+	-ms-transform: scale(0.7, 0.8) rotate(5deg);
+	-webkit-transform: scale(0.8, 0.8) rotate(5deg);
+	
+	margin: -18px;
+	
+	z-index: 6;
+}
+
+ul.photos li div.inner {
+	margin: 0;
+	padding: 0;
+	border: 8px solid #fff;
+	border-bottom-width: 30px;
+
+}
+
+ul.photos li a.image, ul.photos li a.no-image {
+	margin: 0;
+}
+
+footer { text-align: center; }

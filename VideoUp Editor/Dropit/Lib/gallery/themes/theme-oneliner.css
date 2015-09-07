@@ -1,0 +1,71 @@
+/* Theme name: OneLiner */
+/* Thumbnail size: 164x100 */
+/* Created by: tpr */
+
+@import "layout-list.css";
+
+html {
+    background: url("../images/bg-main.png") 0 0 repeat;
+}
+
+body {
+    max-width: 850px;
+}
+
+div.wrap {
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+ul.photos li h2 {
+	margin-top: 10px;
+	width: 100%;
+	float: left;
+}
+
+div.content-wrap {
+    background-color: #fff;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-bottom: 12px;
+}
+
+ul.photos {
+    margin-bottom: 16px;
+}
+
+ul.photos li a.title {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+ul.photos li a.no-image {
+    width: 164px;
+	padding: 0;
+}
+
+p.field {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    clear: none;
+    font-size: 13px;
+}
+
+p.field:after {
+    content: "::";
+    margin-left: 8px;
+    color: #333;
+}
+
+p.field:last-child:after {
+    display: none;
+}
+
+div.footer-wrap {
+    padding: 0;
+}

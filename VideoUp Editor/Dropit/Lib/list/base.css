@@ -1,0 +1,92 @@
+html { overflow-y: scroll; }
+html, body, #dropitList { padding: 0; margin: 0; }
+
+#di-container, #di-main-wrap, #di-header, #di-footer-wrap, #dropitList ul#infoline, #di-mainTable { padding: 0; margin: 0; position: relative; }
+
+#dropitList { font: 12px/1.3 Arial, sans-serif; *float: left; }
+
+#di-container { margin: 0 auto; padding: 15px 30px 40px; display: table; }
+#di-header { padding-top: 1px; }
+
+#dropitList textarea, #dropitList input { outline: none; }
+
+#dropitList a { outline: none; color: #333; text-decoration: underline; }
+a#di-top { display: block; margin-top: 30px; display: inline; position: relative; margin-bottom: 30px; text-decoration: none; }
+
+#dropitList h1 { font-size: 220%; margin: 15px 0; }
+
+.di-center { text-align: center; }
+.di-right { text-align: right; }
+
+#di-infoline { padding: 0; margin: 0; margin-bottom: 15px; }
+
+#di-infoline li {
+	border-right: 1px solid #333;
+	display: inline;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+#di-infoline li:last-child, #di-infoline .di-last { border: none; }
+
+#di-mainTable { border-bottom: 1px solid #333; margin: 10px 0 25px 0; cursor: default; }
+/* #di-mainTable { table-layout: fixed; overflow: hidden; word-wrap: break-word; } */
+
+#dropitList th, #dropitList td { padding: 6px 8px; vertical-align: top; }
+
+#dropitList th {
+	text-align: left;
+	white-space: nowrap;
+	border-bottom: 1px solid #333;
+	font-weight: normal;
+}
+
+#dropitList th div { *width: 100%; *padding-right: 8px; }
+
+#dropitList thead th div { position: relative; }
+.di-sortable thead th, .di-sortable thead th:hover { cursor: pointer; }
+
+.di-tableSortArrow {
+	position: absolute;
+	right: 0px;
+	*right: 5px;
+	top: 2px;
+	font-size: 9px;
+}
+
+#di-footer span { font-style: italic; }
+
+form.di-filter { position: absolute; top: 15px; right: 0; }
+form.di-filter#di-fixed { position: fixed; top: 30px; right: 30px; _position: absolute; _top: 15px; _right: 0; }
+
+form.di-filter input.di-searchField {
+    width: 120px;
+	height: 16px;
+	border: 1px solid #333;
+    padding: 6px 28px 6px 10px;
+    position: relative;
+}
+
+form.di-filter input.di-clearFilterButton {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 28px;
+	height: 28px;
+	margin-right: 0;
+	padding-left: 0;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+}
+
+form.di-filter input.di-clearFilterButton:hover { cursor: pointer; }
+
+a.di-clearFilterLink {
+    border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	margin-left: 5px;
+}
+
+.di-noResults { padding: 30px 0 50px; }

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/*lighter box*/
+
+html, body {
+	height: 100%;
+}
+
+#lighterbox2 {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 2100;
+}
+
+#lighterboxclose2 {
+	width: 100%;
+	height: 100%;
+}
+
+#lighterboxwrapper2, #lighterboxcontent2 {
+	background-color: #fff;
+	z-index: inherit;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 12px;
+}
+
+#lighterboxwrapper2 {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	min-width: 200px;
+	text-align: center;
+}
+
+#lighterboxcontent2 {
+	/*/background: url(load.gif) no-repeat 50% 50%;*/
+	padding: 12px;
+}
+
+#lighterboxportimage2 {
+	border: solid 10px #fff;
+	cursor: pointer;
+}
+
+#lighterboxtitle2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#lighterboxdescription2 {
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+#lighterboxprevimage2, #lighterboxnextimage2 {
+	position: absolute;
+	top: 38%;
+	padding: 12px 8px 16px;
+}
+
+#lighterboxprevimage2 {
+	left: 0;
+}
+
+#lighterboxnextimage2 {
+	right: 0;
+}
+
+#lighterboxcloseimage2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 6px;
+}
+
+#lighterboxclosebutton2 {
+	color: #000;
+	font: bold 12px verdana, sans-serif;
+	width: 100%;
+}
+
+span#lighterboxcloseimage2 {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#lighterboxclosebutton2 span {
+	cursor: pointer;	
+}

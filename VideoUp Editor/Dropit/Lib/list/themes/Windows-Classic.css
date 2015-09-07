@@ -1,0 +1,129 @@
+/* ---------------------------------------------------------- */
+/* Theme: Windows-Classic
+/* Author: tpr
+/* ---------------------------------------------------------- */
+
+html { background-color: #3B6EA5; }
+span.highlighted { color: #000; background-color: #FFFF96; }
+
+#dropitList { background-color: #3B6EA5; color: #669; font-family: Tahoma, sans-serif; padding: 30px; }
+
+#di-container { background-color: #4D0C8; border: 1px solid #D4D0C8; padding: 0; border-bottom: 1px solid #404040; border-right: 1px solid #404040; }
+
+#dropitList a { color: #000; }
+
+#dropitList a#di-top { float: right; position: relative; margin: 0; top: -16px; margin-bottom: -16px; font-size: 11px; margin-right: 3px; }
+#dropitList a#di-top:hover {  }
+
+#dropitList h1 {
+	color: #fff;
+	font-size: 100%;
+	background: #0a246a;
+	background: -moz-linear-gradient(left,  #0a246a 0%, #a6caf0 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0a246a), color-stop(100%,#a6caf0));
+	background: -webkit-linear-gradient(left,  #0a246a 0%,#a6caf0 100%);
+	background: -o-linear-gradient(left,  #0a246a 0%,#a6caf0 100%);
+	background: -ms-linear-gradient(left,  #0a246a 0%,#a6caf0 100%);
+	background: linear-gradient(left,  #0a246a 0%,#a6caf0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a246a', endColorstr='#a6caf0',GradientType=1 );
+	height: 18px;
+	line-height: 18px;
+	font-size: 11px;
+	margin: 0;
+	padding: 0 5px;
+	border-bottom: 1px solid #808080;
+}
+
+#dropitList #di-main-wrap {
+	background-color: #D4D0C8;
+	padding: 1px 2px;
+	border: 1px solid #fff;
+	border-right: 1px solid #808080;
+	border-bottom: none;
+}
+
+#dropitList #di-footer-wrap {
+	background-color: #D4D0C8;
+	padding: 1px 2px 2px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #808080;
+}
+
+#dropitList #di-infoline {
+	border: 1px solid #808080;
+	border-top: 1px solid #fff;
+	box-shadow: 0px 1px 0px 0 #fff;
+	/*box-shadow: 0px 0px 0px 1px #fff;*/
+	padding: 4px 5px;
+	margin: 0 0 1px 0;
+	color: #000;
+}
+
+#dropitList #di-infoline li {
+	border-right-color: transparent;
+	font-size: 11px;
+	margin: 0;
+}
+
+#dropitList #di-infoline li strong {
+	font-weight: normal;
+}
+
+#dropitList #di-mainTable { border: 1px solid #808080; background-color: #fff; font-size: 11px; color: #000; margin: 0; border-bottom: none; border-right: none; }
+#dropitList #di-mainTable a { color: #00f; }
+
+#dropitList th { border-bottom: 1px solid #404040; border-top: 2px solid #fff; background-color: #D4D0C8; border-right: 1px solid #fff; margin: 0; padding: 0; line-height: 15px; height: 15px; text-indent: 4px; cursor: default; }
+#dropitList th div { border: 1px solid #808080; border-left: 1px solid #fff; margin: 0; border-top: 0; padding-right: 12px; }
+
+#dropitList td { padding: 3px 7px; }
+
+#dropitList .di-sortable td.di-activeColumn { background-color: #f7f7f7;  }
+#dropitList .di-sortable td.di-activeColumn:hover, #dropitList .di-sortable tr:hover td.di-activeColumn {  }
+
+#dropitList .di-sortable span.di-tableSortArrow { color: #808080; font-size: 8px; top: 0px; right: 4px; }
+
+#dropitList .di-sortable th:hover, #dropitList .di-sortable th.di-active {  }
+
+#dropitList form.di-filter {
+	position: static;
+	margin: 0;
+	border: 1px solid #808080;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+	width: 100%;
+}
+
+#dropitList form.di-filter input.di-searchField { border: 1px solid #404040; border-bottom-color: #D4D0C8; border-right-color: #D4D0C8; color: #000; font-size: 12px; width: 99%; height: 18px; line-height: 18px; padding: 0; text-indent: 5px; }
+#dropitList form.di-filter input.di-searchField:focus {  }
+
+#dropitList form.di-filter input.di-clearFilterButton { top: 41px; }
+#dropitList form.di-filter input.di-clearFilterButton:hover { }
+
+#dropitList #di-footer {
+	border: 1px solid #808080;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+}
+
+#dropitList #di-footer p {
+	height: 18px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-size: 11px;
+	text-indent: 3px;
+}
+
+#dropitList #di-footer p span {
+	font-style: normal;
+}
+
+#dropitList .di-noResults {
+	color: #000;
+	text-indent: 5px;
+}
+
+#dropitList .di-noResults a {
+	color: #00f;
+}

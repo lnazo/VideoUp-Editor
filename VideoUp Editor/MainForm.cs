@@ -110,6 +110,7 @@ namespace VideoUp
                 boxMetadataTitle.Text = _autoTitle = name;
             if (textBoxOut.Text == _autoOutput || textBoxOut.Text == "")
                 textBoxOut.Text = _autoOutput = Path.Combine(fullPath, name + ".avi");
+            textBox2.Text = textBoxOut.Text.Substring(textBoxOut.Text.LastIndexOf(@"\") + 1);
         }
 
         private void HandleDragEnter(object sender, DragEventArgs e)
@@ -414,6 +415,7 @@ namespace VideoUp
             string metadataDesc = "";
             if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
                 metadataDesc = string.Format("-metadata comment=\"{0}\"", boxMetadataDesc.Text);
+            textBox4.Text = boxMetadataDesc.Text.Substring(boxMetadataDesc.Text.LastIndexOf(@"\") + 1);
 
             string metadataCopy = "-metadata copyright=\"© DCCT\"";
 
@@ -544,6 +546,12 @@ namespace VideoUp
         {
             subtitleFile = path;
             textBox1.Text = path.Substring(path.LastIndexOf(@"\") + 1);
+            textBox3.Text = path.Substring(path.LastIndexOf(@"\") + 1);
+        }
+
+        private void uploadButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

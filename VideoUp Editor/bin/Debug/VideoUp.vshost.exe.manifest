@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XmWaTTd3heutun88XrGnuNjTEAM=</dsig:DigestValue>
+        <dsig:DigestValue>OhQcZg5mWA8w+iqTODtpJJuRv8U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>njTwWr0V+VDBbZcGwkG7oIkOdSg=</dsig:DigestValue>
+        <dsig:DigestValue>UjJLUOtCJjP0Yu5U9W9r0XpOSsU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="304528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="305552">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QWXKwjG/XMkDoYiqK0UEjXIoR1s=</dsig:DigestValue>
+        <dsig:DigestValue>gOHPVbJljsXPV7b0fLJbB7vF3rQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

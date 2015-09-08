@@ -93,7 +93,7 @@ namespace VideoUp
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.uploadButton = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -114,6 +114,8 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.descriptionTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -931,8 +933,10 @@ namespace VideoUp
             // 
             // uploadSection
             // 
+            this.uploadSection.Controls.Add(this.descriptionTitle);
+            this.uploadSection.Controls.Add(this.textBox4);
             this.uploadSection.Controls.Add(this.pictureBox1);
-            this.uploadSection.Controls.Add(this.button3);
+            this.uploadSection.Controls.Add(this.uploadButton);
             this.uploadSection.Controls.Add(this.textBox3);
             this.uploadSection.Controls.Add(this.textBox2);
             this.uploadSection.Controls.Add(this.label34);
@@ -958,14 +962,15 @@ namespace VideoUp
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // uploadButton
             // 
-            this.button3.Location = new System.Drawing.Point(231, 178);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Upload";
-            this.button3.UseVisualStyleBackColor = true;
+            this.uploadButton.Location = new System.Drawing.Point(167, 256);
+            this.uploadButton.Name = "uploadButton";
+            this.uploadButton.Size = new System.Drawing.Size(75, 23);
+            this.uploadButton.TabIndex = 7;
+            this.uploadButton.Text = "Upload";
+            this.uploadButton.UseVisualStyleBackColor = true;
+            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // textBox3
             // 
@@ -1180,6 +1185,25 @@ namespace VideoUp
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Location = new System.Drawing.Point(168, 159);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(191, 79);
+            this.textBox4.TabIndex = 11;
+            // 
+            // descriptionTitle
+            // 
+            this.descriptionTitle.AutoSize = true;
+            this.descriptionTitle.Location = new System.Drawing.Point(95, 162);
+            this.descriptionTitle.Name = "descriptionTitle";
+            this.descriptionTitle.Size = new System.Drawing.Size(63, 13);
+            this.descriptionTitle.TabIndex = 12;
+            this.descriptionTitle.Text = "Description:";
+            // 
             // MainForm
             // 
             this.AcceptButton = this.buttonGo;
@@ -1294,7 +1318,7 @@ namespace VideoUp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.TabPage uploadSection;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button uploadButton;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label34;
@@ -1321,6 +1345,8 @@ namespace VideoUp
         private System.Windows.Forms.TextBox boxMetadataDesc;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage helpSection;
+        private System.Windows.Forms.Label descriptionTitle;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

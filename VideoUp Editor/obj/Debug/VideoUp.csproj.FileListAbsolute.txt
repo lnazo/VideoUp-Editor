@@ -111,7 +111,6 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramew
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\ffmpeg.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\gpl-3.0.txt
-C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.config
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.manifest
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.application
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe
@@ -130,3 +129,6 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe.mani
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\client_secrets.json
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.config

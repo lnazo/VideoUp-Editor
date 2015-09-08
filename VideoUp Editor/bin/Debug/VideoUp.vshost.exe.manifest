@@ -50,7 +50,79 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>OhQcZg5mWA8w+iqTODtpJJuRv8U=</dsig:DigestValue>
+        <dsig:DigestValue>vi/Acv53+lW3640y5fDQJPeWhCo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.dll" size="61952">
+      <assemblyIdentity name="Google.Apis" version="1.9.3.19379" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>glyKL3gWI+rYx+N9Gx6EgFLbiSo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Auth.dll" size="52736">
+      <assemblyIdentity name="Google.Apis.Auth" version="1.9.2.27817" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>L1h7POmEcp8c3uHhx2cKapvz2eM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Auth.PlatformServices.dll" size="22016">
+      <assemblyIdentity name="Google.Apis.Auth.PlatformServices" version="1.9.2.27820" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SF46MAJpUPhvg1Zfsn9zvDvtDuU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Core.dll" size="47104">
+      <assemblyIdentity name="Google.Apis.Core" version="1.9.3.19379" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>tdM/yS6wE0gwH6I3eL6nFZCSoIM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.PlatformServices.dll" size="7168">
+      <assemblyIdentity name="Google.Apis.PlatformServices" version="1.9.3.19381" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>PrXxLWk/HTTrIvOHl73yPZAbqbk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.YouTube.v3.dll" size="250368">
+      <assemblyIdentity name="Google.Apis.YouTube.v3" version="1.9.2.145" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>w8U2RutS60+QpKP6kl8ZiCJgnns=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +134,175 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UjJLUOtCJjP0Yu5U9W9r0XpOSsU=</dsig:DigestValue>
+        <dsig:DigestValue>6Jgb3kqvT0t+AIusnMmedjk8MSo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="305552">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="log4net.dll" size="299520">
+      <assemblyIdentity name="log4net" version="1.2.13.0" publicKeyToken="669E0DDF0BB1AA2A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>UFvaM/FpCv3of072bTx30nt5tOs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Threading.Tasks.dll" size="37104">
+      <assemblyIdentity name="Microsoft.Threading.Tasks" version="1.0.12.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>JfgGlZCxRyTyjmoEuKQuTvSoVi0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Threading.Tasks.Extensions.dll" size="31520">
+      <assemblyIdentity name="Microsoft.Threading.Tasks.Extensions" version="1.0.12.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>PIR6laZUeqSZGXidegy27XYSKEk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Threading.Tasks.Extensions.Desktop.dll" size="47424">
+      <assemblyIdentity name="Microsoft.Threading.Tasks.Extensions.Desktop" version="1.0.168.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>S5awqkj2rAUKdkx9ZfQSmpu4zyE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="510976">
+      <assemblyIdentity name="Newtonsoft.Json" version="7.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dGNDoB1V+SRt/fRKbi2q8jcK3mM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.IO.dll" size="21144">
+      <assemblyIdentity name="System.IO" version="2.6.10.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>BEMpxsM1IkugWk45il/LIE8TrDY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Net.Http.dll" size="191152">
+      <assemblyIdentity name="System.Net.Http" version="2.2.29.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1+BTrFH1Yrkv1AMq12mt6nJVIww=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Net.Http.Extensions.dll" size="22232">
+      <assemblyIdentity name="System.Net.Http.Extensions" version="2.2.29.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>zqjaFHjy3uQe0uzSBZtz0cFhc04=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Net.Http.Primitives.dll" size="21712">
+      <assemblyIdentity name="System.Net.Http.Primitives" version="2.2.29.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>+ZKO+LePfPLT6z7GjSjzbIn/89o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Net.Http.WebRequest.dll" size="27352">
+      <assemblyIdentity name="System.Net.Http.WebRequest" version="2.2.29.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>oDLBRW3BmRiTEO9N9TO87rbEGpI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Runtime.dll" size="22176">
+      <assemblyIdentity name="System.Runtime" version="2.6.10.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Gnr83X8Riz748dl2H6cfru4W/Sw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Threading.Tasks.dll" size="35016">
+      <assemblyIdentity name="System.Threading.Tasks" version="2.6.10.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1anblCpQyIIbrNf2AwICxX7EcIs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="311296">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gOHPVbJljsXPV7b0fLJbB7vF3rQ=</dsig:DigestValue>
+        <dsig:DigestValue>wwmDX8nXA8W5WauBcLjVWHLEdxM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Zlib.Portable.dll" size="81920">
+      <assemblyIdentity name="Zlib.Portable" version="1.11.0.0" publicKeyToken="431CBA815F6A8B5B" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>w6EhZsCdFzsyjHTWJjSVy1TsD70=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -771,13 +999,13 @@
       <dsig:DigestValue>D06SgjnNSkBgsrvq+8jdoFx5RuY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\css\normalize.css" size="6875">
+  <file name="Dropit\Lib\gallery\css\normalize.css" size="7250">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Zyvu7JnWI/u+vKut6jRRuDDL2uA=</dsig:DigestValue>
+      <dsig:DigestValue>WpA8LKJnWsbSmxF9IK15D7ep5oc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Dropit\Lib\gallery\css\print.css" size="37">
@@ -933,112 +1161,112 @@
       <dsig:DigestValue>44WxOVFsaBPc1kuPxDHDZM6v5fM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-buttons.css" size="2447">
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-buttons.css" size="2543">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Gp2OXCKzcfzGnU27uCPZw58EwMg=</dsig:DigestValue>
+      <dsig:DigestValue>Y5TEgJIIV4iowO9yZwsGUgBiMaE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-buttons.js" size="3041">
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-buttons.js" size="3163">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>keQXQcLpP3Msgqqs7Ez8bj8+yHY=</dsig:DigestValue>
+      <dsig:DigestValue>7pSLRImu3rVIp3yeRdjHxXMv1i0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-media.js" size="5305">
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-media.js" size="5503">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>O99p7SRp5PtX9alfFzAO74kf+Q0=</dsig:DigestValue>
+      <dsig:DigestValue>UROaTHlXPTcqNH7wGkkyIqHq8Qo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-thumbs.css" size="735">
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-thumbs.css" size="789">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>SsMpwWpSd1kvwSo3zKPXLKTsKS8=</dsig:DigestValue>
+      <dsig:DigestValue>uItYn18aobPYfMfu80woH/dJsa4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-thumbs.js" size="3836">
+  <file name="Dropit\Lib\gallery\js\fancybox\helpers\jquery.fancybox-thumbs.js" size="3997">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>U+GU9KcuZJwE+1ht1XdiuMAigAs=</dsig:DigestValue>
+      <dsig:DigestValue>0isWKcsjphgb67cNDPZT/+S4Ncg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.css" size="4895">
+  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.css" size="5168">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>XxY0RGF7bPJnNC8GrBZqI3u2Lfk=</dsig:DigestValue>
+      <dsig:DigestValue>gvM60IQqqcFU0Cng2tokl9TrHVc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.js" size="48706">
+  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.js" size="50725">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>HPPUe1zLfLbpAZxk8qiNA6ZIU+Q=</dsig:DigestValue>
+      <dsig:DigestValue>1xYCy8ozuezberKRt/hqSVMPNgE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.pack.js" size="23135">
+  <file name="Dropit\Lib\gallery\js\fancybox\jquery.fancybox.pack.js" size="23180">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>UzYHZLQpwhL0JDmThEF8zCM7s74=</dsig:DigestValue>
+      <dsig:DigestValue>rmMYrrYq1M56fppM2s2T/7AE8Ps=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\html5.js" size="2444">
+  <file name="Dropit\Lib\gallery\js\html5.js" size="2452">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>4UOeN/VVeDsqK0YWLmunxKUVw6A=</dsig:DigestValue>
+      <dsig:DigestValue>hUKXWoHZlmyG4XCmJcBULDGwRSE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\jquery.mousewheel-3.0.6.pack.js" size="1384">
+  <file name="Dropit\Lib\gallery\js\jquery.mousewheel-3.0.6.pack.js" size="1396">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>HhtE63z63mgMUth0iEZCXs2Am/0=</dsig:DigestValue>
+      <dsig:DigestValue>XW8iTjCA/UBm+O9cY9P0Z+nSnmY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\jquery-1.10.1.min.js" size="93064">
+  <file name="Dropit\Lib\gallery\js\jquery-1.10.1.min.js" size="93070">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Fht47FLyhleoNeSlQj8DeC/TWAY=</dsig:DigestValue>
+      <dsig:DigestValue>+4YeZw3nH1SssLljYb/NshQU30U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\gallery\js\main.js" size="1829">
+  <file name="Dropit\Lib\gallery\js\main.js" size="1884">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>GDb0WpZNb6ss7wSHzUOoywEUKPw=</dsig:DigestValue>
+      <dsig:DigestValue>VbDoum7bjxaQuuMFMHG4S+lB6PI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Dropit\Lib\gallery\layouts\layout-blocks.css" size="134">
@@ -1437,22 +1665,22 @@
       <dsig:DigestValue>C00m3XO9u3uT23L5VFdaYWyb3Ps=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\list\lighterbox2.css" size="1398">
+  <file name="Dropit\Lib\list\lighterbox2.css" size="1495">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>M/EaTjUKh2ZccLe7qBjhSmxmxwA=</dsig:DigestValue>
+      <dsig:DigestValue>84zBD9VLz323CySIJ5lm3DIRZhk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Dropit\Lib\list\lighterbox2.js" size="4830">
+  <file name="Dropit\Lib\list\lighterbox2.js" size="4969">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>j5RpPIGZVDYNBiehE0Z7Io2YH9s=</dsig:DigestValue>
+      <dsig:DigestValue>aeAmboTcVrX+rwCeNvr48p7JzO4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Dropit\Lib\list\sortable.js" size="6561">
@@ -1869,13 +2097,13 @@
       <dsig:DigestValue>cbITe8dNI7bftHqlspMqHCSQGss=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VideoUp.exe.config" size="182">
+  <file name="VideoUp.exe.config" size="2050">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>UCK20fjpV4lHlicG25Dj6loPbuE=</dsig:DigestValue>
+      <dsig:DigestValue>Afkf9Lv/4xNgSJ0lhMAkMosX5Z0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="youtube logo.png" size="8813">

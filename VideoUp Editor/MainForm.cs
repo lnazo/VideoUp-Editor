@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Apis.YouTube.Samples;
+using System;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -10,6 +11,8 @@ namespace VideoUp
 {
     public partial class MainForm : Form
     {
+        private UploadVideo uploadV;
+
         private string subtitleFile;
         private string _template;
         private string _templateArguments;
@@ -80,7 +83,7 @@ namespace VideoUp
 
             //int threads = Environment.ProcessorCount;  //Set thread slider to default of 4
             //trackThreads.Value = Math.Min(trackThreads.Maximum, Math.Max(trackThreads.Minimum, threads));
-
+            uploadV = new UploadVideo();
             trackThreads_Scroll(sender, e); //Update label
         }
 
@@ -551,7 +554,7 @@ namespace VideoUp
 
         private void uploadButton_Click(object sender, EventArgs e)
         {
-
+            uploadV.startUpload();
         }
     }
 }

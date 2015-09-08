@@ -27,43 +27,19 @@ using Google.Apis.Upload;
 using Google.Apis.Util.Store;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
+using VideoUp;
 
 namespace Google.Apis.YouTube.Samples
 {
-  /// <summary>
-  /// YouTube Data API v3 sample: upload a video.
-  /// Relies on the Google APIs Client Library for .NET, v1.7.0 or higher.
-  /// See https://code.google.com/p/google-api-dotnet-client/wiki/GettingStarted
-  /// </summary>
   internal class UploadVideo
   {
-    /*[STAThread]
-    static void Main(string[] args)
-    {
-      Console.WriteLine("YouTube Data API: Upload Video");
-      Console.WriteLine("==============================");
-
-      try
-      {
-        new UploadVideo().Run().Wait();
-      }
-      catch (AggregateException ex)
-      {
-        foreach (var e in ex.InnerExceptions)
-        {
-          Console.WriteLine("Error: " + e.Message);
-        }
-      }
-
-      Console.WriteLine("Press any key to continue...");
-      Console.ReadKey();
-    }*/
-
+      public string uploadStatus = "";
+      public string responseStatus = "";
       [STAThread]
       public void startUpload()
       {
-          Console.WriteLine("YouTube Data API: Upload Video");
-          Console.WriteLine("==============================");
+          //Console.WriteLine("YouTube Data API: Upload Video");
+          //Console.WriteLine("==============================");
 
           try
           {
@@ -89,8 +65,6 @@ namespace Google.Apis.YouTube.Samples
       {
         credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
             GoogleClientSecrets.Load(stream).Secrets,
-            // This OAuth 2.0 access scope allows an application to upload files to the
-            // authenticated user's YouTube channel, but doesn't allow other types of access.
             new[] { YouTubeService.Scope.YoutubeUpload },
             "user",
             CancellationToken.None
@@ -111,8 +85,8 @@ namespace Google.Apis.YouTube.Samples
       video.Snippet.Tags = new string[] { "tag1", "tag2" };
       video.Snippet.CategoryId = "22"; // See https://developers.google.com/youtube/v3/docs/videoCategories/list
       video.Status = new VideoStatus();
-      video.Status.PrivacyStatus = "private"; // or "private" or "public"
-      var filePath = @"C:\Users\nzxlub001\Downloads\DCCT\Peerpressure.avi"; // Replace with path to actual movie file.
+      video.Status.PrivacyStatus = "private";
+      var filePath = @"C:\Users\nzxlub001\Downloads\DCCT\Peerpressure.avi";
 
       using (var fileStream = new FileStream(filePath, FileMode.Open))
       {
@@ -130,10 +104,12 @@ namespace Google.Apis.YouTube.Samples
       {
         case UploadStatus.Uploading:
           Console.WriteLine("{0} bytes sent.", progress.BytesSent);
+          uploadStatus = string.Format("{0} bytes sent.", progress.BytesSent);
           break;
 
         case UploadStatus.Failed:
           Console.WriteLine("An error prevented the upload from completing.\n{0}", progress.Exception);
+          uploadStatus = string.Format("An error prevented the upload from completing.\n{0}", progress.Exception);
           break;
       }
     }
@@ -141,6 +117,7 @@ namespace Google.Apis.YouTube.Samples
     void videosInsertRequest_ResponseReceived(Video video)
     {
       Console.WriteLine("Video id '{0}' was successfully uploaded.", video.Id);
+      responseStatus = string.Format("Video id '{0}' was successfully uploaded.", video.Id);
     }
   }
 }

@@ -555,6 +555,8 @@ namespace VideoUp
         private void uploadButton_Click(object sender, EventArgs e)
         {
             uploadV.startUpload();
+            statusBox.AppendText(uploadV.uploadStatus);
+            statusBox.AppendText(uploadV.responseStatus);
         }
     }
 }

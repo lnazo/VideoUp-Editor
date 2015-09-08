@@ -196,6 +196,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="client_secrets.json" />
     <None Include="Dropit\Backup\DropIt_AutoBackup.zip" />
     <None Include="Dropit\Guide.pdf" />

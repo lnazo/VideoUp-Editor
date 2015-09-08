@@ -92,6 +92,8 @@ namespace VideoUp
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
+            this.descriptionTitle = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uploadButton = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -114,8 +116,7 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.descriptionTitle = new System.Windows.Forms.Label();
+            this.statusBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -933,6 +934,7 @@ namespace VideoUp
             // 
             // uploadSection
             // 
+            this.uploadSection.Controls.Add(this.statusBox);
             this.uploadSection.Controls.Add(this.descriptionTitle);
             this.uploadSection.Controls.Add(this.textBox4);
             this.uploadSection.Controls.Add(this.pictureBox1);
@@ -952,19 +954,38 @@ namespace VideoUp
             this.uploadSection.Text = "Upload";
             this.uploadSection.UseVisualStyleBackColor = true;
             // 
+            // descriptionTitle
+            // 
+            this.descriptionTitle.AutoSize = true;
+            this.descriptionTitle.Location = new System.Drawing.Point(32, 118);
+            this.descriptionTitle.Name = "descriptionTitle";
+            this.descriptionTitle.Size = new System.Drawing.Size(63, 13);
+            this.descriptionTitle.TabIndex = 12;
+            this.descriptionTitle.Text = "Description:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Location = new System.Drawing.Point(104, 118);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(191, 79);
+            this.textBox4.TabIndex = 11;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(566, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(103, 263);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 215);
+            this.pictureBox1.Size = new System.Drawing.Size(181, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // uploadButton
             // 
-            this.uploadButton.Location = new System.Drawing.Point(167, 256);
+            this.uploadButton.Location = new System.Drawing.Point(103, 215);
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(75, 23);
             this.uploadButton.TabIndex = 7;
@@ -974,7 +995,7 @@ namespace VideoUp
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(168, 120);
+            this.textBox3.Location = new System.Drawing.Point(104, 86);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(191, 20);
             this.textBox3.TabIndex = 6;
@@ -982,7 +1003,7 @@ namespace VideoUp
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 91);
+            this.textBox2.Location = new System.Drawing.Point(103, 60);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 20);
             this.textBox2.TabIndex = 5;
@@ -991,7 +1012,7 @@ namespace VideoUp
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(202, 45);
+            this.label34.Location = new System.Drawing.Point(32, 26);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(126, 13);
             this.label34.TabIndex = 4;
@@ -1001,7 +1022,7 @@ namespace VideoUp
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(111, 128);
+            this.label33.Location = new System.Drawing.Point(53, 88);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(47, 13);
             this.label33.TabIndex = 3;
@@ -1010,7 +1031,7 @@ namespace VideoUp
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(90, 97);
+            this.label32.Location = new System.Drawing.Point(32, 63);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(68, 13);
             this.label32.TabIndex = 2;
@@ -1019,7 +1040,7 @@ namespace VideoUp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(369, 118);
+            this.button2.Location = new System.Drawing.Point(314, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -1029,7 +1050,7 @@ namespace VideoUp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(369, 88);
+            this.button1.Location = new System.Drawing.Point(314, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -1185,24 +1206,13 @@ namespace VideoUp
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox4
+            // statusBox
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(168, 159);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 79);
-            this.textBox4.TabIndex = 11;
-            // 
-            // descriptionTitle
-            // 
-            this.descriptionTitle.AutoSize = true;
-            this.descriptionTitle.Location = new System.Drawing.Point(95, 162);
-            this.descriptionTitle.Name = "descriptionTitle";
-            this.descriptionTitle.Size = new System.Drawing.Size(63, 13);
-            this.descriptionTitle.TabIndex = 12;
-            this.descriptionTitle.Text = "Description:";
+            this.statusBox.Location = new System.Drawing.Point(455, 56);
+            this.statusBox.Multiline = true;
+            this.statusBox.Name = "statusBox";
+            this.statusBox.Size = new System.Drawing.Size(430, 207);
+            this.statusBox.TabIndex = 13;
             // 
             // MainForm
             // 
@@ -1347,6 +1357,7 @@ namespace VideoUp
         private System.Windows.Forms.TabPage helpSection;
         private System.Windows.Forms.Label descriptionTitle;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox statusBox;
     }
 }
 

@@ -9,7 +9,6 @@ namespace VideoUp
     public partial class ConverterForm : Form
     {
         private string[] _arguments;
-        //private Process _process;
         private FFmpeg _ffmpegProcess;
 
         private Timer _timer;

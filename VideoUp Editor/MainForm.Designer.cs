@@ -92,6 +92,7 @@ namespace VideoUp
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
+            this.statusBox = new System.Windows.Forms.TextBox();
             this.descriptionTitle = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -116,7 +117,6 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.statusBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -954,6 +954,15 @@ namespace VideoUp
             this.uploadSection.Text = "Upload";
             this.uploadSection.UseVisualStyleBackColor = true;
             // 
+            // statusBox
+            // 
+            this.statusBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.statusBox.Location = new System.Drawing.Point(455, 56);
+            this.statusBox.Multiline = true;
+            this.statusBox.Name = "statusBox";
+            this.statusBox.Size = new System.Drawing.Size(430, 207);
+            this.statusBox.TabIndex = 13;
+            // 
             // descriptionTitle
             // 
             this.descriptionTitle.AutoSize = true;
@@ -1205,14 +1214,6 @@ namespace VideoUp
             this.label7.Size = new System.Drawing.Size(73, 57);
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // statusBox
-            // 
-            this.statusBox.Location = new System.Drawing.Point(455, 56);
-            this.statusBox.Multiline = true;
-            this.statusBox.Name = "statusBox";
-            this.statusBox.Size = new System.Drawing.Size(430, 207);
-            this.statusBox.TabIndex = 13;
             // 
             // MainForm
             // 

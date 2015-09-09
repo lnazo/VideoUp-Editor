@@ -197,7 +197,7 @@
     </Compile>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
-    <None Include="client_secrets.json" />
+    <None Include="client_secret.json" />
     <None Include="Dropit\Backup\DropIt_AutoBackup.zip" />
     <None Include="Dropit\Guide.pdf" />
     <None Include="Dropit\Languages\BrazilianPortuguese.lng" />

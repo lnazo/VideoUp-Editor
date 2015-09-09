@@ -28,13 +28,12 @@ using Google.Apis.Util.Store;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
 using VideoUp;
+using System.Windows.Forms;
 
 namespace Google.Apis.YouTube.Samples
 {
   internal class UploadVideo
   {
-      public string uploadStatus = "";
-      public string responseStatus = "";
       [STAThread]
       public void startUpload()
       {
@@ -53,15 +52,17 @@ namespace Google.Apis.YouTube.Samples
               }
           }
 
-          Console.WriteLine("Press any key to continue...");
+          //Console.WriteLine("Press any key to continue...");
           //Console.ReadKey();
-          Console.Read();
+          //Console.Read();
       }
 
     private async Task Run()
     {
       UserCredential credential;
-      using (var stream = new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read))
+      
+      // original
+      using (var stream = new FileStream("client_secret.json", FileMode.Open, FileAccess.Read))
       {
         credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
             GoogleClientSecrets.Load(stream).Secrets,
@@ -70,7 +71,6 @@ namespace Google.Apis.YouTube.Samples
             CancellationToken.None
         );
       }
-
 
       var youtubeService = new YouTubeService(new BaseClientService.Initializer()
       {
@@ -85,7 +85,7 @@ namespace Google.Apis.YouTube.Samples
       video.Snippet.Tags = new string[] { "tag1", "tag2" };
       video.Snippet.CategoryId = "22"; // See https://developers.google.com/youtube/v3/docs/videoCategories/list
       video.Status = new VideoStatus();
-      video.Status.PrivacyStatus = "private";
+      video.Status.PrivacyStatus = "unlisted";
       var filePath = @"C:\Users\nzxlub001\Downloads\DCCT\Peerpressure.avi";
 
       using (var fileStream = new FileStream(filePath, FileMode.Open))
@@ -103,21 +103,21 @@ namespace Google.Apis.YouTube.Samples
       switch (progress.Status)
       {
         case UploadStatus.Uploading:
-          Console.WriteLine("{0} bytes sent.", progress.BytesSent);
-          uploadStatus = string.Format("{0} bytes sent.", progress.BytesSent);
+          //Console.WriteLine("{0} bytes sent.", progress.BytesSent);
+          MessageBox.Show(string.Format("{0} bytes sent.", progress.BytesSent));
           break;
 
         case UploadStatus.Failed:
-          Console.WriteLine("An error prevented the upload from completing.\n{0}", progress.Exception);
-          uploadStatus = string.Format("An error prevented the upload from completing.\n{0}", progress.Exception);
+          //Console.WriteLine("An error prevented the upload from completing.\n{0}", progress.Exception);
+          MessageBox.Show(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
           break;
       }
     }
 
     void videosInsertRequest_ResponseReceived(Video video)
     {
-      Console.WriteLine("Video id '{0}' was successfully uploaded.", video.Id);
-      responseStatus = string.Format("Video id '{0}' was successfully uploaded.", video.Id);
+      //Console.WriteLine("Video id '{0}' was successfully uploaded.", video.Id);
+      MessageBox.Show("The Video was successfully uploaded");
     }
   }
 }

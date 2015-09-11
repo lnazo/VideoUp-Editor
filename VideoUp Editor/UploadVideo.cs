@@ -48,7 +48,8 @@ namespace Google.Apis.YouTube.Samples
       {
           try
           {
-              new UploadVideo().Run(videoTitle, videoDesc, videoPath).Wait();
+              //new UploadVideo().Run(videoTitle, videoDesc, videoPath).Wait(); // leads to deadlock
+              new UploadVideo().Run(videoTitle, videoDesc, videoPath).ConfigureAwait(false);
           }
           catch (AggregateException ex)
           {

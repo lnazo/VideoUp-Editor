@@ -554,6 +554,12 @@ namespace VideoUp
 
         private void uploadButton_Click(object sender, EventArgs e)
         {
+            string title, desc, path;
+            title = textBox2.Text.Substring(0, textBox2.Text.LastIndexOf(@"."));
+            desc = textBox4.Text;
+            path = textBoxOut.Text;
+
+            uploadV.passValues(title, desc, path);
             uploadV.startUpload();
         }
     }

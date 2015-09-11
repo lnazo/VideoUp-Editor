@@ -34,15 +34,21 @@ namespace Google.Apis.YouTube.Samples
 {
   internal class UploadVideo
   {
+      private string videoTitle, videoDesc, videoPath;
+
+      public void passValues(string title, string desc, string path)
+      {
+          videoTitle = title;
+          videoDesc = desc;
+          videoPath = path;
+      }
+
       [STAThread]
       public void startUpload()
       {
-          //Console.WriteLine("YouTube Data API: Upload Video");
-          //Console.WriteLine("==============================");
-
           try
           {
-              new UploadVideo().Run().Wait();
+              new UploadVideo().Run(videoTitle, videoDesc, videoPath).Wait();
           }
           catch (AggregateException ex)
           {
@@ -51,17 +57,12 @@ namespace Google.Apis.YouTube.Samples
                   Console.WriteLine("Error: " + e.Message);
               }
           }
-
-          //Console.WriteLine("Press any key to continue...");
-          //Console.ReadKey();
-          //Console.Read();
       }
 
-    private async Task Run()
+    private async Task Run(string title, string desc, string path)
     {
       UserCredential credential;
       
-      // original
       using (var stream = new FileStream("client_secret.json", FileMode.Open, FileAccess.Read))
       {
         credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
@@ -80,13 +81,13 @@ namespace Google.Apis.YouTube.Samples
 
       var video = new Video();
       video.Snippet = new VideoSnippet();
-      video.Snippet.Title = "Peer Pressure";
-      video.Snippet.Description = "Social pressure in the community.";
-      video.Snippet.Tags = new string[] { "tag1", "tag2" };
+      video.Snippet.Title = title;
+      video.Snippet.Description = desc;
+      video.Snippet.Tags = new string[] {"deaf community of cape town", "dcct", "deaf community", "heathfield"};
       video.Snippet.CategoryId = "22"; // See https://developers.google.com/youtube/v3/docs/videoCategories/list
       video.Status = new VideoStatus();
       video.Status.PrivacyStatus = "unlisted";
-      var filePath = @"C:\Users\nzxlub001\Downloads\DCCT\Peerpressure.avi";
+      var filePath = path;
 
       using (var fileStream = new FileStream(filePath, FileMode.Open))
       {

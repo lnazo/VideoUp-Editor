@@ -49,7 +49,6 @@ namespace VideoUp
             this.boxAudio = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,8 +58,6 @@ namespace VideoUp
             this.boxMetadataAuthor = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.boxMetadataYear = new System.Windows.Forms.TextBox();
-            this.boxMetadataDesc = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label24 = new System.Windows.Forms.Label();
@@ -70,7 +67,6 @@ namespace VideoUp
             this.boxCropFrom = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -84,15 +80,9 @@ namespace VideoUp
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.label31 = new System.Windows.Forms.Label();
             this.radioSubNone = new System.Windows.Forms.RadioButton();
             this.radioSubExternal = new System.Windows.Forms.RadioButton();
-            this.label27 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonSubBrowse = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
-            this.statusBox = new System.Windows.Forms.TextBox();
             this.descriptionTitle = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -117,6 +107,20 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonSubBrowse = new System.Windows.Forms.Button();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.boxMetadataDesc = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.startTime = new System.Windows.Forms.Button();
+            this.endTime = new System.Windows.Forms.Button();
+            this.startTimeBox = new System.Windows.Forms.TextBox();
+            this.endTimeBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -138,10 +142,10 @@ namespace VideoUp
             this.tableLayoutPanel15.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
             this.uploadSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
+            this.tableLayoutPanel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -156,7 +160,7 @@ namespace VideoUp
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(949, 511);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(949, 551);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
@@ -276,16 +280,21 @@ namespace VideoUp
             this.Help.Location = new System.Drawing.Point(3, 87);
             this.Help.Name = "Help";
             this.Help.SelectedIndex = 0;
-            this.Help.Size = new System.Drawing.Size(943, 421);
+            this.Help.Size = new System.Drawing.Size(943, 461);
             this.Help.TabIndex = 6;
             // 
             // videoSection
             // 
             this.videoSection.AllowDrop = true;
+            this.videoSection.Controls.Add(this.endTimeBox);
+            this.videoSection.Controls.Add(this.startTimeBox);
+            this.videoSection.Controls.Add(this.endTime);
+            this.videoSection.Controls.Add(this.startTime);
+            this.videoSection.Controls.Add(this.label23);
             this.videoSection.Controls.Add(this.axWindowsMediaPlayer1);
             this.videoSection.Location = new System.Drawing.Point(4, 22);
             this.videoSection.Name = "videoSection";
-            this.videoSection.Size = new System.Drawing.Size(935, 395);
+            this.videoSection.Size = new System.Drawing.Size(935, 435);
             this.videoSection.TabIndex = 3;
             this.videoSection.Text = "Video";
             this.videoSection.UseVisualStyleBackColor = true;
@@ -294,10 +303,10 @@ namespace VideoUp
             // 
             this.axWindowsMediaPlayer1.AllowDrop = true;
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(170, 24);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(71, 19);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(593, 341);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(547, 305);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             this.axWindowsMediaPlayer1.MediaError += new AxWMPLib._WMPOCXEvents_MediaErrorEventHandler(this.axWindowsMediaPlayer1_MediaError);
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
@@ -309,7 +318,7 @@ namespace VideoUp
             this.basicSection.Location = new System.Drawing.Point(4, 22);
             this.basicSection.Name = "basicSection";
             this.basicSection.Padding = new System.Windows.Forms.Padding(3);
-            this.basicSection.Size = new System.Drawing.Size(935, 395);
+            this.basicSection.Size = new System.Drawing.Size(935, 435);
             this.basicSection.TabIndex = 0;
             this.basicSection.Text = "Basic";
             // 
@@ -324,20 +333,20 @@ namespace VideoUp
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.83086F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.16914F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.41489F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.58511F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(929, 389);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(929, 429);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel13);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 339);
+            this.groupBox2.Location = new System.Drawing.Point(3, 379);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(923, 47);
             this.groupBox2.TabIndex = 7;
@@ -381,7 +390,7 @@ namespace VideoUp
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(923, 198);
+            this.groupBox5.Size = new System.Drawing.Size(923, 255);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Metadata";
@@ -409,31 +418,20 @@ namespace VideoUp
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 4;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(917, 179);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(917, 236);
             this.tableLayoutPanel11.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(3, 101);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 78);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Description:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(492, 70);
+            this.label14.Location = new System.Drawing.Point(492, 75);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(422, 31);
+            this.label14.Size = new System.Drawing.Size(422, 42);
             this.label14.TabIndex = 8;
             this.label14.Text = "Add the date of the event.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -442,9 +440,9 @@ namespace VideoUp
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(3, 70);
+            this.label13.Location = new System.Drawing.Point(3, 75);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 31);
+            this.label13.Size = new System.Drawing.Size(70, 42);
             this.label13.TabIndex = 6;
             this.label13.Text = "Year:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -453,9 +451,9 @@ namespace VideoUp
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 37);
+            this.label6.Location = new System.Drawing.Point(3, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 33);
+            this.label6.Size = new System.Drawing.Size(70, 47);
             this.label6.TabIndex = 3;
             this.label6.Text = "Author:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -466,7 +464,7 @@ namespace VideoUp
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Location = new System.Drawing.Point(3, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 37);
+            this.label19.Size = new System.Drawing.Size(70, 28);
             this.label19.TabIndex = 0;
             this.label19.Text = "Title:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -474,7 +472,7 @@ namespace VideoUp
             // boxMetadataTitle
             // 
             this.boxMetadataTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataTitle.Location = new System.Drawing.Point(82, 8);
+            this.boxMetadataTitle.Location = new System.Drawing.Point(82, 4);
             this.boxMetadataTitle.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.boxMetadataTitle.Name = "boxMetadataTitle";
             this.boxMetadataTitle.Size = new System.Drawing.Size(401, 20);
@@ -487,7 +485,7 @@ namespace VideoUp
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label20.Location = new System.Drawing.Point(492, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(422, 37);
+            this.label20.Size = new System.Drawing.Size(422, 28);
             this.label20.TabIndex = 2;
             this.label20.Text = "Add a name for the video. Leave blank for no title.";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -495,7 +493,7 @@ namespace VideoUp
             // boxMetadataAuthor
             // 
             this.boxMetadataAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataAuthor.Location = new System.Drawing.Point(82, 43);
+            this.boxMetadataAuthor.Location = new System.Drawing.Point(82, 41);
             this.boxMetadataAuthor.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.boxMetadataAuthor.Name = "boxMetadataAuthor";
             this.boxMetadataAuthor.Size = new System.Drawing.Size(401, 20);
@@ -505,9 +503,9 @@ namespace VideoUp
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(492, 37);
+            this.label12.Location = new System.Drawing.Point(492, 28);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(422, 33);
+            this.label12.Size = new System.Drawing.Size(422, 47);
             this.label12.TabIndex = 5;
             this.label12.Text = "Add the author of the video.";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -515,39 +513,19 @@ namespace VideoUp
             // boxMetadataYear
             // 
             this.boxMetadataYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataYear.Location = new System.Drawing.Point(82, 75);
+            this.boxMetadataYear.Location = new System.Drawing.Point(82, 86);
             this.boxMetadataYear.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.boxMetadataYear.Name = "boxMetadataYear";
             this.boxMetadataYear.Size = new System.Drawing.Size(401, 20);
             this.boxMetadataYear.TabIndex = 7;
             // 
-            // boxMetadataDesc
-            // 
-            this.boxMetadataDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataDesc.Location = new System.Drawing.Point(82, 106);
-            this.boxMetadataDesc.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.boxMetadataDesc.Multiline = true;
-            this.boxMetadataDesc.Name = "boxMetadataDesc";
-            this.boxMetadataDesc.Size = new System.Drawing.Size(401, 68);
-            this.boxMetadataDesc.TabIndex = 10;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(492, 101);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(422, 78);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Add a description of the event.";
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel5);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 207);
+            this.groupBox4.Location = new System.Drawing.Point(3, 264);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(923, 126);
+            this.groupBox4.Size = new System.Drawing.Size(923, 109);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Video";
@@ -575,16 +553,16 @@ namespace VideoUp
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(917, 107);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(917, 90);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(281, 70);
+            this.label24.Location = new System.Drawing.Point(281, 60);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(633, 37);
+            this.label24.Size = new System.Drawing.Size(633, 30);
             this.label24.TabIndex = 13;
             this.label24.Text = "Crop a region of the video.";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -593,9 +571,9 @@ namespace VideoUp
             // 
             this.label22.AutoSize = true;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(3, 70);
+            this.label22.Location = new System.Drawing.Point(3, 60);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(70, 37);
+            this.label22.Size = new System.Drawing.Size(70, 30);
             this.label22.TabIndex = 12;
             this.label22.Text = "Crop size:";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -610,18 +588,18 @@ namespace VideoUp
             this.tableLayoutPanel9.Controls.Add(this.boxCropFrom, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(79, 35);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(79, 30);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(196, 35);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(196, 30);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
             // boxCropTo
             // 
             this.boxCropTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxCropTo.Location = new System.Drawing.Point(109, 7);
+            this.boxCropTo.Location = new System.Drawing.Point(109, 5);
             this.boxCropTo.Name = "boxCropTo";
             this.boxCropTo.Size = new System.Drawing.Size(84, 20);
             this.boxCropTo.TabIndex = 2;
@@ -630,7 +608,7 @@ namespace VideoUp
             // boxCropFrom
             // 
             this.boxCropFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxCropFrom.Location = new System.Drawing.Point(3, 7);
+            this.boxCropFrom.Location = new System.Drawing.Point(3, 5);
             this.boxCropFrom.Name = "boxCropFrom";
             this.boxCropFrom.Size = new System.Drawing.Size(84, 20);
             this.boxCropFrom.TabIndex = 0;
@@ -643,7 +621,7 @@ namespace VideoUp
             this.label17.Location = new System.Drawing.Point(90, 0);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(16, 35);
+            this.label17.Size = new System.Drawing.Size(16, 30);
             this.label17.TabIndex = 1;
             this.label17.Text = "to";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -652,23 +630,12 @@ namespace VideoUp
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(281, 35);
+            this.label11.Location = new System.Drawing.Point(281, 30);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(633, 35);
+            this.label11.Size = new System.Drawing.Size(633, 30);
             this.label11.TabIndex = 5;
             this.label11.Text = "HH:MM:SS or MM:SS or SS.";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(3, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 35);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Trim video:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
@@ -676,7 +643,7 @@ namespace VideoUp
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(281, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(633, 35);
+            this.label5.Size = new System.Drawing.Size(633, 30);
             this.label5.TabIndex = 2;
             this.label5.Text = "Enter a desired resolution. Leave blank to keep in tact.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -687,7 +654,7 @@ namespace VideoUp
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 35);
+            this.label2.Size = new System.Drawing.Size(70, 30);
             this.label2.TabIndex = 0;
             this.label2.Text = "Resolution:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -708,13 +675,13 @@ namespace VideoUp
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(196, 35);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(196, 30);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // boxResH
             // 
             this.boxResH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxResH.Location = new System.Drawing.Point(109, 7);
+            this.boxResH.Location = new System.Drawing.Point(109, 5);
             this.boxResH.Name = "boxResH";
             this.boxResH.Size = new System.Drawing.Size(84, 20);
             this.boxResH.TabIndex = 2;
@@ -723,7 +690,7 @@ namespace VideoUp
             // boxResW
             // 
             this.boxResW.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxResW.Location = new System.Drawing.Point(3, 7);
+            this.boxResW.Location = new System.Drawing.Point(3, 5);
             this.boxResW.Name = "boxResW";
             this.boxResW.Size = new System.Drawing.Size(84, 20);
             this.boxResW.TabIndex = 0;
@@ -736,7 +703,7 @@ namespace VideoUp
             this.label8.Location = new System.Drawing.Point(90, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 35);
+            this.label8.Size = new System.Drawing.Size(16, 30);
             this.label8.TabIndex = 1;
             this.label8.Text = "x";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -749,12 +716,12 @@ namespace VideoUp
             this.tableLayoutPanel14.Controls.Add(this.buttonOpenCrop, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.labelCrop, 0, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(79, 70);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(79, 60);
             this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(196, 37);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(196, 30);
             this.tableLayoutPanel14.TabIndex = 14;
             // 
             // buttonOpenCrop
@@ -762,7 +729,7 @@ namespace VideoUp
             this.buttonOpenCrop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonOpenCrop.Location = new System.Drawing.Point(143, 3);
             this.buttonOpenCrop.Name = "buttonOpenCrop";
-            this.buttonOpenCrop.Size = new System.Drawing.Size(50, 31);
+            this.buttonOpenCrop.Size = new System.Drawing.Size(50, 24);
             this.buttonOpenCrop.TabIndex = 0;
             this.buttonOpenCrop.Text = "Crop...";
             this.buttonOpenCrop.UseVisualStyleBackColor = true;
@@ -775,7 +742,7 @@ namespace VideoUp
             this.labelCrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCrop.Location = new System.Drawing.Point(3, 0);
             this.labelCrop.Name = "labelCrop";
-            this.labelCrop.Size = new System.Drawing.Size(134, 37);
+            this.labelCrop.Size = new System.Drawing.Size(134, 30);
             this.labelCrop.TabIndex = 1;
             this.labelCrop.Text = "Don\'t crop";
             this.labelCrop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -787,7 +754,7 @@ namespace VideoUp
             this.subtitleSection.Location = new System.Drawing.Point(4, 22);
             this.subtitleSection.Name = "subtitleSection";
             this.subtitleSection.Padding = new System.Windows.Forms.Padding(3);
-            this.subtitleSection.Size = new System.Drawing.Size(935, 395);
+            this.subtitleSection.Size = new System.Drawing.Size(935, 435);
             this.subtitleSection.TabIndex = 2;
             this.subtitleSection.Text = "Subtitles";
             // 
@@ -809,7 +776,7 @@ namespace VideoUp
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(929, 389);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(929, 429);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // groupBox6
@@ -818,7 +785,7 @@ namespace VideoUp
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(3, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(923, 91);
+            this.groupBox6.Size = new System.Drawing.Size(923, 106);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Subtitles";
@@ -839,22 +806,11 @@ namespace VideoUp
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 4;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.2F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(917, 72);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(917, 87);
             this.tableLayoutPanel16.TabIndex = 0;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(315, 45);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(599, 27);
-            this.label31.TabIndex = 9;
-            this.label31.Text = "Select subtitle file for the video. Subtitles should be *.ass or *.srt format.";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // radioSubNone
             // 
@@ -864,7 +820,7 @@ namespace VideoUp
             this.radioSubNone.Location = new System.Drawing.Point(82, 0);
             this.radioSubNone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.radioSubNone.Name = "radioSubNone";
-            this.radioSubNone.Size = new System.Drawing.Size(227, 15);
+            this.radioSubNone.Size = new System.Drawing.Size(227, 19);
             this.radioSubNone.TabIndex = 0;
             this.radioSubNone.TabStop = true;
             this.radioSubNone.Text = "None";
@@ -875,66 +831,17 @@ namespace VideoUp
             // 
             this.radioSubExternal.AutoSize = true;
             this.radioSubExternal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioSubExternal.Location = new System.Drawing.Point(82, 30);
+            this.radioSubExternal.Location = new System.Drawing.Point(82, 40);
             this.radioSubExternal.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.radioSubExternal.Name = "radioSubExternal";
-            this.radioSubExternal.Size = new System.Drawing.Size(227, 15);
+            this.radioSubExternal.Size = new System.Drawing.Size(227, 19);
             this.radioSubExternal.TabIndex = 2;
             this.radioSubExternal.Text = "Use from file";
             this.radioSubExternal.UseVisualStyleBackColor = true;
             this.radioSubExternal.CheckedChanged += new System.EventHandler(this.radioSubExternal_CheckedChanged);
             // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(3, 45);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(73, 27);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Subtitle file:";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 2;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayoutPanel17.Controls.Add(this.buttonSubBrowse, 1, 0);
-            this.tableLayoutPanel17.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(82, 45);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 1;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(227, 27);
-            this.tableLayoutPanel17.TabIndex = 5;
-            // 
-            // buttonSubBrowse
-            // 
-            this.buttonSubBrowse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSubBrowse.Enabled = false;
-            this.buttonSubBrowse.Location = new System.Drawing.Point(171, 3);
-            this.buttonSubBrowse.Name = "buttonSubBrowse";
-            this.buttonSubBrowse.Size = new System.Drawing.Size(53, 21);
-            this.buttonSubBrowse.TabIndex = 0;
-            this.buttonSubBrowse.Text = "Browse";
-            this.buttonSubBrowse.UseVisualStyleBackColor = true;
-            this.buttonSubBrowse.Click += new System.EventHandler(this.buttonSubBrowse_Click_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // uploadSection
             // 
-            this.uploadSection.Controls.Add(this.statusBox);
             this.uploadSection.Controls.Add(this.descriptionTitle);
             this.uploadSection.Controls.Add(this.textBox4);
             this.uploadSection.Controls.Add(this.pictureBox1);
@@ -949,19 +856,10 @@ namespace VideoUp
             this.uploadSection.Location = new System.Drawing.Point(4, 22);
             this.uploadSection.Name = "uploadSection";
             this.uploadSection.Padding = new System.Windows.Forms.Padding(3);
-            this.uploadSection.Size = new System.Drawing.Size(935, 395);
+            this.uploadSection.Size = new System.Drawing.Size(935, 435);
             this.uploadSection.TabIndex = 4;
             this.uploadSection.Text = "Upload";
             this.uploadSection.UseVisualStyleBackColor = true;
-            // 
-            // statusBox
-            // 
-            this.statusBox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.statusBox.Location = new System.Drawing.Point(455, 56);
-            this.statusBox.Multiline = true;
-            this.statusBox.Name = "statusBox";
-            this.statusBox.Size = new System.Drawing.Size(430, 207);
-            this.statusBox.TabIndex = 13;
             // 
             // descriptionTitle
             // 
@@ -979,7 +877,7 @@ namespace VideoUp
             this.textBox4.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 79);
+            this.textBox4.Size = new System.Drawing.Size(142, 79);
             this.textBox4.TabIndex = 11;
             // 
             // pictureBox1
@@ -1072,7 +970,7 @@ namespace VideoUp
             this.helpSection.Location = new System.Drawing.Point(4, 22);
             this.helpSection.Name = "helpSection";
             this.helpSection.Padding = new System.Windows.Forms.Padding(3);
-            this.helpSection.Size = new System.Drawing.Size(935, 395);
+            this.helpSection.Size = new System.Drawing.Size(984, 603);
             this.helpSection.TabIndex = 5;
             this.helpSection.Text = "Help";
             this.helpSection.UseVisualStyleBackColor = true;
@@ -1215,16 +1113,159 @@ namespace VideoUp
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(162, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // buttonSubBrowse
+            // 
+            this.buttonSubBrowse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSubBrowse.Enabled = false;
+            this.buttonSubBrowse.Location = new System.Drawing.Point(171, 3);
+            this.buttonSubBrowse.Name = "buttonSubBrowse";
+            this.buttonSubBrowse.Size = new System.Drawing.Size(53, 22);
+            this.buttonSubBrowse.TabIndex = 0;
+            this.buttonSubBrowse.Text = "Browse";
+            this.buttonSubBrowse.UseVisualStyleBackColor = true;
+            this.buttonSubBrowse.Click += new System.EventHandler(this.buttonSubBrowse_Click_1);
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel17.Controls.Add(this.buttonSubBrowse, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(82, 59);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(227, 28);
+            this.tableLayoutPanel17.TabIndex = 5;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label27.Location = new System.Drawing.Point(3, 59);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(73, 28);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Subtitle file:";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label31.Location = new System.Drawing.Point(315, 59);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(599, 28);
+            this.label31.TabIndex = 9;
+            this.label31.Text = "Select subtitle file for the video. Subtitles should be *.ass or *.srt format.";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(3, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 30);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Trim video:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Location = new System.Drawing.Point(492, 117);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(422, 119);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Add a description of the event.";
+            // 
+            // boxMetadataDesc
+            // 
+            this.boxMetadataDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxMetadataDesc.Location = new System.Drawing.Point(82, 142);
+            this.boxMetadataDesc.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.boxMetadataDesc.Multiline = true;
+            this.boxMetadataDesc.Name = "boxMetadataDesc";
+            this.boxMetadataDesc.Size = new System.Drawing.Size(401, 68);
+            this.boxMetadataDesc.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Location = new System.Drawing.Point(3, 117);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 119);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Description:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(68, 337);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 13);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Trim:";
+            // 
+            // startTime
+            // 
+            this.startTime.Location = new System.Drawing.Point(71, 362);
+            this.startTime.Name = "startTime";
+            this.startTime.Size = new System.Drawing.Size(96, 23);
+            this.startTime.TabIndex = 2;
+            this.startTime.Text = "Set Start Time";
+            this.startTime.UseVisualStyleBackColor = true;
+            this.startTime.Click += new System.EventHandler(this.startTime_Click);
+            // 
+            // endTime
+            // 
+            this.endTime.Location = new System.Drawing.Point(71, 404);
+            this.endTime.Name = "endTime";
+            this.endTime.Size = new System.Drawing.Size(96, 23);
+            this.endTime.TabIndex = 3;
+            this.endTime.Text = "Set End Time";
+            this.endTime.UseVisualStyleBackColor = true;
+            this.endTime.Click += new System.EventHandler(this.endTime_Click);
+            // 
+            // startTimeBox
+            // 
+            this.startTimeBox.Location = new System.Drawing.Point(185, 364);
+            this.startTimeBox.Name = "startTimeBox";
+            this.startTimeBox.Size = new System.Drawing.Size(100, 20);
+            this.startTimeBox.TabIndex = 4;
+            // 
+            // endTimeBox
+            // 
+            this.endTimeBox.Location = new System.Drawing.Point(185, 406);
+            this.endTimeBox.Name = "endTimeBox";
+            this.endTimeBox.Size = new System.Drawing.Size(100, 20);
+            this.endTimeBox.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.buttonGo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 517);
+            this.ClientSize = new System.Drawing.Size(955, 557);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(975, 270);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(3);
@@ -1236,6 +1277,7 @@ namespace VideoUp
             this.tableLayoutPanel2.PerformLayout();
             this.Help.ResumeLayout(false);
             this.videoSection.ResumeLayout(false);
+            this.videoSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.basicSection.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1259,12 +1301,12 @@ namespace VideoUp
             this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
             this.uploadSection.ResumeLayout(false);
             this.uploadSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).EndInit();
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1315,7 +1357,6 @@ namespace VideoUp
         public System.Windows.Forms.TextBox boxCropFrom;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -1339,26 +1380,31 @@ namespace VideoUp
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.RadioButton radioSubNone;
         private System.Windows.Forms.RadioButton radioSubExternal;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.Button buttonSubBrowse;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox boxMetadataAuthor;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox boxMetadataYear;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox boxMetadataDesc;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage helpSection;
         private System.Windows.Forms.Label descriptionTitle;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox statusBox;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.Button buttonSubBrowse;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox boxMetadataDesc;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button endTime;
+        private System.Windows.Forms.Button startTime;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox endTimeBox;
+        private System.Windows.Forms.TextBox startTimeBox;
     }
 }
 

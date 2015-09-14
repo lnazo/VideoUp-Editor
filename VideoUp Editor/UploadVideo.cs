@@ -92,7 +92,7 @@ namespace Google.Apis.YouTube.Samples
 
       using (var fileStream = new FileStream(filePath, FileMode.Open))
       {
-        var videosInsertRequest = youtubeService.Videos.Insert(video, "snippet,status", fileStream, "video/*");
+        var videosInsertRequest = youtubeService.Videos.Insert(video, "snippet,status", fileStream, ".srt/*");
         videosInsertRequest.ProgressChanged += videosInsertRequest_ProgressChanged;
         videosInsertRequest.ResponseReceived += videosInsertRequest_ResponseReceived;
 

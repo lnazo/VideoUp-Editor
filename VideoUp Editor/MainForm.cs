@@ -17,6 +17,9 @@ namespace VideoUp
         private string _template;
         private string _templateArguments;
 
+        string startTimes = "00:00";
+        string endTimes = "00:00";
+
         private string _autoOutput;
         private string _autoTitle;
         private string _autoArguments;
@@ -561,6 +564,24 @@ namespace VideoUp
 
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
+        }
+
+        private void startTime_Click(object sender, EventArgs e)
+        {
+            startTimes = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
+            Console.WriteLine(startTimes);
+
+            DateTime t1 = DateTime.Now;
+
+            DateTime t2 = Convert.ToDateTime("11:00:00 AM");
+
+            int i = DateTime.Compare(t1, t2);
+        }
+
+        private void endTime_Click(object sender, EventArgs e)
+        {
+            endTimes = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
+            endTimeBox.Text = endTimes;
         }
     }
 }

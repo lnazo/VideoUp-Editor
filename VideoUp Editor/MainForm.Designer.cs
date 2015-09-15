@@ -49,6 +49,19 @@ namespace VideoUp
             this.startTime = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.subtitle = new System.Windows.Forms.TabPage();
+            this.caption = new System.Windows.Forms.Label();
+            this.enterSub = new System.Windows.Forms.Button();
+            this.subTextBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.infoBox = new System.Windows.Forms.TextBox();
+            this.endSubMsg = new System.Windows.Forms.Label();
+            this.startSubMsg = new System.Windows.Forms.Label();
+            this.endSubBox = new System.Windows.Forms.TextBox();
+            this.startSubBox = new System.Windows.Forms.TextBox();
+            this.endSubTime = new System.Windows.Forms.Button();
+            this.startSubTime = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.basicSection = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -123,13 +136,15 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.infoBox = new System.Windows.Forms.TextBox();
+            this.saveSub = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.Help.SuspendLayout();
             this.videoSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.subtitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.basicSection.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -275,6 +290,7 @@ namespace VideoUp
             // Help
             // 
             this.Help.Controls.Add(this.videoSection);
+            this.Help.Controls.Add(this.subtitle);
             this.Help.Controls.Add(this.basicSection);
             this.Help.Controls.Add(this.subtitleSection);
             this.Help.Controls.Add(this.uploadSection);
@@ -289,7 +305,6 @@ namespace VideoUp
             // videoSection
             // 
             this.videoSection.AllowDrop = true;
-            this.videoSection.Controls.Add(this.infoBox);
             this.videoSection.Controls.Add(this.endTimeValid);
             this.videoSection.Controls.Add(this.startTimeValid);
             this.videoSection.Controls.Add(this.endTimeBox);
@@ -310,7 +325,7 @@ namespace VideoUp
             this.endTimeValid.AutoSize = true;
             this.endTimeValid.BackColor = System.Drawing.Color.Red;
             this.endTimeValid.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.endTimeValid.Location = new System.Drawing.Point(305, 409);
+            this.endTimeValid.Location = new System.Drawing.Point(706, 160);
             this.endTimeValid.Name = "endTimeValid";
             this.endTimeValid.Size = new System.Drawing.Size(193, 13);
             this.endTimeValid.TabIndex = 7;
@@ -322,7 +337,7 @@ namespace VideoUp
             this.startTimeValid.AutoSize = true;
             this.startTimeValid.BackColor = System.Drawing.Color.Red;
             this.startTimeValid.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.startTimeValid.Location = new System.Drawing.Point(305, 367);
+            this.startTimeValid.Location = new System.Drawing.Point(706, 88);
             this.startTimeValid.Name = "startTimeValid";
             this.startTimeValid.Size = new System.Drawing.Size(179, 13);
             this.startTimeValid.TabIndex = 6;
@@ -331,14 +346,16 @@ namespace VideoUp
             // 
             // endTimeBox
             // 
-            this.endTimeBox.Location = new System.Drawing.Point(185, 406);
+            this.endTimeBox.Enabled = false;
+            this.endTimeBox.Location = new System.Drawing.Point(823, 122);
             this.endTimeBox.Name = "endTimeBox";
             this.endTimeBox.Size = new System.Drawing.Size(100, 20);
             this.endTimeBox.TabIndex = 5;
             // 
             // startTimeBox
             // 
-            this.startTimeBox.Location = new System.Drawing.Point(185, 364);
+            this.startTimeBox.Enabled = false;
+            this.startTimeBox.Location = new System.Drawing.Point(823, 54);
             this.startTimeBox.Name = "startTimeBox";
             this.startTimeBox.Size = new System.Drawing.Size(100, 20);
             this.startTimeBox.TabIndex = 4;
@@ -346,7 +363,7 @@ namespace VideoUp
             // endTime
             // 
             this.endTime.Enabled = false;
-            this.endTime.Location = new System.Drawing.Point(71, 404);
+            this.endTime.Location = new System.Drawing.Point(709, 120);
             this.endTime.Name = "endTime";
             this.endTime.Size = new System.Drawing.Size(96, 23);
             this.endTime.TabIndex = 3;
@@ -357,7 +374,7 @@ namespace VideoUp
             // startTime
             // 
             this.startTime.Enabled = false;
-            this.startTime.Location = new System.Drawing.Point(71, 362);
+            this.startTime.Location = new System.Drawing.Point(709, 52);
             this.startTime.Name = "startTime";
             this.startTime.Size = new System.Drawing.Size(96, 23);
             this.startTime.TabIndex = 2;
@@ -368,7 +385,7 @@ namespace VideoUp
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(68, 337);
+            this.label23.Location = new System.Drawing.Point(706, 27);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(30, 13);
             this.label23.TabIndex = 1;
@@ -381,10 +398,161 @@ namespace VideoUp
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(71, 19);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(547, 305);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(617, 354);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             this.axWindowsMediaPlayer1.MediaError += new AxWMPLib._WMPOCXEvents_MediaErrorEventHandler(this.axWindowsMediaPlayer1_MediaError);
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
+            // subtitle
+            // 
+            this.subtitle.Controls.Add(this.saveSub);
+            this.subtitle.Controls.Add(this.caption);
+            this.subtitle.Controls.Add(this.enterSub);
+            this.subtitle.Controls.Add(this.subTextBox);
+            this.subtitle.Controls.Add(this.label26);
+            this.subtitle.Controls.Add(this.infoBox);
+            this.subtitle.Controls.Add(this.endSubMsg);
+            this.subtitle.Controls.Add(this.startSubMsg);
+            this.subtitle.Controls.Add(this.endSubBox);
+            this.subtitle.Controls.Add(this.startSubBox);
+            this.subtitle.Controls.Add(this.endSubTime);
+            this.subtitle.Controls.Add(this.startSubTime);
+            this.subtitle.Controls.Add(this.axWindowsMediaPlayer2);
+            this.subtitle.Location = new System.Drawing.Point(4, 22);
+            this.subtitle.Name = "subtitle";
+            this.subtitle.Padding = new System.Windows.Forms.Padding(3);
+            this.subtitle.Size = new System.Drawing.Size(935, 435);
+            this.subtitle.TabIndex = 6;
+            this.subtitle.Text = "Subtitles";
+            this.subtitle.UseVisualStyleBackColor = true;
+            // 
+            // caption
+            // 
+            this.caption.AutoSize = true;
+            this.caption.BackColor = System.Drawing.Color.Black;
+            this.caption.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caption.ForeColor = System.Drawing.SystemColors.Control;
+            this.caption.Location = new System.Drawing.Point(280, 222);
+            this.caption.Name = "caption";
+            this.caption.Size = new System.Drawing.Size(62, 20);
+            this.caption.TabIndex = 25;
+            this.caption.Text = "Caption";
+            this.caption.Visible = false;
+            // 
+            // enterSub
+            // 
+            this.enterSub.Location = new System.Drawing.Point(618, 400);
+            this.enterSub.Name = "enterSub";
+            this.enterSub.Size = new System.Drawing.Size(96, 23);
+            this.enterSub.TabIndex = 24;
+            this.enterSub.Text = "Enter Subtitle";
+            this.enterSub.UseVisualStyleBackColor = true;
+            this.enterSub.Click += new System.EventHandler(this.enterSub_Click);
+            // 
+            // subTextBox
+            // 
+            this.subTextBox.AcceptsReturn = true;
+            this.subTextBox.AcceptsTab = true;
+            this.subTextBox.Location = new System.Drawing.Point(618, 330);
+            this.subTextBox.Multiline = true;
+            this.subTextBox.Name = "subTextBox";
+            this.subTextBox.Size = new System.Drawing.Size(270, 62);
+            this.subTextBox.TabIndex = 23;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(44, 330);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(45, 13);
+            this.label26.TabIndex = 22;
+            this.label26.Text = "Subtitle:";
+            // 
+            // infoBox
+            // 
+            this.infoBox.AcceptsReturn = true;
+            this.infoBox.AcceptsTab = true;
+            this.infoBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.infoBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoBox.Location = new System.Drawing.Point(618, 13);
+            this.infoBox.Multiline = true;
+            this.infoBox.Name = "infoBox";
+            this.infoBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.infoBox.Size = new System.Drawing.Size(270, 305);
+            this.infoBox.TabIndex = 21;
+            // 
+            // endSubMsg
+            // 
+            this.endSubMsg.AutoSize = true;
+            this.endSubMsg.BackColor = System.Drawing.Color.Red;
+            this.endSubMsg.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.endSubMsg.Location = new System.Drawing.Point(281, 403);
+            this.endSubMsg.Name = "endSubMsg";
+            this.endSubMsg.Size = new System.Drawing.Size(193, 13);
+            this.endSubMsg.TabIndex = 20;
+            this.endSubMsg.Text = "End time must be greater than start time";
+            this.endSubMsg.Visible = false;
+            // 
+            // startSubMsg
+            // 
+            this.startSubMsg.AutoSize = true;
+            this.startSubMsg.BackColor = System.Drawing.Color.Red;
+            this.startSubMsg.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.startSubMsg.Location = new System.Drawing.Point(281, 361);
+            this.startSubMsg.Name = "startSubMsg";
+            this.startSubMsg.Size = new System.Drawing.Size(179, 13);
+            this.startSubMsg.TabIndex = 19;
+            this.startSubMsg.Text = "Start time must be less than end time";
+            this.startSubMsg.Visible = false;
+            // 
+            // endSubBox
+            // 
+            this.endSubBox.Enabled = false;
+            this.endSubBox.Location = new System.Drawing.Point(161, 400);
+            this.endSubBox.Name = "endSubBox";
+            this.endSubBox.Size = new System.Drawing.Size(100, 20);
+            this.endSubBox.TabIndex = 18;
+            // 
+            // startSubBox
+            // 
+            this.startSubBox.Enabled = false;
+            this.startSubBox.Location = new System.Drawing.Point(161, 358);
+            this.startSubBox.Name = "startSubBox";
+            this.startSubBox.Size = new System.Drawing.Size(100, 20);
+            this.startSubBox.TabIndex = 17;
+            // 
+            // endSubTime
+            // 
+            this.endSubTime.Enabled = false;
+            this.endSubTime.Location = new System.Drawing.Point(47, 398);
+            this.endSubTime.Name = "endSubTime";
+            this.endSubTime.Size = new System.Drawing.Size(96, 23);
+            this.endSubTime.TabIndex = 16;
+            this.endSubTime.Text = "Set End Time";
+            this.endSubTime.UseVisualStyleBackColor = true;
+            this.endSubTime.Click += new System.EventHandler(this.endSubTime_Click_1);
+            // 
+            // startSubTime
+            // 
+            this.startSubTime.Enabled = false;
+            this.startSubTime.Location = new System.Drawing.Point(47, 356);
+            this.startSubTime.Name = "startSubTime";
+            this.startSubTime.Size = new System.Drawing.Size(96, 23);
+            this.startSubTime.TabIndex = 15;
+            this.startSubTime.Text = "Set Start Time";
+            this.startSubTime.UseVisualStyleBackColor = true;
+            this.startSubTime.Click += new System.EventHandler(this.startSubTime_Click_1);
+            // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.AllowDrop = true;
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(47, 13);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(547, 305);
+            this.axWindowsMediaPlayer2.TabIndex = 14;
+            this.axWindowsMediaPlayer2.Enter += new System.EventHandler(this.axWindowsMediaPlayer2_Enter);
             // 
             // basicSection
             // 
@@ -1291,14 +1459,15 @@ namespace VideoUp
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // infoBox
+            // saveSub
             // 
-            this.infoBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.infoBox.Location = new System.Drawing.Point(642, 24);
-            this.infoBox.Multiline = true;
-            this.infoBox.Name = "infoBox";
-            this.infoBox.Size = new System.Drawing.Size(270, 300);
-            this.infoBox.TabIndex = 8;
+            this.saveSub.Location = new System.Drawing.Point(792, 400);
+            this.saveSub.Name = "saveSub";
+            this.saveSub.Size = new System.Drawing.Size(96, 23);
+            this.saveSub.TabIndex = 26;
+            this.saveSub.Text = "Save Subtitle";
+            this.saveSub.UseVisualStyleBackColor = true;
+            this.saveSub.Click += new System.EventHandler(this.saveSub_Click);
             // 
             // MainForm
             // 
@@ -1322,6 +1491,9 @@ namespace VideoUp
             this.videoSection.ResumeLayout(false);
             this.videoSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.subtitle.ResumeLayout(false);
+            this.subtitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.basicSection.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -1450,7 +1622,20 @@ namespace VideoUp
         private System.Windows.Forms.TextBox startTimeBox;
         private System.Windows.Forms.Label startTimeValid;
         private System.Windows.Forms.Label endTimeValid;
+        private System.Windows.Forms.TabPage subtitle;
+        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox infoBox;
+        private System.Windows.Forms.Label endSubMsg;
+        private System.Windows.Forms.Label startSubMsg;
+        private System.Windows.Forms.TextBox endSubBox;
+        private System.Windows.Forms.TextBox startSubBox;
+        private System.Windows.Forms.Button endSubTime;
+        private System.Windows.Forms.Button startSubTime;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
+        private System.Windows.Forms.Button enterSub;
+        private System.Windows.Forms.TextBox subTextBox;
+        private System.Windows.Forms.Label caption;
+        private System.Windows.Forms.Button saveSub;
     }
 }
 

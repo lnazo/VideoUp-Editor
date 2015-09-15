@@ -19,6 +19,7 @@ namespace VideoUp
 
         string startTimes = "00:00";
         string endTimes = "01:01";
+        int count = 1;
 
         private string _autoOutput;
         private string _autoTitle;
@@ -110,13 +111,15 @@ namespace VideoUp
            
             string fullPath = Path.GetDirectoryName(path);
             axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-
-            infoBox.AppendText("Title: " + axWindowsMediaPlayer1.currentMedia.name + "\n");
+            axWindowsMediaPlayer2.URL = @textBoxIn.Text.Replace(@"\\", @"\");
+            axWindowsMediaPlayer2.Ctlcontrols.stop();
 
             if (!textBoxIn.Text.Equals(""))
             {
                 startTime.Enabled = true;
                 endTime.Enabled = true;
+                startSubTime.Enabled = true;
+                endSubTime.Enabled = true;
             }
 
             string name = Path.GetFileNameWithoutExtension(path);
@@ -157,7 +160,7 @@ namespace VideoUp
         {
             string result = Convert();
             if (!string.IsNullOrWhiteSpace(result))
-                MessageBox.Show(result, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(result, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -598,6 +601,73 @@ namespace VideoUp
             }
             else
                 endTimeValid.Visible = true;
+        }
+
+        private void enterSub_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(startSubBox.Text) && !string.IsNullOrWhiteSpace(endSubBox.Text) && !string.IsNullOrWhiteSpace(subTextBox.Text))
+            {
+                infoBox.AppendText(count.ToString());
+                Console.WriteLine("Count: " + count);
+                infoBox.AppendText("\n");
+                infoBox.AppendText("00:" + startSubBox.Text + " --> " + "00:" + endSubBox.Text);
+                infoBox.AppendText("\n");
+                infoBox.AppendText(subTextBox.Text);
+                infoBox.AppendText("\n");
+                infoBox.AppendText("\n");
+
+                startSubBox.Text = "";
+                endSubBox.Text = "";
+                count++;
+            }
+        }
+
+        private void startSubTime_Click_1(object sender, EventArgs e)
+        {
+            startTimes = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
+            if (System.TimeSpan.Parse(startTimes) < System.TimeSpan.Parse(endTimes))
+            {
+                startSubMsg.Visible = false;
+                startSubBox.Text = startTimes;
+                //boxCropFrom.Text = startTimes;
+            }
+            else
+                startSubMsg.Visible = true;
+        }
+
+        private void endSubTime_Click_1(object sender, EventArgs e)
+        {
+            endTimes = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
+            if (System.TimeSpan.Parse(endTimes) > System.TimeSpan.Parse(startTimes))
+            {
+                endSubMsg.Visible = false;
+                endSubBox.Text = endTimes;
+                //boxCropTo.Text = endTimes;
+            }
+            else
+                endSubMsg.Visible = true;
+        }
+
+        private void axWindowsMediaPlayer2_Enter(object sender, EventArgs e)
+        {
+            // make caption appear for set time
+            if (axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Equals("hi"))
+                caption.Visible = true;
+        }
+
+        private void saveSub_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Srt File|*.srt";
+            saveFileDialog1.Title = "Save subtitle file";
+            //saveFileDialog1.ShowDialog();
+
+            DialogResult result = saveFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string name = saveFileDialog1.FileName;
+                File.WriteAllText(name, infoBox.Text);
+            }
         }
     }
 }

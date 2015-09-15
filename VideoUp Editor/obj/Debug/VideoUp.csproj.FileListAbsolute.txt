@@ -85,6 +85,7 @@ C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\
 C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\Honours\Project\VideoUp Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+<<<<<<< HEAD
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
@@ -94,6 +95,31 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Cro
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.GenerateResource.Cache
+=======
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\ffmpeg.exe
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\gpl-3.0.txt
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.manifest
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.application
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.pdb
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Interop.WMPLib.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.ConverterForm.resources
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.CropForm.resources
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.GenerateResource.Cache
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe.manifest
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.application
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\client_secrets.json
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.config
+>>>>>>> 2ba3dd3f9c505dcb9889ed4694ccae88bba9875b
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\ffmpeg.exe
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\gpl-3.0.txt
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.config
@@ -147,6 +173,15 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\System.Thre
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Zlib.Portable.xml
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Interop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.ConverterForm.resources
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.CropForm.resources
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.GenerateResource.Cache
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe.manifest
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe

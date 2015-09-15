@@ -18,7 +18,7 @@ namespace VideoUp
         private string _templateArguments;
 
         string startTimes = "00:00";
-        string endTimes = "00:00";
+        string endTimes = "01:01";
 
         private string _autoOutput;
         private string _autoTitle;
@@ -110,7 +110,15 @@ namespace VideoUp
            
             string fullPath = Path.GetDirectoryName(path);
             axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-            
+
+            infoBox.AppendText("Title: " + axWindowsMediaPlayer1.currentMedia.name + "\n");
+
+            if (!textBoxIn.Text.Equals(""))
+            {
+                startTime.Enabled = true;
+                endTime.Enabled = true;
+            }
+
             string name = Path.GetFileNameWithoutExtension(path);
             if (boxMetadataTitle.Text == _autoTitle || boxMetadataTitle.Text == "")
                 boxMetadataTitle.Text = _autoTitle = name;
@@ -569,19 +577,27 @@ namespace VideoUp
         private void startTime_Click(object sender, EventArgs e)
         {
             startTimes = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-            Console.WriteLine(startTimes);
-
-            DateTime t1 = DateTime.Now;
-
-            DateTime t2 = Convert.ToDateTime("11:00:00 AM");
-
-            int i = DateTime.Compare(t1, t2);
+            if (System.TimeSpan.Parse(startTimes) < System.TimeSpan.Parse(endTimes))
+            {
+                startTimeValid.Visible = false;
+                startTimeBox.Text = startTimes;
+                boxCropFrom.Text = startTimes;
+            }
+            else
+                startTimeValid.Visible = true;
         }
 
         private void endTime_Click(object sender, EventArgs e)
         {
             endTimes = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-            endTimeBox.Text = endTimes;
+            if (System.TimeSpan.Parse(endTimes) > System.TimeSpan.Parse(startTimes))
+            {
+                endTimeValid.Visible = false;
+                endTimeBox.Text = endTimes;
+                boxCropTo.Text = endTimes;
+            }
+            else
+                endTimeValid.Visible = true;
         }
     }
 }

@@ -41,6 +41,13 @@ namespace VideoUp
             this.buttonBrowseIn = new System.Windows.Forms.Button();
             this.Help = new System.Windows.Forms.TabControl();
             this.videoSection = new System.Windows.Forms.TabPage();
+            this.endTimeValid = new System.Windows.Forms.Label();
+            this.startTimeValid = new System.Windows.Forms.Label();
+            this.endTimeBox = new System.Windows.Forms.TextBox();
+            this.startTimeBox = new System.Windows.Forms.TextBox();
+            this.endTime = new System.Windows.Forms.Button();
+            this.startTime = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.basicSection = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -49,6 +56,7 @@ namespace VideoUp
             this.boxAudio = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +66,8 @@ namespace VideoUp
             this.boxMetadataAuthor = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.boxMetadataYear = new System.Windows.Forms.TextBox();
+            this.boxMetadataDesc = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label24 = new System.Windows.Forms.Label();
@@ -67,6 +77,7 @@ namespace VideoUp
             this.boxCropFrom = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -80,8 +91,13 @@ namespace VideoUp
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
             this.radioSubNone = new System.Windows.Forms.RadioButton();
             this.radioSubExternal = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSubBrowse = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
             this.descriptionTitle = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -107,20 +123,7 @@ namespace VideoUp
             this.trackThreads = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonSubBrowse = new System.Windows.Forms.Button();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.boxMetadataDesc = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.startTime = new System.Windows.Forms.Button();
-            this.endTime = new System.Windows.Forms.Button();
-            this.startTimeBox = new System.Windows.Forms.TextBox();
-            this.endTimeBox = new System.Windows.Forms.TextBox();
+            this.infoBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -142,10 +145,10 @@ namespace VideoUp
             this.tableLayoutPanel15.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
             this.uploadSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
-            this.tableLayoutPanel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -286,6 +289,9 @@ namespace VideoUp
             // videoSection
             // 
             this.videoSection.AllowDrop = true;
+            this.videoSection.Controls.Add(this.infoBox);
+            this.videoSection.Controls.Add(this.endTimeValid);
+            this.videoSection.Controls.Add(this.startTimeValid);
             this.videoSection.Controls.Add(this.endTimeBox);
             this.videoSection.Controls.Add(this.startTimeBox);
             this.videoSection.Controls.Add(this.endTime);
@@ -298,6 +304,75 @@ namespace VideoUp
             this.videoSection.TabIndex = 3;
             this.videoSection.Text = "Video";
             this.videoSection.UseVisualStyleBackColor = true;
+            // 
+            // endTimeValid
+            // 
+            this.endTimeValid.AutoSize = true;
+            this.endTimeValid.BackColor = System.Drawing.Color.Red;
+            this.endTimeValid.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.endTimeValid.Location = new System.Drawing.Point(305, 409);
+            this.endTimeValid.Name = "endTimeValid";
+            this.endTimeValid.Size = new System.Drawing.Size(193, 13);
+            this.endTimeValid.TabIndex = 7;
+            this.endTimeValid.Text = "End time must be greater than start time";
+            this.endTimeValid.Visible = false;
+            // 
+            // startTimeValid
+            // 
+            this.startTimeValid.AutoSize = true;
+            this.startTimeValid.BackColor = System.Drawing.Color.Red;
+            this.startTimeValid.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.startTimeValid.Location = new System.Drawing.Point(305, 367);
+            this.startTimeValid.Name = "startTimeValid";
+            this.startTimeValid.Size = new System.Drawing.Size(179, 13);
+            this.startTimeValid.TabIndex = 6;
+            this.startTimeValid.Text = "Start time must be less than end time";
+            this.startTimeValid.Visible = false;
+            // 
+            // endTimeBox
+            // 
+            this.endTimeBox.Location = new System.Drawing.Point(185, 406);
+            this.endTimeBox.Name = "endTimeBox";
+            this.endTimeBox.Size = new System.Drawing.Size(100, 20);
+            this.endTimeBox.TabIndex = 5;
+            // 
+            // startTimeBox
+            // 
+            this.startTimeBox.Location = new System.Drawing.Point(185, 364);
+            this.startTimeBox.Name = "startTimeBox";
+            this.startTimeBox.Size = new System.Drawing.Size(100, 20);
+            this.startTimeBox.TabIndex = 4;
+            // 
+            // endTime
+            // 
+            this.endTime.Enabled = false;
+            this.endTime.Location = new System.Drawing.Point(71, 404);
+            this.endTime.Name = "endTime";
+            this.endTime.Size = new System.Drawing.Size(96, 23);
+            this.endTime.TabIndex = 3;
+            this.endTime.Text = "Set End Time";
+            this.endTime.UseVisualStyleBackColor = true;
+            this.endTime.Click += new System.EventHandler(this.endTime_Click);
+            // 
+            // startTime
+            // 
+            this.startTime.Enabled = false;
+            this.startTime.Location = new System.Drawing.Point(71, 362);
+            this.startTime.Name = "startTime";
+            this.startTime.Size = new System.Drawing.Size(96, 23);
+            this.startTime.TabIndex = 2;
+            this.startTime.Text = "Set Start Time";
+            this.startTime.UseVisualStyleBackColor = true;
+            this.startTime.Click += new System.EventHandler(this.startTime_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(68, 337);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 13);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Trim:";
             // 
             // axWindowsMediaPlayer1
             // 
@@ -425,6 +500,17 @@ namespace VideoUp
             this.tableLayoutPanel11.Size = new System.Drawing.Size(917, 236);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Location = new System.Drawing.Point(3, 117);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 119);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Description:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -519,6 +605,26 @@ namespace VideoUp
             this.boxMetadataYear.Size = new System.Drawing.Size(401, 20);
             this.boxMetadataYear.TabIndex = 7;
             // 
+            // boxMetadataDesc
+            // 
+            this.boxMetadataDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxMetadataDesc.Location = new System.Drawing.Point(82, 142);
+            this.boxMetadataDesc.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.boxMetadataDesc.Multiline = true;
+            this.boxMetadataDesc.Name = "boxMetadataDesc";
+            this.boxMetadataDesc.Size = new System.Drawing.Size(401, 68);
+            this.boxMetadataDesc.TabIndex = 10;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Location = new System.Drawing.Point(492, 117);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(422, 119);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Add a description of the event.";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel5);
@@ -599,6 +705,7 @@ namespace VideoUp
             // boxCropTo
             // 
             this.boxCropTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxCropTo.Enabled = false;
             this.boxCropTo.Location = new System.Drawing.Point(109, 5);
             this.boxCropTo.Name = "boxCropTo";
             this.boxCropTo.Size = new System.Drawing.Size(84, 20);
@@ -608,6 +715,7 @@ namespace VideoUp
             // boxCropFrom
             // 
             this.boxCropFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxCropFrom.Enabled = false;
             this.boxCropFrom.Location = new System.Drawing.Point(3, 5);
             this.boxCropFrom.Name = "boxCropFrom";
             this.boxCropFrom.Size = new System.Drawing.Size(84, 20);
@@ -636,6 +744,17 @@ namespace VideoUp
             this.label11.TabIndex = 5;
             this.label11.Text = "HH:MM:SS or MM:SS or SS.";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(3, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 30);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Trim video:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
@@ -674,7 +793,7 @@ namespace VideoUp
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(196, 30);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
@@ -812,6 +931,17 @@ namespace VideoUp
             this.tableLayoutPanel16.Size = new System.Drawing.Size(917, 87);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label31.Location = new System.Drawing.Point(315, 59);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(599, 28);
+            this.label31.TabIndex = 9;
+            this.label31.Text = "Select subtitle file for the video. Subtitles should be *.ass or *.srt format.";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // radioSubNone
             // 
             this.radioSubNone.AutoSize = true;
@@ -839,6 +969,54 @@ namespace VideoUp
             this.radioSubExternal.Text = "Use from file";
             this.radioSubExternal.UseVisualStyleBackColor = true;
             this.radioSubExternal.CheckedChanged += new System.EventHandler(this.radioSubExternal_CheckedChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label27.Location = new System.Drawing.Point(3, 59);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(73, 28);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Subtitle file:";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel17.Controls.Add(this.buttonSubBrowse, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(82, 59);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(227, 28);
+            this.tableLayoutPanel17.TabIndex = 5;
+            // 
+            // buttonSubBrowse
+            // 
+            this.buttonSubBrowse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSubBrowse.Enabled = false;
+            this.buttonSubBrowse.Location = new System.Drawing.Point(171, 3);
+            this.buttonSubBrowse.Name = "buttonSubBrowse";
+            this.buttonSubBrowse.Size = new System.Drawing.Size(53, 22);
+            this.buttonSubBrowse.TabIndex = 0;
+            this.buttonSubBrowse.Text = "Browse";
+            this.buttonSubBrowse.UseVisualStyleBackColor = true;
+            this.buttonSubBrowse.Click += new System.EventHandler(this.buttonSubBrowse_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(162, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // uploadSection
             // 
@@ -970,7 +1148,7 @@ namespace VideoUp
             this.helpSection.Location = new System.Drawing.Point(4, 22);
             this.helpSection.Name = "helpSection";
             this.helpSection.Padding = new System.Windows.Forms.Padding(3);
-            this.helpSection.Size = new System.Drawing.Size(984, 603);
+            this.helpSection.Size = new System.Drawing.Size(935, 435);
             this.helpSection.TabIndex = 5;
             this.helpSection.Text = "Help";
             this.helpSection.UseVisualStyleBackColor = true;
@@ -1113,149 +1291,14 @@ namespace VideoUp
             this.label7.TabIndex = 28;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // infoBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // buttonSubBrowse
-            // 
-            this.buttonSubBrowse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSubBrowse.Enabled = false;
-            this.buttonSubBrowse.Location = new System.Drawing.Point(171, 3);
-            this.buttonSubBrowse.Name = "buttonSubBrowse";
-            this.buttonSubBrowse.Size = new System.Drawing.Size(53, 22);
-            this.buttonSubBrowse.TabIndex = 0;
-            this.buttonSubBrowse.Text = "Browse";
-            this.buttonSubBrowse.UseVisualStyleBackColor = true;
-            this.buttonSubBrowse.Click += new System.EventHandler(this.buttonSubBrowse_Click_1);
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 2;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayoutPanel17.Controls.Add(this.buttonSubBrowse, 1, 0);
-            this.tableLayoutPanel17.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(82, 59);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 1;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(227, 28);
-            this.tableLayoutPanel17.TabIndex = 5;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(3, 59);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(73, 28);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Subtitle file:";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(315, 59);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(599, 28);
-            this.label31.TabIndex = 9;
-            this.label31.Text = "Select subtitle file for the video. Subtitles should be *.ass or *.srt format.";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(3, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 30);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Trim video:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(492, 117);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(422, 119);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Add a description of the event.";
-            // 
-            // boxMetadataDesc
-            // 
-            this.boxMetadataDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataDesc.Location = new System.Drawing.Point(82, 142);
-            this.boxMetadataDesc.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.boxMetadataDesc.Multiline = true;
-            this.boxMetadataDesc.Name = "boxMetadataDesc";
-            this.boxMetadataDesc.Size = new System.Drawing.Size(401, 68);
-            this.boxMetadataDesc.TabIndex = 10;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(3, 117);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 119);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Description:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(68, 337);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(30, 13);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Trim:";
-            // 
-            // startTime
-            // 
-            this.startTime.Location = new System.Drawing.Point(71, 362);
-            this.startTime.Name = "startTime";
-            this.startTime.Size = new System.Drawing.Size(96, 23);
-            this.startTime.TabIndex = 2;
-            this.startTime.Text = "Set Start Time";
-            this.startTime.UseVisualStyleBackColor = true;
-            this.startTime.Click += new System.EventHandler(this.startTime_Click);
-            // 
-            // endTime
-            // 
-            this.endTime.Location = new System.Drawing.Point(71, 404);
-            this.endTime.Name = "endTime";
-            this.endTime.Size = new System.Drawing.Size(96, 23);
-            this.endTime.TabIndex = 3;
-            this.endTime.Text = "Set End Time";
-            this.endTime.UseVisualStyleBackColor = true;
-            this.endTime.Click += new System.EventHandler(this.endTime_Click);
-            // 
-            // startTimeBox
-            // 
-            this.startTimeBox.Location = new System.Drawing.Point(185, 364);
-            this.startTimeBox.Name = "startTimeBox";
-            this.startTimeBox.Size = new System.Drawing.Size(100, 20);
-            this.startTimeBox.TabIndex = 4;
-            // 
-            // endTimeBox
-            // 
-            this.endTimeBox.Location = new System.Drawing.Point(185, 406);
-            this.endTimeBox.Name = "endTimeBox";
-            this.endTimeBox.Size = new System.Drawing.Size(100, 20);
-            this.endTimeBox.TabIndex = 5;
+            this.infoBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.infoBox.Location = new System.Drawing.Point(642, 24);
+            this.infoBox.Multiline = true;
+            this.infoBox.Name = "infoBox";
+            this.infoBox.Size = new System.Drawing.Size(270, 300);
+            this.infoBox.TabIndex = 8;
             // 
             // MainForm
             // 
@@ -1301,12 +1344,12 @@ namespace VideoUp
             this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
             this.uploadSection.ResumeLayout(false);
             this.uploadSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).EndInit();
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1405,6 +1448,9 @@ namespace VideoUp
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox endTimeBox;
         private System.Windows.Forms.TextBox startTimeBox;
+        private System.Windows.Forms.Label startTimeValid;
+        private System.Windows.Forms.Label endTimeValid;
+        private System.Windows.Forms.TextBox infoBox;
     }
 }
 

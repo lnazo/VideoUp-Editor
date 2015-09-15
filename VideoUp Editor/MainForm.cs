@@ -599,34 +599,5 @@ namespace VideoUp
             else
                 endTimeValid.Visible = true;
         }
-
-        private void subtitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /*private void m1(object sender, EventArgs e)
-        {
-            boxMetadataTitle.Text = "";
-        }
-
-        private void m2(object sender, EventArgs e)
-        {
-
-            if (!boxMetadataTitle.Text.Equals(""))
-            {
-                boxMetadataTitle.Text = "e.g Monty's Reunion";
-            }
-        }
-
-        private void m1(TextBox tb, EventArgs e)
-        {
-            if (!tb.Text.Equals(""))
-            {
-
-            }
-            else
-            tb.Text = "";
-        }*/
     }
 }

@@ -43,6 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Telerik.WinControls" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Telerik.WinControls.Themes.Aqua" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Telerik.WinControls.UI" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="TelerikCommon" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.WMPLib.dll" size="53760">
       <assemblyIdentity name="AxInterop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -50,11 +70,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD
-        <dsig:DigestValue>gPSgkGL+37dm8mpEKardXsZXqEQ=</dsig:DigestValue>
-=======
         <dsig:DigestValue>bqlw22jgI1WUcfMYKkjK135timM=</dsig:DigestValue>
->>>>>>> 2ba3dd3f9c505dcb9889ed4694ccae88bba9875b
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,11 +154,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD
-        <dsig:DigestValue>Kre2KLTx7OZk0CL1I4DMe+K7I+I=</dsig:DigestValue>
-=======
         <dsig:DigestValue>5aZMCRcKsaKMK6HdHCqbuC2aBT4=</dsig:DigestValue>
->>>>>>> 2ba3dd3f9c505dcb9889ed4694ccae88bba9875b
       </hash>
     </dependentAssembly>
   </dependency>
@@ -291,26 +303,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-<<<<<<< HEAD
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="317440">
-=======
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="313744">
->>>>>>> d100c5c5c5081a6c32dd963c76e9ebafbb7b7a2b
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="313856">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD
-        <dsig:DigestValue>j8wxBV0Ujm4agZ0u9+yMpovMgiU=</dsig:DigestValue>
-=======
-<<<<<<< HEAD
-        <dsig:DigestValue>ohlQuJuVZ8nCveLVebt6AW+7OEc=</dsig:DigestValue>
-=======
         <dsig:DigestValue>/preAZ4JxWb0yf9zrxSGLEF1b0g=</dsig:DigestValue>
->>>>>>> 2ba3dd3f9c505dcb9889ed4694ccae88bba9875b
->>>>>>> d100c5c5c5081a6c32dd963c76e9ebafbb7b7a2b
       </hash>
     </dependentAssembly>
   </dependency>

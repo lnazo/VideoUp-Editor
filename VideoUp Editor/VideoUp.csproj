@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>8812071d</NuGetPackageImportStamp>
     <PublishUrl>C:\Users\Luba\Desktop\VideoUp\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -13,12 +14,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>8812071d</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>80B1390BC22D277DDAAEB572FCC99A9238127EDA</ManifestCertificateThumbprint>

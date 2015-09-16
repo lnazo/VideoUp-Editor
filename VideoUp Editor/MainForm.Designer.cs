@@ -137,6 +137,7 @@ namespace VideoUp
             this.label7 = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,7 +145,6 @@ namespace VideoUp
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -775,7 +775,7 @@ namespace VideoUp
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(72, 31);
             this.label13.TabIndex = 6;
-            this.label13.Text = "Year:";
+            this.label13.Text = "Date:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
@@ -1333,6 +1333,7 @@ namespace VideoUp
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(191, 20);
             this.textBox3.TabIndex = 6;
+            this.textBox3.Visible = false;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
@@ -1364,6 +1365,7 @@ namespace VideoUp
             this.label33.Size = new System.Drawing.Size(47, 14);
             this.label33.TabIndex = 3;
             this.label33.Text = "Subtitile:";
+            this.label33.Visible = false;
             // 
             // label32
             // 
@@ -1385,6 +1387,7 @@ namespace VideoUp
             this.button2.TabIndex = 1;
             this.button2.Text = "Browse";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
@@ -1572,22 +1575,29 @@ namespace VideoUp
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // fileManagerToolStripMenuItem
+            // 
+            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
+            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.fileManagerToolStripMenuItem.Text = "File Manager";
+            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
+            // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -1613,13 +1623,6 @@ namespace VideoUp
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // fileManagerToolStripMenuItem
-            // 
-            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
-            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fileManagerToolStripMenuItem.Text = "File Manager";
-            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
             // 
             // MainForm
             // 

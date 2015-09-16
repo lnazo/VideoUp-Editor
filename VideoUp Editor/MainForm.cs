@@ -677,8 +677,8 @@ namespace VideoUp
 
         private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
-            text = "\"" + text + "\"";
+            //string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
+            //text = "\"" + text + "\"";
 
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();

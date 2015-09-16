@@ -19,6 +19,8 @@ namespace VideoUp
 
         string startTimes = "00:00";
         string endTimes = "01:01";
+        string startTimesSub = "00:00";
+        string endTimesSub = "01:01";
         int count = 1;
 
         private string _autoOutput;
@@ -87,6 +89,7 @@ namespace VideoUp
 
             //int threads = Environment.ProcessorCount;  //Set thread slider to default of 4
             //trackThreads.Value = Math.Min(trackThreads.Maximum, Math.Max(trackThreads.Minimum, threads));
+            resBox.SelectedIndex = 1;
             uploadV = new UploadVideo();
             trackThreads_Scroll(sender, e); //Update label
         }
@@ -283,12 +286,12 @@ namespace VideoUp
             process.StartInfo = startInfo;
             process.Start();
 
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+            /*System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
             {
                 FileName = text,
                 UseShellExecute = true,
                 Verb = "open"
-            });
+            });*/
         }
 
         public static float ParseTime(string text)
@@ -319,7 +322,7 @@ namespace VideoUp
 
         private void UpdateArguments(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 string arguments = GenerateArguments();
                 if (arguments != _autoArguments || _argumentError)
@@ -332,26 +335,28 @@ namespace VideoUp
             {
                 textBoxArguments.Text = "ERROR: " + argExc.Message;
                 _argumentError = true;
-            }
+            }*/
         }
 
         private string GenerateArguments()
         {
             int width = 0;
             int height = 0;
+            
+            string[] res = resBox.SelectedItem.ToString().Split('x');
 
-            if (!string.IsNullOrWhiteSpace(boxResW.Text) || !string.IsNullOrWhiteSpace(boxResH.Text))
+            if (!string.IsNullOrWhiteSpace(res[0]) || !string.IsNullOrWhiteSpace(res[1]))
             {
-                if (!int.TryParse(boxResW.Text, out width))
-                    throw new ArgumentException("Invalid width!");
-                if (!int.TryParse(boxResH.Text, out height))
-                    throw new ArgumentException("Invalid height!");
+                if (!int.TryParse(res[0], out width))
+                    throw new ArgumentException("Invalid width");
+                if (!int.TryParse(res[1], out height))
+                    throw new ArgumentException("Invalid height");
             }
 
-            if ((!string.IsNullOrWhiteSpace(boxResW.Text) && string.IsNullOrWhiteSpace(boxResH.Text)) ||
-                (string.IsNullOrWhiteSpace(boxResW.Text) && !string.IsNullOrWhiteSpace(boxResH.Text)))
+            if ((!string.IsNullOrWhiteSpace(res[0]) && string.IsNullOrWhiteSpace(res[1])) ||
+                (string.IsNullOrWhiteSpace(res[0]) && !string.IsNullOrWhiteSpace(res[1])))
                 throw new ArgumentException("One of the width/height fields isn't filled in! Either fill none of them, or both of them!");
-
+            
             string sizeCrop = "";
             if (_croppingRectangle != CropForm.FullCrop)
             {
@@ -426,11 +431,12 @@ namespace VideoUp
                 metadataAuthor = string.Format("-metadata author=\"{0}\"", boxMetadataAuthor.Text);
 
             string metadataYear = "";
-            if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
-                metadataYear = string.Format("-metadata date=\"{0}\"", boxMetadataYear.Text);
+            string theDate = dateTimeMetadata.Value.ToString("yyyy-MM-dd");
+            if (!string.IsNullOrWhiteSpace(theDate))
+                metadataYear = string.Format("-metadata date=\"{0}\"", theDate);
 
             string metadataDesc = "";
-            if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
+            if (!string.IsNullOrWhiteSpace(boxMetadataDesc.Text))
                 metadataDesc = string.Format("-metadata comment=\"{0}\"", boxMetadataDesc.Text);
             textBox4.Text = boxMetadataDesc.Text.Substring(boxMetadataDesc.Text.LastIndexOf(@"\") + 1);
 
@@ -618,18 +624,19 @@ namespace VideoUp
 
                 startSubBox.Text = "";
                 endSubBox.Text = "";
+                startTimesSub = "00:00";
+                endTimesSub = "01:01";
                 count++;
             }
         }
 
         private void startSubTime_Click_1(object sender, EventArgs e)
         {
-            startTimes = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
-            if (System.TimeSpan.Parse(startTimes) < System.TimeSpan.Parse(endTimes))
+            startTimesSub = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
+            if (System.TimeSpan.Parse(startTimesSub) < System.TimeSpan.Parse(endTimesSub))
             {
                 startSubMsg.Visible = false;
-                startSubBox.Text = startTimes;
-                //boxCropFrom.Text = startTimes;
+                startSubBox.Text = startTimesSub;
             }
             else
                 startSubMsg.Visible = true;
@@ -637,12 +644,11 @@ namespace VideoUp
 
         private void endSubTime_Click_1(object sender, EventArgs e)
         {
-            endTimes = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
-            if (System.TimeSpan.Parse(endTimes) > System.TimeSpan.Parse(startTimes))
+            endTimesSub = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
+            if (System.TimeSpan.Parse(endTimesSub) > System.TimeSpan.Parse(startTimesSub))
             {
                 endSubMsg.Visible = false;
-                endSubBox.Text = endTimes;
-                //boxCropTo.Text = endTimes;
+                endSubBox.Text = endTimesSub;
             }
             else
                 endSubMsg.Visible = true;
@@ -660,7 +666,6 @@ namespace VideoUp
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Srt File|*.srt";
             saveFileDialog1.Title = "Save subtitle file";
-            //saveFileDialog1.ShowDialog();
 
             DialogResult result = saveFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
@@ -668,6 +673,19 @@ namespace VideoUp
                 string name = saveFileDialog1.FileName;
                 File.WriteAllText(name, infoBox.Text);
             }
+        }
+
+        private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
+            text = "\"" + text + "\"";
+
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "Dropit\\DropIt.exe";
+            process.StartInfo = startInfo;
+            process.Start();
         }
     }
 }

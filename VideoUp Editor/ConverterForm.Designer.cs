@@ -53,16 +53,16 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(678, 435);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(328, 195);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonPlay
             // 
             this.buttonPlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPlay.Enabled = false;
-            this.buttonPlay.Location = new System.Drawing.Point(34, 407);
+            this.buttonPlay.Location = new System.Drawing.Point(34, 167);
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(317, 25);
+            this.buttonPlay.Size = new System.Drawing.Size(142, 25);
             this.buttonPlay.TabIndex = 5;
             this.buttonPlay.Text = "Play result";
             this.buttonPlay.UseVisualStyleBackColor = true;
@@ -77,16 +77,16 @@
             this.textBoxOutput.Location = new System.Drawing.Point(3, 3);
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
-            this.textBoxOutput.Size = new System.Drawing.Size(672, 398);
+            this.textBoxOutput.Size = new System.Drawing.Size(322, 158);
             this.textBoxOutput.TabIndex = 2;
             this.textBoxOutput.Text = "";
             // 
             // buttonCancel
             // 
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCancel.Location = new System.Drawing.Point(357, 407);
+            this.buttonCancel.Location = new System.Drawing.Point(182, 167);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(318, 25);
+            this.buttonCancel.Size = new System.Drawing.Size(143, 25);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox.Location = new System.Drawing.Point(3, 407);
+            this.pictureBox.Location = new System.Drawing.Point(3, 167);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(25, 25);
             this.pictureBox.TabIndex = 4;
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 441);
+            this.ClientSize = new System.Drawing.Size(334, 201);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -132,7 +132,5 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button buttonPlay;
-
-
     }
 }

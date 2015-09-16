@@ -31,18 +31,20 @@ namespace VideoUp
 
         private void ProcessOnErrorDataReceived(object sender, DataReceivedEventArgs args)
         {
-            if (args.Data != null)
-                textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+            //if (args.Data != null)
+            //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
         }
 
         private void ProcessOnOutputDataReceived(object sender, DataReceivedEventArgs args)
         {
-            if (args.Data != null)
-                textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+            //if (args.Data != null)
+                //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
         }
 
         private void ConverterForm_Load(object sender, EventArgs e)
         {
+            textBoxOutput.AppendText("Busy converting. Please wait...");
+
             string argument = null;
            _multipass = true;
             if (_arguments.Length == 1)
@@ -51,11 +53,11 @@ namespace VideoUp
                 argument = _arguments[0];
             }
 
-            if (_multipass)
-                for (int i = 0; i < _arguments.Length; i++)
-                    textBoxOutput.AppendText(string.Format("\nArguments for pass {0}: {1}", i + 1, _arguments[i]));
-            else
-                textBoxOutput.AppendText("\nArguments: " + argument);
+            //if (_multipass)
+                //for (int i = 0; i < _arguments.Length; i++)
+                    //textBoxOutput.AppendText(string.Format("\nArguments for pass {0}: {1}", i + 1, _arguments[i]));
+            //else
+                //textBoxOutput.AppendText("\nArguments: " + argument);
 
             if (_multipass)
                 MultiPass(_arguments);
@@ -72,7 +74,7 @@ namespace VideoUp
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
                                                                               {
                                                                                   if (_panic) return; //This should stop that one exception when closing the converter
-                                                                                  textBoxOutput.AppendText("\n--- FFMPEG HAS EXITED ---");
+                                                                                  textBoxOutput.AppendText("\n--- Conversion is complete ---");
                                                                                   buttonCancel.Enabled = false;
 
                                                                                   _timer = new Timer();
@@ -100,7 +102,7 @@ namespace VideoUp
                 currentPass++;
                 if (currentPass < passes && !_cancelMultipass)
                 {
-                    textBoxOutput.AppendText(string.Format("\n--- ENTERING PASS {0} ---", currentPass + 1));
+                    //textBoxOutput.AppendText(string.Format("\n--- ENTERING PASS {0} ---", currentPass + 1));
 
                     MultiPass(arguments); //Sort of recursion going on here, be careful with stack overflows and shit
                     return;
@@ -139,12 +141,12 @@ namespace VideoUp
             }
             else
             {
-                textBoxOutput.AppendText("\n\nVideo converted succesfully!");
+                textBoxOutput.AppendText("\n\nVideo is ready.");
                 pictureBox.BackgroundImage = Properties.Resources.tick;
 
                 buttonPlay.Enabled = true;
                 _owner.MkvMerge();
-                _owner.manageFiles();
+                //_owner.manageFiles();
             }
 
             buttonCancel.Text = "Close";

@@ -17,11 +17,11 @@ namespace VideoUp
         private string _template;
         private string _templateArguments;
 
-        string startTimes = "00:00";
-        string endTimes = "01:01";
-        string startTimesSub = "00:00";
-        string endTimesSub = "01:01";
-        int count = 1;
+        private TimeSpan startTimes = new TimeSpan(00, 00, 00);
+        private TimeSpan endTimes = new TimeSpan(10, 10, 10);
+        private TimeSpan startTimesSub = new TimeSpan(00, 00, 00);
+        private TimeSpan endTimesSub = new TimeSpan(10, 10, 10);
+        private int count = 1;
 
         private string _autoOutput;
         private string _autoTitle;
@@ -114,6 +114,7 @@ namespace VideoUp
            
             string fullPath = Path.GetDirectoryName(path);
             axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
             axWindowsMediaPlayer2.URL = @textBoxIn.Text.Replace(@"\\", @"\");
             axWindowsMediaPlayer2.Ctlcontrols.stop();
 
@@ -585,12 +586,13 @@ namespace VideoUp
 
         private void startTime_Click(object sender, EventArgs e)
         {
-            startTimes = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-            if (System.TimeSpan.Parse(startTimes) < System.TimeSpan.Parse(endTimes))
+            startTimes = TimeSpan.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+
+            if (startTimes <= endTimes)
             {
                 startTimeValid.Visible = false;
-                startTimeBox.Text = startTimes;
-                boxCropFrom.Text = startTimes;
+                startTimeBox.Text = startTimes.ToString();
+                boxCropFrom.Text = startTimes.ToString();
             }
             else
                 startTimeValid.Visible = true;
@@ -598,12 +600,13 @@ namespace VideoUp
 
         private void endTime_Click(object sender, EventArgs e)
         {
-            endTimes = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-            if (System.TimeSpan.Parse(endTimes) > System.TimeSpan.Parse(startTimes))
+            endTimes = TimeSpan.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+
+            if (endTimes >= startTimes)
             {
                 endTimeValid.Visible = false;
-                endTimeBox.Text = endTimes;
-                boxCropTo.Text = endTimes;
+                endTimeBox.Text = endTimes.ToString();
+                boxCropTo.Text = endTimes.ToString();
             }
             else
                 endTimeValid.Visible = true;
@@ -616,7 +619,7 @@ namespace VideoUp
                 infoBox.AppendText(count.ToString());
                 Console.WriteLine("Count: " + count);
                 infoBox.AppendText("\n");
-                infoBox.AppendText("00:" + startSubBox.Text + " --> " + "00:" + endSubBox.Text);
+                infoBox.AppendText(startSubBox.Text + ",000" + " --> " + endSubBox.Text + ",000");
                 infoBox.AppendText("\n");
                 infoBox.AppendText(subTextBox.Text);
                 infoBox.AppendText("\n");
@@ -624,19 +627,19 @@ namespace VideoUp
 
                 startSubBox.Text = "";
                 endSubBox.Text = "";
-                startTimesSub = "00:00";
-                endTimesSub = "01:01";
+                startTimesSub = new TimeSpan(0, 0, 0);
+                endTimesSub = new TimeSpan(10, 10, 10);
                 count++;
             }
         }
 
         private void startSubTime_Click_1(object sender, EventArgs e)
         {
-            startTimesSub = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
-            if (System.TimeSpan.Parse(startTimesSub) < System.TimeSpan.Parse(endTimesSub))
+            startTimesSub = TimeSpan.Parse(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+            if (startTimesSub < endTimesSub)
             {
                 startSubMsg.Visible = false;
-                startSubBox.Text = startTimesSub;
+                startSubBox.Text = startTimesSub.ToString();
             }
             else
                 startSubMsg.Visible = true;
@@ -644,11 +647,11 @@ namespace VideoUp
 
         private void endSubTime_Click_1(object sender, EventArgs e)
         {
-            endTimesSub = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
-            if (System.TimeSpan.Parse(endTimesSub) > System.TimeSpan.Parse(startTimesSub))
+            endTimesSub = TimeSpan.Parse(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+            if (endTimesSub > startTimesSub)
             {
                 endSubMsg.Visible = false;
-                endSubBox.Text = endTimesSub;
+                endSubBox.Text = endTimesSub.ToString();
             }
             else
                 endSubMsg.Visible = true;

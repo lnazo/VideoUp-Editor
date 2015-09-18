@@ -145,6 +145,10 @@ namespace VideoUp
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -171,8 +175,10 @@ namespace VideoUp
             this.tableLayoutPanel17.SuspendLayout();
             this.uploadSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.helpSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -326,6 +332,7 @@ namespace VideoUp
             // videoSection
             // 
             this.videoSection.AllowDrop = true;
+            this.videoSection.BackColor = System.Drawing.SystemColors.Control;
             this.videoSection.Controls.Add(this.endTimeValid);
             this.videoSection.Controls.Add(this.startTimeValid);
             this.videoSection.Controls.Add(this.endTimeBox);
@@ -334,13 +341,13 @@ namespace VideoUp
             this.videoSection.Controls.Add(this.startTime);
             this.videoSection.Controls.Add(this.label23);
             this.videoSection.Controls.Add(this.axWindowsMediaPlayer1);
+            this.videoSection.Controls.Add(this.groupBox7);
             this.videoSection.Location = new System.Drawing.Point(4, 23);
             this.videoSection.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.videoSection.Name = "videoSection";
             this.videoSection.Size = new System.Drawing.Size(939, 447);
             this.videoSection.TabIndex = 3;
             this.videoSection.Text = "Trim Video";
-            this.videoSection.UseVisualStyleBackColor = true;
             // 
             // endTimeValid
             // 
@@ -435,19 +442,12 @@ namespace VideoUp
             // 
             // subtitle
             // 
-            this.subtitle.Controls.Add(this.saveSub);
+            this.subtitle.BackColor = System.Drawing.SystemColors.Control;
             this.subtitle.Controls.Add(this.caption);
-            this.subtitle.Controls.Add(this.enterSub);
             this.subtitle.Controls.Add(this.subTextBox);
-            this.subtitle.Controls.Add(this.label26);
             this.subtitle.Controls.Add(this.infoBox);
-            this.subtitle.Controls.Add(this.endSubMsg);
-            this.subtitle.Controls.Add(this.startSubMsg);
-            this.subtitle.Controls.Add(this.endSubBox);
-            this.subtitle.Controls.Add(this.startSubBox);
-            this.subtitle.Controls.Add(this.endSubTime);
-            this.subtitle.Controls.Add(this.startSubTime);
             this.subtitle.Controls.Add(this.axWindowsMediaPlayer2);
+            this.subtitle.Controls.Add(this.groupBox8);
             this.subtitle.Location = new System.Drawing.Point(4, 23);
             this.subtitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subtitle.Name = "subtitle";
@@ -455,11 +455,10 @@ namespace VideoUp
             this.subtitle.Size = new System.Drawing.Size(939, 447);
             this.subtitle.TabIndex = 6;
             this.subtitle.Text = "Create Subtitles";
-            this.subtitle.UseVisualStyleBackColor = true;
             // 
             // saveSub
             // 
-            this.saveSub.Location = new System.Drawing.Point(792, 431);
+            this.saveSub.Location = new System.Drawing.Point(790, 413);
             this.saveSub.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.saveSub.Name = "saveSub";
             this.saveSub.Size = new System.Drawing.Size(96, 25);
@@ -484,7 +483,7 @@ namespace VideoUp
             // 
             // enterSub
             // 
-            this.enterSub.Location = new System.Drawing.Point(618, 431);
+            this.enterSub.Location = new System.Drawing.Point(616, 413);
             this.enterSub.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.enterSub.Name = "enterSub";
             this.enterSub.Size = new System.Drawing.Size(96, 25);
@@ -501,13 +500,13 @@ namespace VideoUp
             this.subTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.subTextBox.Multiline = true;
             this.subTextBox.Name = "subTextBox";
-            this.subTextBox.Size = new System.Drawing.Size(270, 66);
+            this.subTextBox.Size = new System.Drawing.Size(270, 53);
             this.subTextBox.TabIndex = 23;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(44, 355);
+            this.label26.Location = new System.Drawing.Point(42, 337);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 14);
@@ -533,7 +532,7 @@ namespace VideoUp
             this.endSubMsg.AutoSize = true;
             this.endSubMsg.BackColor = System.Drawing.Color.Red;
             this.endSubMsg.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.endSubMsg.Location = new System.Drawing.Point(281, 434);
+            this.endSubMsg.Location = new System.Drawing.Point(279, 407);
             this.endSubMsg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.endSubMsg.Name = "endSubMsg";
             this.endSubMsg.Size = new System.Drawing.Size(197, 14);
@@ -546,7 +545,7 @@ namespace VideoUp
             this.startSubMsg.AutoSize = true;
             this.startSubMsg.BackColor = System.Drawing.Color.Red;
             this.startSubMsg.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.startSubMsg.Location = new System.Drawing.Point(281, 389);
+            this.startSubMsg.Location = new System.Drawing.Point(279, 365);
             this.startSubMsg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.startSubMsg.Name = "startSubMsg";
             this.startSubMsg.Size = new System.Drawing.Size(183, 14);
@@ -557,7 +556,7 @@ namespace VideoUp
             // endSubBox
             // 
             this.endSubBox.Enabled = false;
-            this.endSubBox.Location = new System.Drawing.Point(161, 431);
+            this.endSubBox.Location = new System.Drawing.Point(159, 401);
             this.endSubBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.endSubBox.Name = "endSubBox";
             this.endSubBox.Size = new System.Drawing.Size(100, 20);
@@ -566,7 +565,7 @@ namespace VideoUp
             // startSubBox
             // 
             this.startSubBox.Enabled = false;
-            this.startSubBox.Location = new System.Drawing.Point(161, 386);
+            this.startSubBox.Location = new System.Drawing.Point(159, 359);
             this.startSubBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.startSubBox.Name = "startSubBox";
             this.startSubBox.Size = new System.Drawing.Size(100, 20);
@@ -575,7 +574,7 @@ namespace VideoUp
             // endSubTime
             // 
             this.endSubTime.Enabled = false;
-            this.endSubTime.Location = new System.Drawing.Point(47, 429);
+            this.endSubTime.Location = new System.Drawing.Point(45, 396);
             this.endSubTime.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.endSubTime.Name = "endSubTime";
             this.endSubTime.Size = new System.Drawing.Size(96, 25);
@@ -587,7 +586,7 @@ namespace VideoUp
             // startSubTime
             // 
             this.startSubTime.Enabled = false;
-            this.startSubTime.Location = new System.Drawing.Point(47, 383);
+            this.startSubTime.Location = new System.Drawing.Point(45, 354);
             this.startSubTime.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.startSubTime.Name = "startSubTime";
             this.startSubTime.Size = new System.Drawing.Size(96, 25);
@@ -652,7 +651,7 @@ namespace VideoUp
             this.groupBox2.Size = new System.Drawing.Size(931, 51);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Audio";
+            this.groupBox2.Text = "Sound";
             // 
             // tableLayoutPanel13
             // 
@@ -681,7 +680,7 @@ namespace VideoUp
             this.boxAudio.Name = "boxAudio";
             this.boxAudio.Size = new System.Drawing.Size(267, 26);
             this.boxAudio.TabIndex = 3;
-            this.boxAudio.Text = "Enable audio:";
+            this.boxAudio.Text = "Enable sound:";
             this.boxAudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.boxAudio.UseVisualStyleBackColor = true;
             this.boxAudio.CheckedChanged += new System.EventHandler(this.UpdateArguments);
@@ -697,7 +696,7 @@ namespace VideoUp
             this.groupBox5.Size = new System.Drawing.Size(931, 261);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Metadata";
+            this.groupBox5.Text = "Information";
             // 
             // tableLayoutPanel11
             // 
@@ -874,7 +873,7 @@ namespace VideoUp
             this.groupBox4.Size = new System.Drawing.Size(931, 111);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Video";
+            this.groupBox4.Text = "Video Aspects";
             // 
             // tableLayoutPanel5
             // 
@@ -1264,6 +1263,7 @@ namespace VideoUp
             // 
             // uploadSection
             // 
+            this.uploadSection.BackColor = System.Drawing.SystemColors.Control;
             this.uploadSection.Controls.Add(this.descriptionTitle);
             this.uploadSection.Controls.Add(this.textBox4);
             this.uploadSection.Controls.Add(this.pictureBox1);
@@ -1275,6 +1275,7 @@ namespace VideoUp
             this.uploadSection.Controls.Add(this.label32);
             this.uploadSection.Controls.Add(this.button2);
             this.uploadSection.Controls.Add(this.button1);
+            this.uploadSection.Controls.Add(this.groupBox9);
             this.uploadSection.Location = new System.Drawing.Point(4, 23);
             this.uploadSection.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.uploadSection.Name = "uploadSection";
@@ -1282,7 +1283,6 @@ namespace VideoUp
             this.uploadSection.Size = new System.Drawing.Size(939, 447);
             this.uploadSection.TabIndex = 4;
             this.uploadSection.Text = "Upload Video";
-            this.uploadSection.UseVisualStyleBackColor = true;
             // 
             // descriptionTitle
             // 
@@ -1403,6 +1403,8 @@ namespace VideoUp
             // 
             // helpSection
             // 
+            this.helpSection.BackColor = System.Drawing.SystemColors.Control;
+            this.helpSection.Controls.Add(this.groupBox10);
             this.helpSection.Location = new System.Drawing.Point(4, 23);
             this.helpSection.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.helpSection.Name = "helpSection";
@@ -1410,7 +1412,6 @@ namespace VideoUp
             this.helpSection.Size = new System.Drawing.Size(939, 447);
             this.helpSection.TabIndex = 5;
             this.helpSection.Text = "Help";
-            this.helpSection.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -1624,6 +1625,55 @@ namespace VideoUp
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Location = new System.Drawing.Point(0, 0);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(939, 447);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Trim";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.saveSub);
+            this.groupBox8.Controls.Add(this.enterSub);
+            this.groupBox8.Controls.Add(this.label26);
+            this.groupBox8.Controls.Add(this.endSubMsg);
+            this.groupBox8.Controls.Add(this.startSubTime);
+            this.groupBox8.Controls.Add(this.startSubMsg);
+            this.groupBox8.Controls.Add(this.endSubTime);
+            this.groupBox8.Controls.Add(this.endSubBox);
+            this.groupBox8.Controls.Add(this.startSubBox);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox8.Location = new System.Drawing.Point(2, 3);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(935, 441);
+            this.groupBox8.TabIndex = 27;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Create";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Location = new System.Drawing.Point(2, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(935, 441);
+            this.groupBox9.TabIndex = 13;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Upload";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(2, 3);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(935, 441);
+            this.groupBox10.TabIndex = 9;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Help";
+            // 
             // MainForm
             // 
             this.AcceptButton = this.buttonGo;
@@ -1636,6 +1686,7 @@ namespace VideoUp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(975, 287);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1678,9 +1729,12 @@ namespace VideoUp
             this.uploadSection.ResumeLayout(false);
             this.uploadSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.helpSection.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1804,6 +1858,10 @@ namespace VideoUp
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileManagerToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox10;
     }
 }
 

@@ -14,6 +14,7 @@ namespace VideoUp
         private UploadVideo uploadV;
 
         private string subtitleFile;
+        private string subFile = "";
         private string _template;
         private string _templateArguments;
 
@@ -62,7 +63,7 @@ namespace VideoUp
             DragDrop += HandleDragDrop;
 
             // default arguments
-            _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {6} {7} {8} {9} {10}";
+            _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {11} {6} {7} {8} {9} {10}";
             //{0} is '-an' if no audio, otherwise blank
             //{1} is bitrate in kb/s
             //{2} is '-vf scale=WIDTH:HEIGHT' if set otherwise blank
@@ -72,6 +73,7 @@ namespace VideoUp
             //{8} is '-metadata year="YEAR"' when specifying a date, otherwise blank
             //{9} is '-metadata description="DESCRIPTION"' when specifying a description, otherwise blank
             //{10} is '-metadata copyright="© DCCT"' when setting the copyright
+            //{11} is 'subtitle' when including the subtitle
 
             // selected arguments by user
             _template = "{2} -i \"{0}\" {3} {4} {5} -f avi -y \"{1}\"";
@@ -443,8 +445,16 @@ namespace VideoUp
 
             string metadataCopy = "-metadata copyright=\"© DCCT\"";
 
+            if (!string.IsNullOrWhiteSpace(subFile))
+            {
+                subFile = string.Format("-vf \"subtitles='{0}'\"", subFile);
+                subFile = @subFile.Replace(@"\", @"\\");
+                subFile = subFile.Insert(17, "\\");
+                Console.WriteLine(subFile);
+            }
+
             string audioEnabled = boxAudio.Checked ? "" : "-an";
-            return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, metadataTitle, metadataAuthor, metadataYear, metadataDesc, metadataCopy);
+            return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, subFile, metadataTitle, metadataAuthor, metadataYear, metadataDesc, metadataCopy);
         }
 
         private static string MakeParseFriendly(string text)
@@ -571,6 +581,7 @@ namespace VideoUp
             subtitleFile = path;
             textBox1.Text = path.Substring(path.LastIndexOf(@"\") + 1);
             textBox3.Text = path.Substring(path.LastIndexOf(@"\") + 1);
+            subFile = path;
         }
 
         private void uploadButton_Click(object sender, EventArgs e)

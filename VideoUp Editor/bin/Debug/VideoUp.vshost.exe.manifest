@@ -283,14 +283,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="322448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="322960">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IMTpixx9CdyQ1TnWo6JBfLOiVeM=</dsig:DigestValue>
+        <dsig:DigestValue>KDlDir2oJNKQWss/6lYwVTDZtgE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2061,13 +2061,13 @@
       <dsig:DigestValue>NdLCupLXiYYT/KdYxbXuzGcrS3g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="FFmpeg\ffmpeg.exe" size="36095488">
+  <file name="FFmpeg\ffmpeg.exe" size="36547584">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>d/yHVWDfSAxTF81pTlZDvTDfkFc=</dsig:DigestValue>
+      <dsig:DigestValue>CRNZr5DSGcJQhyCVh7XBt1Nffbg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="FFmpeg\gpl-3.0.txt" size="35821">

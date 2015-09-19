@@ -32,7 +32,7 @@ namespace VideoUp
         private void ProcessOnErrorDataReceived(object sender, DataReceivedEventArgs args)
         {
             //if (args.Data != null)
-            //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+                //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
         }
 
         private void ProcessOnOutputDataReceived(object sender, DataReceivedEventArgs args)
@@ -53,11 +53,11 @@ namespace VideoUp
                 argument = _arguments[0];
             }
 
-            //if (_multipass)
-                //for (int i = 0; i < _arguments.Length; i++)
-                    //textBoxOutput.AppendText(string.Format("\nArguments for pass {0}: {1}", i + 1, _arguments[i]));
-            //else
-                //textBoxOutput.AppendText("\nArguments: " + argument);
+            /*if (_multipass)
+                for (int i = 0; i < _arguments.Length; i++)
+                    textBoxOutput.AppendText(string.Format("\nArguments for pass {0}: {1}", i + 1, _arguments[i]));
+            else
+                textBoxOutput.AppendText("\nArguments: " + argument);*/
 
             if (_multipass)
                 MultiPass(_arguments);
@@ -145,7 +145,7 @@ namespace VideoUp
                 pictureBox.BackgroundImage = Properties.Resources.tick;
 
                 buttonPlay.Enabled = true;
-                _owner.MkvMerge();
+                //_owner.MkvMerge();
                 //_owner.manageFiles();
             }
 

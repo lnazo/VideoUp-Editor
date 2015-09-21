@@ -63,7 +63,8 @@ namespace VideoUp
             DragDrop += HandleDragDrop;
 
             // default arguments
-            _templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {11} {6} {7} {8} {9} {10}";
+            //_templateArguments = "{0} -vcodec libx264 -preset fast -crf 32 -b:v {1}K {2} {3} {11} {6} {7} {8} {9} {10}";
+            _templateArguments = "{0} -codec:v libx264 -preset fast -crf 25 -b:v {1}K {2} {3} {11} {6} {7} {8} {9} {10}";
             //{0} is '-an' if no audio, otherwise blank
             //{1} is bitrate in kb/s
             //{2} is '-vf scale=WIDTH:HEIGHT' if set otherwise blank
@@ -133,7 +134,7 @@ namespace VideoUp
                 boxMetadataTitle.Text = _autoTitle = name;
             if (textBoxOut.Text == _autoOutput || textBoxOut.Text == "")
                 textBoxOut.Text = _autoOutput = Path.Combine(fullPath, name + ".avi");
-            textBox2.Text = textBoxOut.Text.Substring(textBoxOut.Text.LastIndexOf(@"\") + 1);
+            //textBox2.Text = textBoxOut.Text.Substring(textBoxOut.Text.LastIndexOf(@"\") + 1);
         }
 
         private void HandleDragEnter(object sender, DragEventArgs e)
@@ -254,7 +255,7 @@ namespace VideoUp
                     arguments[i] = string.Format(_template, input, output, start, end, options, "-pass " + (i + 1));
             }
 
-            var form = new ConverterForm(this, arguments);
+            var form = new UploaderForm(this, arguments);
             form.ShowDialog();
 
             return null;
@@ -486,11 +487,6 @@ namespace VideoUp
             MessageBox.Show("The current format is not working. Please try again.");
         }
 
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog dialog = new OpenFileDialog())
@@ -507,41 +503,8 @@ namespace VideoUp
 
         private void SetFile1(string path)
         {
-            textBox2.Text = path.Substring(path.LastIndexOf(@"\") + 1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog dialog = new OpenFileDialog())
-            {
-                dialog.CheckFileExists = true;
-                dialog.CheckPathExists = true;
-                dialog.ValidateNames = true;
-                dialog.Filter = "Subtitle files (*.ass, *.srt) | *.ass; *.srt";
-
-                if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
-                    SetFile2(dialog.FileName);
-            }
-        }
-
-        private void SetFile2(string path)
-        {
-            textBox3.Text = path.Substring(path.LastIndexOf(@"\") + 1);
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            //textBox2.Text = path.Substring(path.LastIndexOf(@"\") + 1);
+            textBox2.Text = path;
         }
 
         // unused method
@@ -553,7 +516,9 @@ namespace VideoUp
         private void radioSubNone_CheckedChanged(object sender, EventArgs e)
         {
             buttonSubBrowse.Enabled = false;
+            textBox1.Text = "";
             textBox1.Enabled = false;
+            subFile = "";
         }
 
         private void radioSubExternal_CheckedChanged(object sender, EventArgs e)
@@ -580,16 +545,15 @@ namespace VideoUp
         {
             subtitleFile = path;
             textBox1.Text = path.Substring(path.LastIndexOf(@"\") + 1);
-            textBox3.Text = path.Substring(path.LastIndexOf(@"\") + 1);
             subFile = path;
         }
 
         private void uploadButton_Click(object sender, EventArgs e)
         {
             string title, desc, path;
-            title = textBox2.Text.Substring(0, textBox2.Text.LastIndexOf(@"."));
+            title = vidNameUpload.Text;
             desc = textBox4.Text;
-            path = textBoxOut.Text;
+            path = textBox2.Text;
 
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
@@ -668,13 +632,6 @@ namespace VideoUp
                 endSubMsg.Visible = true;
         }
 
-        private void axWindowsMediaPlayer2_Enter(object sender, EventArgs e)
-        {
-            // make caption appear for set time
-            if (axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Equals("hi"))
-                caption.Visible = true;
-        }
-
         private void saveSub_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
@@ -687,6 +644,7 @@ namespace VideoUp
                 string name = saveFileDialog1.FileName;
                 File.WriteAllText(name, infoBox.Text);
             }
+            subTextBox.Text = "";
         }
 
         private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)

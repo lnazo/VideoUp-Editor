@@ -1,6 +1,6 @@
 ﻿namespace VideoUp
 {
-    partial class ConverterForm
+    partial class UploaderForm
     {
         /// <summary>
         /// Required designer variable.

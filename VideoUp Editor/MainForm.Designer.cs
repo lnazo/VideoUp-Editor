@@ -51,7 +51,6 @@ namespace VideoUp
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.subtitle = new System.Windows.Forms.TabPage();
-            this.caption = new System.Windows.Forms.Label();
             this.subTextBox = new System.Windows.Forms.TextBox();
             this.infoBox = new System.Windows.Forms.TextBox();
             this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -113,13 +112,16 @@ namespace VideoUp
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.uploadStatusBox = new System.Windows.Forms.TextBox();
+            this.vidNameUpload = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.uploadButton = new System.Windows.Forms.Button();
             this.descriptionTitle = new System.Windows.Forms.Label();
             this.helpSection = new System.Windows.Forms.TabPage();
@@ -140,14 +142,13 @@ namespace VideoUp
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label16 = new System.Windows.Forms.Label();
-            this.vidNameUpload = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -454,7 +455,6 @@ namespace VideoUp
             // subtitle
             // 
             this.subtitle.BackColor = System.Drawing.SystemColors.Control;
-            this.subtitle.Controls.Add(this.caption);
             this.subtitle.Controls.Add(this.subTextBox);
             this.subtitle.Controls.Add(this.infoBox);
             this.subtitle.Controls.Add(this.axWindowsMediaPlayer2);
@@ -466,20 +466,6 @@ namespace VideoUp
             this.subtitle.Size = new System.Drawing.Size(939, 447);
             this.subtitle.TabIndex = 6;
             this.subtitle.Text = "Create Subtitles";
-            // 
-            // caption
-            // 
-            this.caption.AutoSize = true;
-            this.caption.BackColor = System.Drawing.Color.Black;
-            this.caption.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caption.ForeColor = System.Drawing.SystemColors.Control;
-            this.caption.Location = new System.Drawing.Point(280, 239);
-            this.caption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.caption.Name = "caption";
-            this.caption.Size = new System.Drawing.Size(62, 20);
-            this.caption.TabIndex = 25;
-            this.caption.Text = "Caption";
-            this.caption.Visible = false;
             // 
             // subTextBox
             // 
@@ -496,7 +482,7 @@ namespace VideoUp
             // 
             this.infoBox.AcceptsReturn = true;
             this.infoBox.AcceptsTab = true;
-            this.infoBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.infoBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.infoBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoBox.Location = new System.Drawing.Point(618, 14);
             this.infoBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1304,15 +1290,6 @@ namespace VideoUp
             this.uploadSection.TabIndex = 4;
             this.uploadSection.Text = "Upload Video";
             // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(102, 96);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 5;
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -1334,19 +1311,9 @@ namespace VideoUp
             this.label32.TabIndex = 2;
             this.label32.Text = "Video Name:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(307, 94);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.uploadStatusBox);
             this.groupBox9.Controls.Add(this.vidNameUpload);
             this.groupBox9.Controls.Add(this.textBox2);
             this.groupBox9.Controls.Add(this.label16);
@@ -1362,6 +1329,43 @@ namespace VideoUp
             this.groupBox9.TabIndex = 13;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Upload";
+            // 
+            // uploadStatusBox
+            // 
+            this.uploadStatusBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.uploadStatusBox.Location = new System.Drawing.Point(425, 65);
+            this.uploadStatusBox.Multiline = true;
+            this.uploadStatusBox.Name = "uploadStatusBox";
+            this.uploadStatusBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.uploadStatusBox.Size = new System.Drawing.Size(435, 151);
+            this.uploadStatusBox.TabIndex = 15;
+            // 
+            // vidNameUpload
+            // 
+            this.vidNameUpload.Location = new System.Drawing.Point(102, 65);
+            this.vidNameUpload.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.vidNameUpload.Name = "vidNameUpload";
+            this.vidNameUpload.Size = new System.Drawing.Size(192, 20);
+            this.vidNameUpload.TabIndex = 14;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(102, 96);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(192, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(30, 99);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(62, 14);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Video Path:";
             // 
             // pictureBox1
             // 
@@ -1383,6 +1387,17 @@ namespace VideoUp
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(191, 85);
             this.textBox4.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(307, 94);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 25);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Browse";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // uploadButton
             // 
@@ -1584,6 +1599,7 @@ namespace VideoUp
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileManagerToolStripMenuItem,
             this.newToolStripMenuItem,
+            this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -1603,17 +1619,26 @@ namespace VideoUp
             this.newToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -1638,24 +1663,6 @@ namespace VideoUp
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 99);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 14);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Video Path:";
-            // 
-            // vidNameUpload
-            // 
-            this.vidNameUpload.Location = new System.Drawing.Point(102, 65);
-            this.vidNameUpload.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.vidNameUpload.Name = "vidNameUpload";
-            this.vidNameUpload.Size = new System.Drawing.Size(192, 20);
-            this.vidNameUpload.TabIndex = 14;
             // 
             // MainForm
             // 
@@ -1825,7 +1832,6 @@ namespace VideoUp
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
         private System.Windows.Forms.Button enterSub;
         private System.Windows.Forms.TextBox subTextBox;
-        private System.Windows.Forms.Label caption;
         private System.Windows.Forms.Button saveSub;
         private System.Windows.Forms.ComboBox resBox;
         private System.Windows.Forms.DateTimePicker dateTimeMetadata;
@@ -1846,6 +1852,8 @@ namespace VideoUp
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox vidNameUpload;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox uploadStatusBox;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
     }
 }
 

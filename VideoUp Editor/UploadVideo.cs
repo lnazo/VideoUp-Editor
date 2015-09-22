@@ -32,94 +32,104 @@ using System.Windows.Forms;
 
 namespace Google.Apis.YouTube.Samples
 {
-  internal class UploadVideo
-  {
-      private string videoTitle, videoDesc, videoPath;
-
-      public void passValues(string title, string desc, string path)
-      {
-          videoTitle = title;
-          videoDesc = desc;
-          videoPath = path;
-      }
-
-      [STAThread]
-      public void startUpload()
-      {
-          try
-          {
-              //new UploadVideo().Run(videoTitle, videoDesc, videoPath).Wait(); // leads to deadlock
-              new UploadVideo().Run(videoTitle, videoDesc, videoPath).ConfigureAwait(false);
-          }
-          catch (AggregateException ex)
-          {
-              foreach (var e in ex.InnerExceptions)
-              {
-                  Console.WriteLine("Error: " + e.Message);
-              }
-          }
-      }
-
-    private async Task Run(string title, string desc, string path)
+    internal class UploadVideo
     {
-      UserCredential credential;
+        private string videoTitle, videoDesc, videoPath, uploadStatus;
+
+        public void passValues(string title, string desc, string path)
+        {
+            videoTitle = title;
+            videoDesc = desc;
+            videoPath = path;
+        }
+
+        [STAThread]
+        public void startUpload()
+        {
+            try
+            {
+                //new UploadVideo().Run(videoTitle, videoDesc, videoPath).Wait(); // leads to deadlock
+                new UploadVideo().Run(videoTitle, videoDesc, videoPath).ConfigureAwait(false);
+            }
+            catch (AggregateException ex)
+            {
+                foreach (var e in ex.InnerExceptions)
+                {
+                    Console.WriteLine("Error: " + e.Message);
+                }
+            }
+        }
+
+        private async Task Run(string title, string desc, string path)
+        {
+            UserCredential credential;
       
-      using (var stream = new FileStream("client_secret.json", FileMode.Open, FileAccess.Read))
-      {
-        credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-            GoogleClientSecrets.Load(stream).Secrets,
-            new[] { YouTubeService.Scope.YoutubeUpload },
-            "user",
-            CancellationToken.None
-        );
-      }
+            using (var stream = new FileStream("client_secret.json", FileMode.Open, FileAccess.Read))
+            {
+                credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                GoogleClientSecrets.Load(stream).Secrets,
+                new[] { YouTubeService.Scope.YoutubeUpload },
+                "user",
+                CancellationToken.None
+            );
+          }
 
-      var youtubeService = new YouTubeService(new BaseClientService.Initializer()
-      {
-        HttpClientInitializer = credential,
-        ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
-      });
+          var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+          {
+            HttpClientInitializer = credential,
+            ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
+          });
 
-      var video = new Video();
-      video.Snippet = new VideoSnippet();
-      video.Snippet.Title = title;
-      video.Snippet.Description = desc;
-      video.Snippet.Tags = new string[] {"deaf community of cape town", "dcct", "deaf community", "heathfield"};
-      video.Snippet.CategoryId = "22"; // See https://developers.google.com/youtube/v3/docs/videoCategories/list
-      video.Status = new VideoStatus();
-      video.Status.PrivacyStatus = "unlisted";
-      var filePath = path;
+          var video = new Video();
+          video.Snippet = new VideoSnippet();
+          video.Snippet.Title = title;
+          video.Snippet.Description = desc;
+          video.Snippet.Tags = new string[] {"deaf community of cape town", "dcct", "deaf community", "heathfield"};
+          video.Snippet.CategoryId = "22"; // See https://developers.google.com/youtube/v3/docs/videoCategories/list
+          video.Status = new VideoStatus();
+          video.Status.PrivacyStatus = "unlisted";
+          var filePath = path;
 
-      using (var fileStream = new FileStream(filePath, FileMode.Open))
-      {
-        var videosInsertRequest = youtubeService.Videos.Insert(video, "snippet,status", fileStream, "video/*");
-        videosInsertRequest.ProgressChanged += videosInsertRequest_ProgressChanged;
-        videosInsertRequest.ResponseReceived += videosInsertRequest_ResponseReceived;
+        using (var fileStream = new FileStream(filePath, FileMode.Open))
+        {
+            var videosInsertRequest = youtubeService.Videos.Insert(video, "snippet,status", fileStream, "video/*");
+            videosInsertRequest.ProgressChanged += videosInsertRequest_ProgressChanged;
+            videosInsertRequest.ResponseReceived += videosInsertRequest_ResponseReceived;
 
-        await videosInsertRequest.UploadAsync();
-      }
+            await videosInsertRequest.UploadAsync();
+            }
+        }
+
+        void videosInsertRequest_ProgressChanged(Google.Apis.Upload.IUploadProgress progress)
+        {
+            switch (progress.Status)
+            {
+                case UploadStatus.Uploading:
+                  //MessageBox.Show(string.Format("{0:0.##} MB sent.", progress.BytesSent * 0.000001));
+                  sendResponse(string.Format("{0:0.##} MB sent.", progress.BytesSent * 0.000001));
+                  break;
+
+                case UploadStatus.Failed:
+                  //MessageBox.Show(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
+                  sendResponse(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
+                  break;
+            }
+        }
+
+        void videosInsertRequest_ResponseReceived(Video video)
+        {
+            //MessageBox.Show("The Video " + videoTitle + " was successfully uploaded");
+            sendResponse("The Video " + videoTitle + " was successfully uploaded");
+        }
+
+        public void sendResponse(string str)
+        {
+            uploadStatus = str;
+        }
+
+        public string returnResponse()
+        {
+            return uploadStatus;
+        }
     }
-
-    void videosInsertRequest_ProgressChanged(Google.Apis.Upload.IUploadProgress progress)
-    {
-      switch (progress.Status)
-      {
-        case UploadStatus.Uploading:
-          //Console.WriteLine("{0} bytes sent.", progress.BytesSent);
-          MessageBox.Show(string.Format("{0} bytes sent.", progress.BytesSent));
-          break;
-
-        case UploadStatus.Failed:
-          //Console.WriteLine("An error prevented the upload from completing.\n{0}", progress.Exception);
-          MessageBox.Show(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
-          break;
-      }
-    }
-
-    void videosInsertRequest_ResponseReceived(Video video)
-    {
-      //Console.WriteLine("Video id '{0}' was successfully uploaded.", video.Id);
-      MessageBox.Show("The Video was successfully uploaded");
-    }
-  }
 }

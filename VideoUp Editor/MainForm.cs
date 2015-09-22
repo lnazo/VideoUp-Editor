@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace VideoUp
 {
@@ -13,6 +14,7 @@ namespace VideoUp
     {
         private UploadVideo uploadV;
 
+        private Timer check;
         private string subtitleFile;
         private string subFile = "";
         private string _template;
@@ -95,6 +97,26 @@ namespace VideoUp
             resBox.SelectedIndex = 1;
             uploadV = new UploadVideo();
             trackThreads_Scroll(sender, e); //Update label
+            InitTimer();
+        }
+
+        public void InitTimer()
+        {
+            check = new Timer();
+            check.Tick += new EventHandler(check_Tick);
+            check.Interval = 1000; // in miliseconds
+            check.Start();
+        }
+
+        private void check_Tick(object sender, EventArgs e)
+        {
+            handleUploadStatus();
+        }
+
+        public void handleUploadStatus()
+        {
+            if (!string.IsNullOrWhiteSpace(uploadV.returnResponse()))
+                uploadStatusBox.AppendText(uploadV.returnResponse() + "\n");
         }
 
         private void buttonBrowseIn_Click(object sender, EventArgs e)
@@ -557,6 +579,8 @@ namespace VideoUp
 
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
+            uploadStatusBox.AppendText("Upload process has begun\n");
+            uploadStatusBox.AppendText("Preparing upload...\n");
         }
 
         private void startTime_Click(object sender, EventArgs e)
@@ -658,6 +682,68 @@ namespace VideoUp
             startInfo.FileName = "Dropit\\DropIt.exe";
             process.StartInfo = startInfo;
             process.Start();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "VideoUp File|*.vidup";
+            saveFileDialog1.Title = "Save VideoUp Project";
+
+            DialogResult result = saveFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string name = saveFileDialog1.FileName;
+                string content = textBoxIn.Text + "\n" + textBoxOut.Text + "\n" +
+                boxMetadataTitle.Text + "\n" + boxMetadataAuthor.Text + "\n" + startTimeBox.Text + "\n" + endTimeBox.Text
+                + "\n" + resBox.Text + "\n" + boxCropFrom.Text + "\n" + boxCropTo.Text + "\n" + textBox1.Text + "\n"
+                + dateTimeMetadata.Text + "\n" + boxMetadataDesc.Text + "\n" + infoBox.Text;
+                File.WriteAllText(name, content);
+                MessageBox.Show("Project Saved");
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog theDialog = new OpenFileDialog();
+            theDialog.Title = "Open VideoUp File";
+            theDialog.Filter = "VideoUp File|*.vidup";
+
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new
+                System.IO.StreamReader(theDialog.FileName);
+                textBoxIn.Text = sr.ReadLine();
+                axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
+                axWindowsMediaPlayer1.Ctlcontrols.stop();
+                axWindowsMediaPlayer2.URL = @textBoxIn.Text.Replace(@"\\", @"\");
+                axWindowsMediaPlayer2.Ctlcontrols.stop();
+
+                textBoxOut.Text = sr.ReadLine();
+                boxMetadataTitle.Text = sr.ReadLine();
+                boxMetadataAuthor.Text = sr.ReadLine();
+                startTimeBox.Text = sr.ReadLine();
+                endTimeBox.Text = sr.ReadLine();
+                resBox.Text = sr.ReadLine();
+                boxCropFrom.Text = sr.ReadLine();
+                boxCropTo.Text = sr.ReadLine();
+
+                textBox1.Text = sr.ReadLine();
+                radioSubNone.Checked = false;
+                radioSubExternal.Checked = true;
+                buttonSubBrowse.Enabled = true;
+                textBox1.Enabled = true;
+
+                dateTimeMetadata.Text = sr.ReadLine();
+                boxMetadataDesc.Text = sr.ReadLine();
+                infoBox.Text = sr.ReadLine();
+                sr.Close();
+            }
         }
     }
 }

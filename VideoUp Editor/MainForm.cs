@@ -34,7 +34,7 @@ namespace VideoUp
         public Size AssumedInputSize; //This will get set as soon as the crop form generates an input file. It's assumed because the user could've changed the video after cropping.
         //Might want to get a definite, reliable way to get the size of the input video.
 
-        public RectangleF CroppingRectangle  //This is in the [0-1] region, multiply it by the resolution to get the crop coordinates in pixels
+        public RectangleF CroppingRectangle
         {
             get { return _croppingRectangle; }
             set
@@ -50,15 +50,13 @@ namespace VideoUp
                                                    _croppingRectangle.Height);
             }
         }
-        private RectangleF _croppingRectangle; //Using a backing field so we can update the label as soon as something changed it!
-
-        //public RectangleF CroppingRectangle; //This is in the [0-1] region, multiply it by the resolution to get the crop coordinates in pixels
+        private RectangleF _croppingRectangle;
 
         public MainForm()
         {
             InitializeComponent();
 
-            CroppingRectangle = new RectangleF(0, 0, 1, 1); //Crop nothing by default
+            CroppingRectangle = new RectangleF(0, 0, 1, 1);
 
             AllowDrop = true;
             DragEnter += HandleDragEnter;
@@ -90,33 +88,27 @@ namespace VideoUp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //Keeping this disabled for now because threads are crashy
-
-            //int threads = Environment.ProcessorCount;  //Set thread slider to default of 4
-            //trackThreads.Value = Math.Min(trackThreads.Maximum, Math.Max(trackThreads.Minimum, threads));
             resBox.SelectedIndex = 1;
             uploadV = new UploadVideo();
-            trackThreads_Scroll(sender, e); //Update label
-            InitTimer();
+            trackThreads_Scroll(sender, e);
+            //InitTimer();
         }
 
         public void InitTimer()
         {
             check = new Timer();
             check.Tick += new EventHandler(check_Tick);
-            check.Interval = 1000; // in miliseconds
+            check.Interval = 10000;
             check.Start();
         }
 
         private void check_Tick(object sender, EventArgs e)
         {
-            handleUploadStatus();
-        }
-
-        public void handleUploadStatus()
-        {
-            if (!string.IsNullOrWhiteSpace(uploadV.returnResponse()))
-                uploadStatusBox.AppendText(uploadV.returnResponse() + "\n");
+            uploadButton.Enabled = true;
+            vidNameUpload.Text = "";
+            textBox2.Text = "";
+            textBox4.Text = "";
+            uploadStatusBox.Text = "";
         }
 
         private void buttonBrowseIn_Click(object sender, EventArgs e)
@@ -161,7 +153,6 @@ namespace VideoUp
 
         private void HandleDragEnter(object sender, DragEventArgs e)
         {
-            // show copy cursor for files
             bool dataPresent = e.Data.GetDataPresent(DataFormats.FileDrop);
             e.Effect = dataPresent ? DragDropEffects.Copy : DragDropEffects.None;
         }
@@ -270,7 +261,7 @@ namespace VideoUp
                 arguments = new[] { string.Format(_template, input, output, start, end, options, "", "") };
             else
             {
-                int passes = 2; //Can you even use more than 2 passes?
+                int passes = 2;
 
                 arguments = new string[passes];
                 for (int i = 0; i < passes; i++)
@@ -283,7 +274,7 @@ namespace VideoUp
             return null;
         }
 
-        public void MkvMerge()
+        /*public void MkvMerge()
         {
             string inText = "\"" + textBoxOut.Text + "\"";
             string outText = "\"" + textBoxOut.Text + "\"";
@@ -298,7 +289,7 @@ namespace VideoUp
             startInfo.Arguments = "/c FFmpeg\\mkvmerge -o " + outText + " " + inText + " " + subtitleFile;
             process.StartInfo = startInfo;
             process.Start();
-        }
+        }*/
 
         public void manageFiles()
         {
@@ -386,20 +377,12 @@ namespace VideoUp
             string sizeCrop = "";
             if (_croppingRectangle != CropForm.FullCrop)
             {
-                //Okay so here's the plan
-                //1. Get the width of the video. If this is -1, you need to get the aspect ratio of the video somehow and then calculate the width from the height
-                //2. Get the height of the video. If this is -1, you need to get the aspect ratio of the video somehowand then calculate the height from the width
-                //If you can't get them, disallow the use of -1 if you're cropping the video at all!
-                //3. If they are both filled in, you're in luck. Now you can calculate the pixel values for all 4 parameters for the crop.
-
                 int assumedWidth = width;
                 int assumedHeight = height;
-                if (width == -1 || height == -1)  //TODO: allow this
+                if (width == -1 || height == -1)
                     throw new ArgumentException("Sorry, but you can't crop while using -1 in one of the resolution fields.");
                 if (width == 0 || height == 0) 
                 {
-                    //The AssumedInputSize is the size of the last preview image generated while using the cropping tool.
-                    //It's a good assumption, unless the user changes the input video after cropping.
                     assumedWidth = AssumedInputSize.Width;
                     assumedHeight = AssumedInputSize.Height;
 
@@ -482,9 +465,6 @@ namespace VideoUp
 
         private static string MakeParseFriendly(string text)
         {
-            //This method adds "00:" in front of text, if the text format is in either 00:00 or 00:00.00 format.
-            //This pattern should work.
-
             string pattern = @"^[0-5][0-9]:[0-5][0-9](\.[0-9]+)?$";
             Regex regex = new Regex(pattern, RegexOptions.Singleline);
             if (regex.IsMatch(text))
@@ -527,12 +507,6 @@ namespace VideoUp
         {
             //textBox2.Text = path.Substring(path.LastIndexOf(@"\") + 1);
             textBox2.Text = path;
-        }
-
-        // unused method
-        private void label34_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void radioSubNone_CheckedChanged(object sender, EventArgs e)
@@ -579,8 +553,15 @@ namespace VideoUp
 
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
+
+            uploadButton.Enabled = false;
+
             uploadStatusBox.AppendText("Upload process has begun\n");
             uploadStatusBox.AppendText("Preparing upload...\n");
+            uploadStatusBox.AppendText("Uploading to your YouTube account...\n");
+            uploadStatusBox.AppendText("Check/refresh your YouTube account and you will the video\n");
+
+            InitTimer();
         }
 
         private void startTime_Click(object sender, EventArgs e)
@@ -733,17 +714,42 @@ namespace VideoUp
                 boxCropFrom.Text = sr.ReadLine();
                 boxCropTo.Text = sr.ReadLine();
 
-                textBox1.Text = sr.ReadLine();
                 radioSubNone.Checked = false;
                 radioSubExternal.Checked = true;
                 buttonSubBrowse.Enabled = true;
                 textBox1.Enabled = true;
+                textBox1.Text = sr.ReadLine();
 
                 dateTimeMetadata.Text = sr.ReadLine();
                 boxMetadataDesc.Text = sr.ReadLine();
                 infoBox.Text = sr.ReadLine();
                 sr.Close();
             }
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.currentPlaylist.clear();
+
+            textBoxIn.Text = "";
+            textBoxOut.Text = "";
+            boxMetadataTitle.Text = "";
+            boxMetadataAuthor.Text = "";
+            startTimeBox.Text = "";
+            endTimeBox.Text = "";
+            resBox.Text = "";
+            boxCropFrom.Text = "";
+            boxCropTo.Text = "";
+
+            textBox1.Text = "";
+            radioSubNone.Checked = true;
+            radioSubExternal.Checked = false;
+            buttonSubBrowse.Enabled = false;
+            textBox1.Enabled = false;
+
+            dateTimeMetadata.Text = "";
+            boxMetadataDesc.Text = "";
+            infoBox.Text = "";
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
@@ -20,6 +21,8 @@ namespace VideoUp
         private bool _cancelMultipass;
 
         private MainForm _owner;
+        private double trim, timeLeft;
+        private string frameNum;
 
         public UploaderForm(MainForm mainForm, string[] args)
         {
@@ -31,8 +34,20 @@ namespace VideoUp
 
         private void ProcessOnErrorDataReceived(object sender, DataReceivedEventArgs args)
         {
+            trim = (TimeSpan.Parse(_owner.boxCropFrom.Text) - TimeSpan.Parse(_owner.boxCropTo.Text)).TotalSeconds * -1;
             if (args.Data != null)
-                textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+            {
+                //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+                if (args.Data.Contains("frame"))
+                {
+                    frameNum = Regex.Match(args.Data, @"\d+").Value;
+                    timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
+                    if (timeLeft <= 100)
+                        textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                    else
+                        textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
+                }
+            }
         }
 
         private void ProcessOnOutputDataReceived(object sender, DataReceivedEventArgs args)
@@ -43,7 +58,7 @@ namespace VideoUp
 
         private void ConverterForm_Load(object sender, EventArgs e)
         {
-            textBoxOutput.AppendText("The video is busy converting. Please wait...");
+            textBoxOutput.Text = ("The video is busy converting. Please wait...");
 
             string argument = null;
            _multipass = true;

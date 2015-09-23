@@ -31,7 +31,7 @@ Requirements
 Screenshot (current version)
 ----------------------------
 
-![videoup_2.0](https://github.com/lnazo/VideoUp-Editor/tree/master/VideoUp%20Editor/videoup_img.jpg)
+![videoup_2.0](https://github.com/lnazo/VideoUp-Editor/blob/master/VideoUp%20Editor/videoup_img.jpg)
 
 Reference tools and software
 ----------------------------

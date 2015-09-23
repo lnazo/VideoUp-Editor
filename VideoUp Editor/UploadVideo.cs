@@ -116,7 +116,7 @@ namespace Google.Apis.YouTube.Samples
 
         void videosInsertRequest_ResponseReceived(Video video)
         {
-            MessageBox.Show("The video '" + videoTitle + "' was successfully uploaded");
+            MessageBox.Show("The video '" + videoTitle + "' is now uploading. Check your YouTube account.");
         }
     }
 }

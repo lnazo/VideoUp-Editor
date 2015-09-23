@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploaderForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonPlay = new System.Windows.Forms.Button();
             this.textBoxOutput = new System.Windows.Forms.RichTextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -56,25 +57,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(328, 195);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // buttonPlay
-            // 
-            this.buttonPlay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPlay.Enabled = false;
-            this.buttonPlay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.buttonPlay.Location = new System.Drawing.Point(34, 167);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(142, 25);
-            this.buttonPlay.TabIndex = 5;
-            this.buttonPlay.Text = "Play result";
-            this.buttonPlay.UseVisualStyleBackColor = true;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
-            // 
             // textBoxOutput
             // 
+            this.textBoxOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(44)))), ((int)(((byte)(63)))));
             this.textBoxOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxOutput, 3);
             this.textBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxOutput.Location = new System.Drawing.Point(3, 3);
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
@@ -84,15 +74,38 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(44)))), ((int)(((byte)(63)))));
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.buttonCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonCancel.Image = global::VideoUp.Properties.Resources.close;
+            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancel.Location = new System.Drawing.Point(182, 167);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(143, 25);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(44)))), ((int)(((byte)(63)))));
+            this.buttonPlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPlay.Enabled = false;
+            this.buttonPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.buttonPlay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonPlay.Image = global::VideoUp.Properties.Resources.play;
+            this.buttonPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPlay.Location = new System.Drawing.Point(34, 167);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(142, 25);
+            this.buttonPlay.TabIndex = 5;
+            this.buttonPlay.Text = "Play result";
+            this.buttonPlay.UseVisualStyleBackColor = false;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // pictureBox
             // 
@@ -115,6 +128,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UploaderForm";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

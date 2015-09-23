@@ -481,6 +481,8 @@
     <None Include="Resources\gray_bg.jpg" />
     <None Include="Resources\trim.png" />
     <None Include="Resources\info.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\close.png" />
     <Content Include="Resources\upload.png" />
     <None Include="Resources\import.png" />
     <None Include="Resources\convert.png" />

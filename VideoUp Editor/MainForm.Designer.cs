@@ -452,20 +452,20 @@ namespace VideoUp
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(635, 71);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(375, 18);
+            this.label14.Size = new System.Drawing.Size(382, 20);
             this.label14.TabIndex = 16;
             this.label14.Text = "Trim a video by setting a \'start time\' and an \'end time\'.";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(639, 17);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(304, 41);
+            this.label13.Size = new System.Drawing.Size(234, 42);
             this.label13.TabIndex = 15;
             this.label13.Text = "Trim a video";
             // 
@@ -575,10 +575,10 @@ namespace VideoUp
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(637, 69);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(364, 54);
+            this.label15.Size = new System.Drawing.Size(375, 60);
             this.label15.TabIndex = 40;
             this.label15.Text = "- First, set the \'start time\' and \'end time\' for a subtitle\r\n- Write subtitle in " +
     "textbox, click \'enter subtitle\'\r\n- Click \'save subtitle\' when done";
@@ -586,10 +586,10 @@ namespace VideoUp
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(622, 17);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(426, 41);
+            this.label17.Size = new System.Drawing.Size(293, 42);
             this.label17.TabIndex = 39;
             this.label17.Text = "Create subtitles";
             // 
@@ -763,10 +763,10 @@ namespace VideoUp
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(702, 70);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(318, 36);
+            this.label19.Size = new System.Drawing.Size(324, 40);
             this.label19.TabIndex = 28;
             this.label19.Text = "Add video information. Also select resolution,\r\nand if sound should be kept or no" +
     "t.";
@@ -774,10 +774,10 @@ namespace VideoUp
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(698, 18);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(361, 41);
+            this.label20.Size = new System.Drawing.Size(269, 42);
             this.label20.TabIndex = 27;
             this.label20.Text = "Add video info";
             // 
@@ -810,7 +810,6 @@ namespace VideoUp
             this.labelCrop.TabIndex = 24;
             this.labelCrop.Text = "Don\'t crop";
             this.labelCrop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelCrop.Visible = false;
             // 
             // label10
             // 
@@ -826,7 +825,7 @@ namespace VideoUp
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(451, 77);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 17);
+            this.label8.Size = new System.Drawing.Size(37, 17);
             this.label8.TabIndex = 22;
             this.label8.Text = "Trim:";
             // 
@@ -861,7 +860,6 @@ namespace VideoUp
             this.buttonOpenCrop.TabIndex = 19;
             this.buttonOpenCrop.Text = "Crop...";
             this.buttonOpenCrop.UseVisualStyleBackColor = true;
-            this.buttonOpenCrop.Visible = false;
             // 
             // boxCropTo
             // 
@@ -1006,20 +1004,20 @@ namespace VideoUp
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(684, 78);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(256, 18);
+            this.label22.Size = new System.Drawing.Size(261, 20);
             this.label22.TabIndex = 27;
             this.label22.Text = "Determine the video to be uploaded";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(688, 24);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(374, 41);
+            this.label23.Size = new System.Drawing.Size(282, 42);
             this.label23.TabIndex = 26;
             this.label23.Text = "Upload a video";
             // 

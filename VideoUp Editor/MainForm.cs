@@ -98,7 +98,7 @@ namespace VideoUp
         {
             check = new Timer();
             check.Tick += new EventHandler(check_Tick);
-            check.Interval = 10000;
+            check.Interval = 15000;
             check.Start();
         }
 
@@ -449,7 +449,7 @@ namespace VideoUp
                 metadataDesc = string.Format("-metadata comment=\"{0}\"", boxMetadataDesc.Text);
             textBox4.Text = boxMetadataDesc.Text.Substring(boxMetadataDesc.Text.LastIndexOf(@"\") + 1);
 
-            string metadataCopy = "-metadata copyright=\"© DCCT\"";
+            string metadataCopy = "-metadata copyright=\"(c) DCCT\"";
 
             if (!string.IsNullOrWhiteSpace(subFile))
             {
@@ -556,8 +556,6 @@ namespace VideoUp
             uploadButton.Enabled = false;
 
             uploadStatusBox.AppendText("Upload process has begun\n");
-            uploadStatusBox.AppendText("Uploading to your YouTube account...\n");
-            uploadStatusBox.AppendText("Check/refresh your YouTube account and you will see the video\n");
 
             InitTimer();
         }
@@ -638,7 +636,7 @@ namespace VideoUp
         private void saveSub_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Srt File|*.srt";
+            saveFileDialog1.Filter = "srt File|*.srt";
             saveFileDialog1.Title = "Save subtitle file";
 
             DialogResult result = saveFileDialog1.ShowDialog();

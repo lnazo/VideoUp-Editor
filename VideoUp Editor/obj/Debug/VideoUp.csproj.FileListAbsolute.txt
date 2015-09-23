@@ -221,3 +221,6 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Temp.resources

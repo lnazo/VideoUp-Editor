@@ -43,26 +43,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Telerik.WinControls" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Telerik.WinControls.Themes.Aqua" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Telerik.WinControls.UI" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="TelerikCommon" version="2014.2.715.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.WMPLib.dll" size="53760">
       <assemblyIdentity name="AxInterop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -70,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8P7AopmfsDkPe/H77Qq1Ry2pn6c=</dsig:DigestValue>
+        <dsig:DigestValue>AUu4qujwxRTULigN0jgnF/r6DvU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -154,7 +134,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ICsFyoCYakrYrTbf1AdKFHq/b3E=</dsig:DigestValue>
+        <dsig:DigestValue>tTvFRZ2AgYOTdB3Hqko4tYmHv2w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -167,6 +147,30 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>UFvaM/FpCv3of072bTx30nt5tOs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.dll" size="152576">
+      <assemblyIdentity name="MetroFramework" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>2mcwFTmQN3Vwjp7JE2VIUeno6t4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Fonts.dll" size="672256">
+      <assemblyIdentity name="MetroFramework.Fonts" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>2wZlk8Y9Lv9Bpa8bSaPgmLYOABM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -303,14 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="324096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="454544">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5cvQTYEEpWDJZsuEopVL4fG6YaI=</dsig:DigestValue>
+        <dsig:DigestValue>T8mEY0ngs6eZYEUziimqnRAR7l4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2117,6 +2121,24 @@
       <dsig:DigestValue>cbITe8dNI7bftHqlspMqHCSQGss=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\save.png" size="1137">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q8mBr3Fsi4yGSSGb2ioLbxcuwEs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\upload.png" size="3142">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>97j0A6+EEujXPgf0Z/1kmF0I6u4=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="VideoUp.exe.config" size="2050">
     <hash>
       <dsig:Transforms>
@@ -2124,15 +2146,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>Afkf9Lv/4xNgSJ0lhMAkMosX5Z0=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="youtube logo.png" size="8813">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nVoDwInM7H/sxeWe6Pim4eebh04=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -31,8 +31,8 @@ namespace VideoUp
 
         private void ProcessOnErrorDataReceived(object sender, DataReceivedEventArgs args)
         {
-            //if (args.Data != null)
-                //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+            if (args.Data != null)
+                textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
         }
 
         private void ProcessOnOutputDataReceived(object sender, DataReceivedEventArgs args)
@@ -43,7 +43,7 @@ namespace VideoUp
 
         private void ConverterForm_Load(object sender, EventArgs e)
         {
-            textBoxOutput.AppendText("Busy converting. Please wait...");
+            textBoxOutput.AppendText("The video is busy converting. Please wait...");
 
             string argument = null;
            _multipass = true;
@@ -74,7 +74,7 @@ namespace VideoUp
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
                                                                               {
                                                                                   if (_panic) return; //This should stop that one exception when closing the converter
-                                                                                  textBoxOutput.AppendText("\n--- Conversion is complete ---");
+                                                                                  textBoxOutput.AppendText("\n--- The video conversion is done ---");
                                                                                   buttonCancel.Enabled = false;
 
                                                                                   _timer = new Timer();
@@ -97,7 +97,7 @@ namespace VideoUp
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
             {
                 if (_panic) return; //This should stop that one exception when closing the converter
-                textBoxOutput.AppendText("\n--- FFMPEG HAS EXITED ---");
+                textBoxOutput.AppendText("\n--- Back-end done converting video ---");
 
                 currentPass++;
                 if (currentPass < passes && !_cancelMultipass)
@@ -131,13 +131,13 @@ namespace VideoUp
                     textBoxOutput.AppendText("\n\nConversion cancelled.");
                 else
                 {
-                    textBoxOutput.AppendText(string.Format("\n\nffmpeg.exe exited with exit code {0}. That's usually bad.", process.ExitCode));
-                    textBoxOutput.AppendText("\nIf you have no idea what went wrong, open an issue on GitHub and copy paste the output of this window there.");
+                    textBoxOutput.AppendText(string.Format("\n\nAn error occurred with the code {0}. Oops.", process.ExitCode));
+                    textBoxOutput.AppendText("\nPost the error on the VideoUp help page.");
                 }
                 pictureBox.BackgroundImage = Properties.Resources.cross;
 
                 if (process.ExitCode == -1073741819) //This error keeps happening for me if I set threads to anything above 1, might happen for other people too
-                    MessageBox.Show("It appears ffmpeg.exe crashed because of a thread error. Set the amount of threads to 1 in the advanced tab and try again.", "FYI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("FFmpeg crashed because of a thread error. Set the number of threads to 1.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

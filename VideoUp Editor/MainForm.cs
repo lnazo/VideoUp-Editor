@@ -169,7 +169,7 @@ namespace VideoUp
             {
                 dialog.OverwritePrompt = true;
                 dialog.ValidateNames = true;
-                dialog.Filter = "avi file|*.avi";
+                dialog.Filter = "avi file (*.avi) | *.avi";
 
                 if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
                     textBoxOut.Text = dialog.FileName;
@@ -509,20 +509,6 @@ namespace VideoUp
             textBox2.Text = path;
         }
 
-        private void radioSubNone_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonSubBrowse.Enabled = false;
-            textBox1.Text = "";
-            textBox1.Enabled = false;
-            subFile = "";
-        }
-
-        private void radioSubExternal_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonSubBrowse.Enabled = true;
-            textBox1.Enabled = true;
-        }
-
         private void buttonSubBrowse_Click_1(object sender, EventArgs e)
         {
             using (OpenFileDialog dialog = new OpenFileDialog())
@@ -530,7 +516,7 @@ namespace VideoUp
                 dialog.CheckFileExists = true;
                 dialog.CheckPathExists = true;
                 dialog.ValidateNames = true;
-                dialog.Filter = "Subtitle files (*.ass, *.srt) | *.ass; *.srt";
+                dialog.Filter = "Subtitle file (*.srt) | *.srt";
 
                 if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.FileName))
                     SetbuttonSubBrowse(dialog.FileName);
@@ -551,15 +537,27 @@ namespace VideoUp
             desc = textBox4.Text;
             path = textBox2.Text;
 
+            if (string.IsNullOrWhiteSpace(title))
+                MessageBox.Show("Enter a name of the video");
+            if (string.IsNullOrWhiteSpace(desc))
+                MessageBox.Show("Enter a description for the video");
+            if (string.IsNullOrWhiteSpace(path))
+                MessageBox.Show("Select a video to upload");
+
+            if (invalidChars.Any(path.Contains))
+                MessageBox.Show("Video directory has invalid characters: " + string.Join(" ", invalidChars));
+
+            if (!File.Exists(path))
+                MessageBox.Show("No video has been selected for upload");
+
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
 
             uploadButton.Enabled = false;
 
             uploadStatusBox.AppendText("Upload process has begun\n");
-            uploadStatusBox.AppendText("Preparing upload...\n");
             uploadStatusBox.AppendText("Uploading to your YouTube account...\n");
-            uploadStatusBox.AppendText("Check/refresh your YouTube account and you will the video\n");
+            uploadStatusBox.AppendText("Check/refresh your YouTube account and you will see the video\n");
 
             InitTimer();
         }
@@ -713,9 +711,6 @@ namespace VideoUp
                 resBox.Text = sr.ReadLine();
                 boxCropFrom.Text = sr.ReadLine();
                 boxCropTo.Text = sr.ReadLine();
-
-                radioSubNone.Checked = false;
-                radioSubExternal.Checked = true;
                 buttonSubBrowse.Enabled = true;
                 textBox1.Enabled = true;
                 textBox1.Text = sr.ReadLine();
@@ -742,8 +737,6 @@ namespace VideoUp
             boxCropTo.Text = "";
 
             textBox1.Text = "";
-            radioSubNone.Checked = true;
-            radioSubExternal.Checked = false;
             buttonSubBrowse.Enabled = false;
             textBox1.Enabled = false;
 

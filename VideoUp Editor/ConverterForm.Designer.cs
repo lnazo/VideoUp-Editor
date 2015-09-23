@@ -60,6 +60,7 @@
             // 
             this.buttonPlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPlay.Enabled = false;
+            this.buttonPlay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.buttonPlay.Location = new System.Drawing.Point(34, 167);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(142, 25);
@@ -84,6 +85,7 @@
             // buttonCancel
             // 
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.buttonCancel.Location = new System.Drawing.Point(182, 167);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(143, 25);
@@ -105,16 +107,17 @@
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
             // 
-            // ConverterForm
+            // UploaderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 201);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "ConverterForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "UploaderForm";
             this.Padding = new System.Windows.Forms.Padding(3);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conversion Progress";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConverterForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConverterForm_FormClosed);

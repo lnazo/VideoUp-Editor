@@ -35,7 +35,6 @@ namespace Google.Apis.YouTube.Samples
     internal class UploadVideo
     {
         private string videoTitle, videoDesc, videoPath;
-        private bool finished = false;
 
         public void passValues(string title, string desc, string path)
         {
@@ -107,12 +106,10 @@ namespace Google.Apis.YouTube.Samples
             {
                 case UploadStatus.Uploading:
                   //MessageBox.Show(string.Format("{0:0} MB sent.", progress.BytesSent * 0.000001));
-                  //sendResponse(string.Format("{0:0} MB sent.", progress.BytesSent * 0.000001));
                   break;
 
                 case UploadStatus.Failed:
                   //MessageBox.Show(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
-                  //sendResponse(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
                   break;
             }
         }
@@ -120,8 +117,6 @@ namespace Google.Apis.YouTube.Samples
         void videosInsertRequest_ResponseReceived(Video video)
         {
             MessageBox.Show("The video '" + videoTitle + "' was successfully uploaded");
-            finished = true;
-            //sendResponse("The video '" + videoTitle + "' was successfully uploaded");
         }
     }
 }

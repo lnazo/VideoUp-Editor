@@ -43,6 +43,10 @@ namespace VideoUp
             this.label7 = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +56,9 @@ namespace VideoUp
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabs = new System.Windows.Forms.TabControl();
             this.trimSection = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.endTimeValid = new System.Windows.Forms.Label();
             this.startTimeValid = new System.Windows.Forms.Label();
             this.endTimeBox = new System.Windows.Forms.TextBox();
@@ -60,6 +67,8 @@ namespace VideoUp
             this.endTime = new System.Windows.Forms.Button();
             this.startTime = new System.Windows.Forms.Button();
             this.subtitleSection = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.saveSub = new System.Windows.Forms.Button();
             this.enterSub = new System.Windows.Forms.Button();
             this.subTextBox = new System.Windows.Forms.TextBox();
@@ -72,6 +81,9 @@ namespace VideoUp
             this.startSubBox = new System.Windows.Forms.TextBox();
             this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.infoSection = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.labelCrop = new System.Windows.Forms.Label();
@@ -92,6 +104,9 @@ namespace VideoUp
             this.boxMetadataAuthor = new System.Windows.Forms.TextBox();
             this.boxMetadataTitle = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.uploadButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.descriptionTitle = new System.Windows.Forms.Label();
@@ -101,39 +116,24 @@ namespace VideoUp
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.vidNameUpload = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonGo = new System.Windows.Forms.Button();
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.buttonBrowseOut = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonBrowseIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.tabs.SuspendLayout();
             this.trimSection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.subtitleSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.infoSection.SuspendLayout();
-            this.uploadSection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.uploadSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -306,6 +306,46 @@ namespace VideoUp
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // fileManagerToolStripMenuItem
+            // 
+            this.fileManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.fileManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fileManagerToolStripMenuItem.Image = global::VideoUp.Properties.Resources.archive;
+            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
+            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fileManagerToolStripMenuItem.Text = "File Manager";
+            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.newToolStripMenuItem.Image = global::VideoUp.Properties.Resources._new;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
@@ -399,6 +439,35 @@ namespace VideoUp
             this.trimSection.Size = new System.Drawing.Size(1062, 454);
             this.trimSection.TabIndex = 0;
             this.trimSection.Text = "Trim";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::VideoUp.Properties.Resources.trim;
+            this.pictureBox3.Location = new System.Drawing.Point(754, 150);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(136, 138);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(635, 71);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(375, 18);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Trim a video by setting a \'start time\' and an \'end time\'.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(639, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(304, 41);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Trim a video";
             // 
             // endTimeValid
             // 
@@ -502,6 +571,27 @@ namespace VideoUp
             this.subtitleSection.Size = new System.Drawing.Size(1062, 454);
             this.subtitleSection.TabIndex = 1;
             this.subtitleSection.Text = "Subtitles";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(637, 69);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(364, 54);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "- First, set the \'start time\' and \'end time\' for a subtitle\r\n- Write subtitle in " +
+    "textbox, click \'enter subtitle\'\r\n- Click \'save subtitle\' when done";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(622, 17);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(426, 41);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Create subtitles";
             // 
             // saveSub
             // 
@@ -660,6 +750,36 @@ namespace VideoUp
             this.infoSection.Size = new System.Drawing.Size(1062, 454);
             this.infoSection.TabIndex = 2;
             this.infoSection.Text = "Information";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::VideoUp.Properties.Resources.info;
+            this.pictureBox4.Location = new System.Drawing.Point(735, 134);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(257, 271);
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(702, 70);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(318, 36);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "Add video information. Also select resolution,\r\nand if sound should be kept or no" +
+    "t.";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(698, 18);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(361, 41);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Add video info";
             // 
             // label12
             // 
@@ -874,6 +994,35 @@ namespace VideoUp
             this.uploadSection.TabIndex = 3;
             this.uploadSection.Text = "Upload";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::VideoUp.Properties.Resources.upload_2;
+            this.pictureBox5.Location = new System.Drawing.Point(783, 117);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(129, 132);
+            this.pictureBox5.TabIndex = 28;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(684, 78);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(256, 18);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Determine the video to be uploaded";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(688, 24);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(374, 41);
+            this.label23.TabIndex = 26;
+            this.label23.Text = "Upload a video";
+            // 
             // uploadButton
             // 
             this.uploadButton.Location = new System.Drawing.Point(101, 246);
@@ -964,87 +1113,27 @@ namespace VideoUp
             this.vidNameUpload.Size = new System.Drawing.Size(223, 25);
             this.vidNameUpload.TabIndex = 15;
             // 
-            // label13
+            // pictureBox2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(639, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(304, 41);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Trim a video";
+            this.pictureBox2.Image = global::VideoUp.Properties.Resources.upload;
+            this.pictureBox2.Location = new System.Drawing.Point(446, 307);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(211, 130);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
             // 
-            // label14
+            // pictureBox1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(635, 71);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(375, 18);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Trim a video by setting a \'start time\' and an \'end time\'.";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(637, 69);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(364, 54);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "- First, set the \'start time\' and \'end time\' for a subtitle\r\n- Write subtitle in " +
-    "textbox, click \'enter subtitle\'\r\n- Click \'save subtitle\' when done";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(622, 17);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(426, 41);
-            this.label17.TabIndex = 39;
-            this.label17.Text = "Create subtitles";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(702, 70);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(318, 36);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "Add video information. Also select resolution,\r\nand if sound should be kept or no" +
-    "t.";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(698, 18);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(361, 41);
-            this.label20.TabIndex = 27;
-            this.label20.Text = "Add video info";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Geomanist", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(684, 78);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(256, 18);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Determine the video to be uploaded";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("MANIFESTO", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(688, 24);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(374, 41);
-            this.label23.TabIndex = 26;
-            this.label23.Text = "Upload a video";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(101, 307);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonGo
             // 
@@ -1107,95 +1196,6 @@ namespace VideoUp
             this.helpButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.helpButton.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VideoUp.Properties.Resources.trim;
-            this.pictureBox3.Location = new System.Drawing.Point(754, 150);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(136, 138);
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::VideoUp.Properties.Resources.info;
-            this.pictureBox4.Location = new System.Drawing.Point(735, 134);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(257, 271);
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::VideoUp.Properties.Resources.upload_2;
-            this.pictureBox5.Location = new System.Drawing.Point(783, 117);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(129, 132);
-            this.pictureBox5.TabIndex = 28;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::VideoUp.Properties.Resources.upload;
-            this.pictureBox2.Location = new System.Drawing.Point(446, 307);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(211, 130);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(101, 307);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // fileManagerToolStripMenuItem
-            // 
-            this.fileManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.fileManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.fileManagerToolStripMenuItem.Image = global::VideoUp.Properties.Resources.archive;
-            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
-            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fileManagerToolStripMenuItem.Text = "File Manager";
-            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.newToolStripMenuItem.Image = global::VideoUp.Properties.Resources._new;
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
             // buttonBrowseIn
             // 
             this.buttonBrowseIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1246,16 +1246,16 @@ namespace VideoUp
             this.tabs.ResumeLayout(false);
             this.trimSection.ResumeLayout(false);
             this.trimSection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.subtitleSection.ResumeLayout(false);
             this.subtitleSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.infoSection.ResumeLayout(false);
             this.infoSection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.uploadSection.ResumeLayout(false);
             this.uploadSection.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

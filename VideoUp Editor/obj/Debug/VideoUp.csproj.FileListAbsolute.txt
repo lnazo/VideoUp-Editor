@@ -155,6 +155,7 @@ C:\Users\nzxlub001\Downloads\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.W
 C:\Users\nzxlub001\Downloads\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
 C:\Users\nzxlub001\Downloads\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\nzxlub001\Downloads\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\ffmpeg.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\FFmpeg\gpl-3.0.txt
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\VideoUp.exe.config
@@ -169,6 +170,8 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Google.Apis.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Google.Apis.PlatformServices.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Google.Apis.YouTube.v3.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\log4net.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.dll
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Microsoft.Threading.Tasks.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
@@ -211,16 +214,13 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\AxInterop.WMPLib
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.CropForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Temp.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.GenerateResource.Cache
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe.manifest
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
-C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
-C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
-C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.dll
-C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Temp.resources

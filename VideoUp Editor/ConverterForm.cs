@@ -21,7 +21,7 @@ namespace VideoUp
         private bool _cancelMultipass;
 
         private MainForm _owner;
-        private double trim, timeLeft;
+        private double trim, timeLeft, endTime;
         private string frameNum;
 
         public UploaderForm(MainForm mainForm, string[] args)
@@ -34,18 +34,25 @@ namespace VideoUp
 
         private void ProcessOnErrorDataReceived(object sender, DataReceivedEventArgs args)
         {
-            trim = (TimeSpan.Parse(_owner.boxCropFrom.Text) - TimeSpan.Parse(_owner.boxCropTo.Text)).TotalSeconds * -1;
             if (args.Data != null)
             {
                 //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
-                if (args.Data.Contains("frame"))
+                if (_owner.boxCropTo.Text.Equals("00:00:00"))
+                    textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nBusy transcoding...")));
+
+                else
                 {
-                    frameNum = Regex.Match(args.Data, @"\d+").Value;
-                    timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                    if (timeLeft <= 100)
-                        textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
-                    else
-                        textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
+                    trim = (TimeSpan.Parse(_owner.boxCropTo.Text) - TimeSpan.Parse(_owner.boxCropFrom.Text)).TotalSeconds;
+                    trim = Math.Abs(trim);
+                    if (args.Data.Contains("frame"))
+                    {
+                        frameNum = Regex.Match(args.Data, @"\d+").Value;
+                        timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
+                        if (timeLeft <= 100)
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        else
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
+                    }
                 }
             }
         }

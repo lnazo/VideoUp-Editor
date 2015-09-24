@@ -147,7 +147,6 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\System.Thre
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Zlib.Portable.xml
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\Interop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache

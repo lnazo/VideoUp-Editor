@@ -19,8 +19,6 @@ namespace VideoUp
         private string subtitleFile;
         private string subFile = "";
 
-        private long bytesReceivedPrev = 0;
-
         private string _template;
         private string _templateArguments;
 

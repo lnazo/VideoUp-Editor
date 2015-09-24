@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
@@ -17,6 +18,9 @@ namespace VideoUp
         private Timer check;
         private string subtitleFile;
         private string subFile = "";
+
+        private long bytesReceivedPrev = 0;
+
         private string _template;
         private string _templateArguments;
 
@@ -91,24 +95,23 @@ namespace VideoUp
             resBox.SelectedIndex = 1;
             uploadV = new UploadVideo();
             trackThreads_Scroll(sender, e);
-            //InitTimer();
         }
 
         public void InitTimer()
         {
             check = new Timer();
             check.Tick += new EventHandler(check_Tick);
-            check.Interval = 15000;
+            check.Interval = 1000;
             check.Start();
         }
 
         private void check_Tick(object sender, EventArgs e)
         {
-            uploadButton.Enabled = true;
+            /*uploadButton.Enabled = true;
             vidNameUpload.Text = "";
             textBox2.Text = "";
             textBox4.Text = "";
-            uploadStatusBox.Text = "";
+            uploadStatusBox.Text = "";*/
         }
 
         private void buttonBrowseIn_Click(object sender, EventArgs e)
@@ -491,6 +494,7 @@ namespace VideoUp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            uploadButton.Enabled = true;
             using (OpenFileDialog dialog = new OpenFileDialog())
             {
                 dialog.CheckFileExists = true;
@@ -556,8 +560,8 @@ namespace VideoUp
             uploadButton.Enabled = false;
 
             uploadStatusBox.AppendText("Upload process has begun\n");
-
-            InitTimer();
+            uploadStatusBox.AppendText("\nPlease wait for status messages until the upload is complete");
+            //InitTimer();
         }
 
         private void startTime_Click(object sender, EventArgs e)

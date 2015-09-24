@@ -105,18 +105,18 @@ namespace Google.Apis.YouTube.Samples
             switch (progress.Status)
             {
                 case UploadStatus.Uploading:
-                  //MessageBox.Show(string.Format("{0:0} MB sent.", progress.BytesSent * 0.000001));
-                  break;
+                    MessageBox.Show(string.Format("{0:0} MB sent. \n Status: {1}", progress.BytesSent * 0.000001, progress.Status));
+                    break;
 
                 case UploadStatus.Failed:
-                  //MessageBox.Show(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
-                  break;
+                    MessageBox.Show("An error prevented the upload from completing.\nPlease try again.");
+                    break;
             }
         }
 
         void videosInsertRequest_ResponseReceived(Video video)
         {
-            MessageBox.Show("The video '" + videoTitle + "' is now uploading. Check your YouTube account.");
+            MessageBox.Show("The video upload is complte. Check your YouTube account.");
         }
     }
 }

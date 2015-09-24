@@ -473,6 +473,8 @@
     </Content>
     <Content Include="FFmpeg\mkvmerge.exe" />
     <Content Include="logo.ico" />
+    <Content Include="logo_32bit.ico" />
+    <Content Include="save.ico" />
     <None Include="Resources\upload_2.png" />
     <None Include="Resources\white_bg.png" />
     <None Include="Resources\open.png" />
@@ -536,6 +538,20 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".srt">
+      <Visible>False</Visible>
+      <Description>Subtitle file</Description>
+      <Progid>srtfile</Progid>
+      <DefaultIcon>save.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".vidup">
+      <Visible>False</Visible>
+      <Description>VideoUp project file</Description>
+      <Progid>projfile</Progid>
+      <DefaultIcon>save.ico</DefaultIcon>
+    </FileAssociation>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

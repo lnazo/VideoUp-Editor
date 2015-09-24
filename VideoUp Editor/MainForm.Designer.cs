@@ -63,7 +63,6 @@ namespace VideoUp
             this.startTimeValid = new System.Windows.Forms.Label();
             this.endTimeBox = new System.Windows.Forms.TextBox();
             this.startTimeBox = new System.Windows.Forms.TextBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.endTime = new System.Windows.Forms.Button();
             this.startTime = new System.Windows.Forms.Button();
             this.subtitleSection = new System.Windows.Forms.TabPage();
@@ -79,7 +78,6 @@ namespace VideoUp
             this.endSubTime = new System.Windows.Forms.Button();
             this.endSubBox = new System.Windows.Forms.TextBox();
             this.startSubBox = new System.Windows.Forms.TextBox();
-            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.infoSection = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -123,20 +121,22 @@ namespace VideoUp
             this.buttonBrowseOut = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.buttonBrowseIn = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.tabs.SuspendLayout();
             this.trimSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.subtitleSection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.infoSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.uploadSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -513,17 +513,6 @@ namespace VideoUp
             this.startTimeBox.Size = new System.Drawing.Size(116, 25);
             this.startTimeBox.TabIndex = 11;
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.AllowDrop = true;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 17);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(602, 324);
-            this.axWindowsMediaPlayer1.TabIndex = 8;
-            // 
             // endTime
             // 
             this.endTime.Enabled = false;
@@ -708,17 +697,6 @@ namespace VideoUp
             this.startSubBox.Size = new System.Drawing.Size(116, 25);
             this.startSubBox.TabIndex = 30;
             // 
-            // axWindowsMediaPlayer2
-            // 
-            this.axWindowsMediaPlayer2.AllowDrop = true;
-            this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(15, 17);
-            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(602, 324);
-            this.axWindowsMediaPlayer2.TabIndex = 27;
-            // 
             // infoSection
             // 
             this.infoSection.BackColor = System.Drawing.SystemColors.Control;
@@ -825,7 +803,7 @@ namespace VideoUp
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(451, 77);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 17);
+            this.label8.Size = new System.Drawing.Size(36, 17);
             this.label8.TabIndex = 22;
             this.label8.Text = "Trim:";
             // 
@@ -1210,6 +1188,28 @@ namespace VideoUp
             this.buttonBrowseIn.UseVisualStyleBackColor = true;
             this.buttonBrowseIn.Click += new System.EventHandler(this.buttonBrowseIn_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.AllowDrop = true;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 17);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(602, 324);
+            this.axWindowsMediaPlayer1.TabIndex = 8;
+            // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.AllowDrop = true;
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(15, 17);
+            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(602, 324);
+            this.axWindowsMediaPlayer2.TabIndex = 27;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.buttonGo;
@@ -1245,10 +1245,8 @@ namespace VideoUp
             this.trimSection.ResumeLayout(false);
             this.trimSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.subtitleSection.ResumeLayout(false);
             this.subtitleSection.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.infoSection.ResumeLayout(false);
             this.infoSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1257,6 +1255,8 @@ namespace VideoUp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

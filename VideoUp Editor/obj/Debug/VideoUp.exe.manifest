@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>noPH2VypI0sPvXIBXqxV6wlbdHI=</dsig:DigestValue>
+        <dsig:DigestValue>uB9Z0Br9zADEV4TzrzA3SjNoKqU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -134,7 +134,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FP/57FEdvwF9Q61y9pkTqdoD/OA=</dsig:DigestValue>
+        <dsig:DigestValue>EdOAWXP1K2GN+M0ugq0vp7Eme4w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -307,14 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="528272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="800144">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>wOnPcl4niEcU9k0dmgilgGm+xv4=</dsig:DigestValue>
+        <dsig:DigestValue>9/xi37Xz/TVnx64ukUUf1C8FL+o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2112,13 +2112,22 @@
       <dsig:DigestValue>PMyj+zHfTqYgKyLgTNogcaoLq98=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="logo.ico" size="99678">
+  <file name="logo.ico" size="370070">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>UcHVnQ9G+ftqxQSGaGDKiQAZVMo=</dsig:DigestValue>
+      <dsig:DigestValue>CiPIxK7uu8AQTb6U0xErD4WyTTE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="logo_32bit.ico" size="99678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HiinN/yaTy1nynQYUKF5Plhvero=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\save.png" size="1137">
@@ -2139,6 +2148,15 @@
       <dsig:DigestValue>97j0A6+EEujXPgf0Z/1kmF0I6u4=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="save.ico" size="99678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wsvIQ0GfbB4uA212FJ3M5bCNZvc=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="VideoUp.exe.config" size="2050">
     <hash>
       <dsig:Transforms>
@@ -2148,4 +2166,6 @@
       <dsig:DigestValue>Afkf9Lv/4xNgSJ0lhMAkMosX5Z0=</dsig:DigestValue>
     </hash>
   </file>
+  <fileAssociation extension=".srt" description="Subtitle file" progid="srtfile" defaultIcon="save.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
+  <fileAssociation extension=".vidup" description="VideoUp project file" progid="projfile" defaultIcon="save.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
 </asmv1:assembly>

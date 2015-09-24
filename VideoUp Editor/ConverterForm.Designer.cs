@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploaderForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonPlay = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxOutput = new System.Windows.Forms.RichTextBox();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -57,52 +57,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(328, 195);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // buttonPlay
-            // 
-            this.buttonPlay.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonPlay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPlay.Enabled = false;
-            this.buttonPlay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.buttonPlay.ForeColor = System.Drawing.Color.Black;
-            this.buttonPlay.Image = global::VideoUp.Properties.Resources.play;
-            this.buttonPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPlay.Location = new System.Drawing.Point(34, 167);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(142, 25);
-            this.buttonPlay.TabIndex = 5;
-            this.buttonPlay.Text = "Play result";
-            this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox.BackgroundImage = global::VideoUp.Properties.Resources.clock;
-            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox.Location = new System.Drawing.Point(3, 167);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox.TabIndex = 4;
-            this.pictureBox.TabStop = false;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.buttonCancel.ForeColor = System.Drawing.Color.Black;
-            this.buttonCancel.Image = global::VideoUp.Properties.Resources.close;
-            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancel.Location = new System.Drawing.Point(182, 167);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(143, 25);
-            this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = false;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
             // textBoxOutput
             // 
             this.textBoxOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(44)))), ((int)(((byte)(63)))));
@@ -117,6 +71,52 @@
             this.textBoxOutput.Size = new System.Drawing.Size(322, 158);
             this.textBoxOutput.TabIndex = 2;
             this.textBoxOutput.Text = "";
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonPlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPlay.Enabled = false;
+            this.buttonPlay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.buttonPlay.ForeColor = System.Drawing.Color.Black;
+            this.buttonPlay.Image = global::VideoUp.Properties.Resources.play;
+            this.buttonPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPlay.Location = new System.Drawing.Point(34, 167);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(142, 25);
+            this.buttonPlay.TabIndex = 5;
+            this.buttonPlay.Text = "Play result";
+            this.buttonPlay.UseVisualStyleBackColor = false;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.buttonCancel.ForeColor = System.Drawing.Color.Black;
+            this.buttonCancel.Image = global::VideoUp.Properties.Resources.close;
+            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancel.Location = new System.Drawing.Point(182, 167);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(143, 25);
+            this.buttonCancel.TabIndex = 3;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox.BackgroundImage = global::VideoUp.Properties.Resources.clock;
+            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox.Location = new System.Drawing.Point(3, 167);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox.TabIndex = 4;
+            this.pictureBox.TabStop = false;
             // 
             // UploaderForm
             // 

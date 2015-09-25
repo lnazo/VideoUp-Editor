@@ -85,13 +85,13 @@ namespace VideoUp
 
                                                                                     if (exitCode != 0)
                                                                                     {
-                                                                                        _message = string.Format("ffmpeg.exe exited with exit code {0}. That's usually bad.", exitCode);
+                                                                                        _message = string.Format("Oops. An error occurred with the code {0}..", exitCode);
                                                                                         return;
                                                                                     }
 
                                                                                     if (!File.Exists(_previewFile))
                                                                                     {
-                                                                                        _message = "The preview file wasn't generated, that means ffmpeg.exe failed. Confirm the following:\n- Is the input time actually smaller than the length than the input video?";
+                                                                                        _message = "The preview file did not generate. Check this:\n- Is the input time actually smaller than the length than the input video?";
                                                                                         return;
                                                                                     }
 
@@ -129,7 +129,7 @@ namespace VideoUp
             string input = _owner.textBoxIn.Text;
             if (string.IsNullOrWhiteSpace(input))
             {
-                _message = "No input file!";
+                _message = "No input file";
                 return null;
             }
             if (!File.Exists(input))
@@ -149,9 +149,9 @@ namespace VideoUp
             }
 
 
-            _message = string.Format("Previewing video at {0}", TimeSpan.FromSeconds(time));
+            _message = string.Format("Preview {0}", TimeSpan.FromSeconds(time));
             if (time == 0.0f)
-                _message += "\nTo preview at a different time, input a valid trim start time";
+                _message += "\nTo preview at a different time, change trim start time";
             //We can actually allow invalid times here: we just use the preview from the very start of the video (0.0) in that case
 
             return string.Format(template, input, "-ss " + time, _previewFile);
@@ -357,7 +357,7 @@ namespace VideoUp
         {
             if (_rectangle.Left >= _rectangle.Right || _rectangle.Top >= _rectangle.Bottom)
             {
-                MessageBox.Show("You messed up your crop! Press the reset button and try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Check your crop. Press the reset button and try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -365,7 +365,7 @@ namespace VideoUp
 
             if (_rectangle.Left < 0 - tolerance || _rectangle.Top < 0 - tolerance || _rectangle.Right > 1 + tolerance || _rectangle.Bottom > 1 + tolerance)
             {
-                MessageBox.Show("Your crop is outside the valid range! Press the reset button and try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Your crop is outside the valid range. Press the reset button and try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

@@ -43,10 +43,6 @@ namespace VideoUp
             this.label7 = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,13 +52,13 @@ namespace VideoUp
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabs = new System.Windows.Forms.TabControl();
             this.trimSection = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.endTimeValid = new System.Windows.Forms.Label();
             this.startTimeValid = new System.Windows.Forms.Label();
             this.endTimeBox = new System.Windows.Forms.TextBox();
             this.startTimeBox = new System.Windows.Forms.TextBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.endTime = new System.Windows.Forms.Button();
             this.startTime = new System.Windows.Forms.Button();
             this.subtitleSection = new System.Windows.Forms.TabPage();
@@ -78,8 +74,8 @@ namespace VideoUp
             this.endSubTime = new System.Windows.Forms.Button();
             this.endSubBox = new System.Windows.Forms.TextBox();
             this.startSubBox = new System.Windows.Forms.TextBox();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.infoSection = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -102,7 +98,6 @@ namespace VideoUp
             this.boxMetadataAuthor = new System.Windows.Forms.TextBox();
             this.boxMetadataTitle = new System.Windows.Forms.TextBox();
             this.uploadSection = new System.Windows.Forms.TabPage();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.uploadButton = new System.Windows.Forms.Button();
@@ -114,29 +109,38 @@ namespace VideoUp
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.vidNameUpload = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonGo = new System.Windows.Forms.Button();
+            this.buttonBrowseIn = new System.Windows.Forms.Button();
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.buttonBrowseOut = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
-            this.buttonBrowseIn = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dCCTWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projectWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.tabs.SuspendLayout();
             this.trimSection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.subtitleSection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.infoSection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.uploadSection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -306,46 +310,6 @@ namespace VideoUp
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // fileManagerToolStripMenuItem
-            // 
-            this.fileManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.fileManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.fileManagerToolStripMenuItem.Image = global::VideoUp.Properties.Resources.archive;
-            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
-            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fileManagerToolStripMenuItem.Text = "File Manager";
-            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.newToolStripMenuItem.Image = global::VideoUp.Properties.Resources._new;
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
-            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
@@ -371,6 +335,11 @@ namespace VideoUp
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.documentationToolStripMenuItem,
+            this.dCCTWebsiteToolStripMenuItem,
+            this.projectWebsiteToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
@@ -440,15 +409,6 @@ namespace VideoUp
             this.trimSection.TabIndex = 0;
             this.trimSection.Text = "Trim";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VideoUp.Properties.Resources.trim;
-            this.pictureBox3.Location = new System.Drawing.Point(646, 132);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(136, 138);
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -512,6 +472,17 @@ namespace VideoUp
             this.startTimeBox.Name = "startTimeBox";
             this.startTimeBox.Size = new System.Drawing.Size(116, 25);
             this.startTimeBox.TabIndex = 11;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.AllowDrop = true;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 17);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(602, 324);
+            this.axWindowsMediaPlayer1.TabIndex = 8;
             // 
             // endTime
             // 
@@ -697,6 +668,17 @@ namespace VideoUp
             this.startSubBox.Size = new System.Drawing.Size(116, 25);
             this.startSubBox.TabIndex = 30;
             // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.AllowDrop = true;
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(15, 17);
+            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(602, 324);
+            this.axWindowsMediaPlayer2.TabIndex = 27;
+            // 
             // infoSection
             // 
             this.infoSection.BackColor = System.Drawing.SystemColors.Control;
@@ -728,15 +710,6 @@ namespace VideoUp
             this.infoSection.Size = new System.Drawing.Size(1062, 454);
             this.infoSection.TabIndex = 2;
             this.infoSection.Text = "Information";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::VideoUp.Properties.Resources.info;
-            this.pictureBox4.Location = new System.Drawing.Point(705, 120);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(257, 271);
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
             // 
             // label19
             // 
@@ -838,6 +811,7 @@ namespace VideoUp
             this.buttonOpenCrop.TabIndex = 19;
             this.buttonOpenCrop.Text = "Crop...";
             this.buttonOpenCrop.UseVisualStyleBackColor = true;
+            this.buttonOpenCrop.Click += new System.EventHandler(this.buttonOpenCrop_Click);
             // 
             // boxCropTo
             // 
@@ -970,15 +944,6 @@ namespace VideoUp
             this.uploadSection.TabIndex = 3;
             this.uploadSection.Text = "Upload";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::VideoUp.Properties.Resources.upload_2;
-            this.pictureBox5.Location = new System.Drawing.Point(695, 127);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(129, 132);
-            this.pictureBox5.TabIndex = 28;
-            this.pictureBox5.TabStop = false;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -1089,28 +1054,6 @@ namespace VideoUp
             this.vidNameUpload.Size = new System.Drawing.Size(223, 25);
             this.vidNameUpload.TabIndex = 15;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::VideoUp.Properties.Resources.upload;
-            this.pictureBox2.Location = new System.Drawing.Point(446, 307);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(211, 130);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(101, 307);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // buttonGo
             // 
             this.buttonGo.BackColor = System.Drawing.Color.Transparent;
@@ -1125,6 +1068,22 @@ namespace VideoUp
             this.buttonGo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonGo.UseVisualStyleBackColor = false;
             this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
+            // 
+            // buttonBrowseIn
+            // 
+            this.buttonBrowseIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBrowseIn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.buttonBrowseIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonBrowseIn.Image = global::VideoUp.Properties.Resources.open;
+            this.buttonBrowseIn.Location = new System.Drawing.Point(344, 33);
+            this.buttonBrowseIn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.buttonBrowseIn.Name = "buttonBrowseIn";
+            this.buttonBrowseIn.Size = new System.Drawing.Size(110, 69);
+            this.buttonBrowseIn.TabIndex = 13;
+            this.buttonBrowseIn.Text = "Input";
+            this.buttonBrowseIn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonBrowseIn.UseVisualStyleBackColor = true;
+            this.buttonBrowseIn.Click += new System.EventHandler(this.buttonBrowseIn_Click);
             // 
             // buttonSubBrowse
             // 
@@ -1172,43 +1131,134 @@ namespace VideoUp
             this.helpButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.helpButton.UseVisualStyleBackColor = true;
             // 
-            // buttonBrowseIn
+            // pictureBox3
             // 
-            this.buttonBrowseIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBrowseIn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.buttonBrowseIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonBrowseIn.Image = global::VideoUp.Properties.Resources.open;
-            this.buttonBrowseIn.Location = new System.Drawing.Point(344, 33);
-            this.buttonBrowseIn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.buttonBrowseIn.Name = "buttonBrowseIn";
-            this.buttonBrowseIn.Size = new System.Drawing.Size(110, 69);
-            this.buttonBrowseIn.TabIndex = 13;
-            this.buttonBrowseIn.Text = "Input";
-            this.buttonBrowseIn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonBrowseIn.UseVisualStyleBackColor = true;
-            this.buttonBrowseIn.Click += new System.EventHandler(this.buttonBrowseIn_Click);
+            this.pictureBox3.Image = global::VideoUp.Properties.Resources.trim;
+            this.pictureBox3.Location = new System.Drawing.Point(646, 132);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(136, 138);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
             // 
-            // axWindowsMediaPlayer1
+            // pictureBox4
             // 
-            this.axWindowsMediaPlayer1.AllowDrop = true;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 17);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(602, 324);
-            this.axWindowsMediaPlayer1.TabIndex = 8;
+            this.pictureBox4.Image = global::VideoUp.Properties.Resources.info;
+            this.pictureBox4.Location = new System.Drawing.Point(705, 120);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(257, 271);
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
             // 
-            // axWindowsMediaPlayer2
+            // pictureBox5
             // 
-            this.axWindowsMediaPlayer2.AllowDrop = true;
-            this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(15, 17);
-            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(602, 324);
-            this.axWindowsMediaPlayer2.TabIndex = 27;
+            this.pictureBox5.Image = global::VideoUp.Properties.Resources.upload_2;
+            this.pictureBox5.Location = new System.Drawing.Point(695, 127);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(129, 132);
+            this.pictureBox5.TabIndex = 28;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::VideoUp.Properties.Resources.upload;
+            this.pictureBox2.Location = new System.Drawing.Point(446, 307);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(211, 130);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(101, 307);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // fileManagerToolStripMenuItem
+            // 
+            this.fileManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.fileManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fileManagerToolStripMenuItem.Image = global::VideoUp.Properties.Resources.archive;
+            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
+            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fileManagerToolStripMenuItem.Text = "File Manager";
+            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.newToolStripMenuItem.Image = global::VideoUp.Properties.Resources._new;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // documentationToolStripMenuItem
+            // 
+            this.documentationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.documentationToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.documentationToolStripMenuItem.Image = global::VideoUp.Properties.Resources.documentation;
+            this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.documentationToolStripMenuItem.Text = "Documentation";
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
+            // 
+            // dCCTWebsiteToolStripMenuItem
+            // 
+            this.dCCTWebsiteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.dCCTWebsiteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dCCTWebsiteToolStripMenuItem.Image = global::VideoUp.Properties.Resources.dcct_us;
+            this.dCCTWebsiteToolStripMenuItem.Name = "dCCTWebsiteToolStripMenuItem";
+            this.dCCTWebsiteToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.dCCTWebsiteToolStripMenuItem.Text = "DCCT Website";
+            this.dCCTWebsiteToolStripMenuItem.Click += new System.EventHandler(this.dCCTWebsiteToolStripMenuItem_Click);
+            // 
+            // projectWebsiteToolStripMenuItem
+            // 
+            this.projectWebsiteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.projectWebsiteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.projectWebsiteToolStripMenuItem.Image = global::VideoUp.Properties.Resources.us;
+            this.projectWebsiteToolStripMenuItem.Name = "projectWebsiteToolStripMenuItem";
+            this.projectWebsiteToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.projectWebsiteToolStripMenuItem.Text = "Project Website";
+            this.projectWebsiteToolStripMenuItem.Click += new System.EventHandler(this.projectWebsiteToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(34)))));
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.aboutToolStripMenuItem.Image = global::VideoUp.Properties.Resources.about;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -1244,19 +1294,19 @@ namespace VideoUp
             this.tabs.ResumeLayout(false);
             this.trimSection.ResumeLayout(false);
             this.trimSection.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.subtitleSection.ResumeLayout(false);
             this.subtitleSection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.infoSection.ResumeLayout(false);
             this.infoSection.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.uploadSection.ResumeLayout(false);
             this.uploadSection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1357,6 +1407,10 @@ namespace VideoUp
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button buttonBrowseIn;
+        private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dCCTWebsiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem projectWebsiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

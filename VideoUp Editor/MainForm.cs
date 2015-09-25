@@ -2,9 +2,9 @@
 using System;
 using System.Drawing;
 using System.Globalization;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
@@ -269,7 +269,7 @@ namespace VideoUp
                     arguments[i] = string.Format(_template, input, output, start, end, options, "-pass " + (i + 1));
             }
 
-            var form = new UploaderForm(this, arguments);
+            var form = new ConverterForm(this, arguments);
             form.ShowDialog();
 
             return null;
@@ -743,6 +743,31 @@ namespace VideoUp
             dateTimeMetadata.Text = "";
             boxMetadataDesc.Text = "";
             infoBox.Text = "";
+        }
+
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // check if it works on any PC
+            Process.Start(@"C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\Documents\UserGuide.pdf");
+        }
+
+        private void dCCTWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.dcct.org.za/");
+        }
+
+        private void projectWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://people.cs.uct.ac.za/~nzxlub001/");
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string info = "Copyright © 2015. \nCS Honours Project (Monty & Luba). \nDeveloped for the DCCT."
+            + "\n\nReference tools and software: FFmpeg, MkvMerge, DropIt, WebMConverter";
+
+            MessageBox.Show(info, "VideoUp Application",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

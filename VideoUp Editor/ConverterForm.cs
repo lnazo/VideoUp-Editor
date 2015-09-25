@@ -7,7 +7,7 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace VideoUp
 {
-    public partial class UploaderForm : Form
+    public partial class ConverterForm:Form
     {
         private string[] _arguments;
         private FFmpeg _ffmpegProcess;
@@ -24,7 +24,7 @@ namespace VideoUp
         private double trim, timeLeft, duration;
         private string frameNum;
 
-        public UploaderForm(MainForm mainForm, string[] args)
+        public ConverterForm(MainForm mainForm, string[] args)
         {
             InitializeComponent();
 

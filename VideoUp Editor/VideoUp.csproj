@@ -223,6 +223,7 @@
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="client_secret.json" />
+    <None Include="Documents\UserGuide.pdf" />
     <None Include="Dropit\Backup\DropIt_AutoBackup.zip" />
     <None Include="Dropit\Guide.pdf" />
     <None Include="Dropit\Languages\BrazilianPortuguese.lng" />
@@ -474,6 +475,10 @@
     <Content Include="FFmpeg\mkvmerge.exe" />
     <Content Include="logo.ico" />
     <Content Include="logo_32bit.ico" />
+    <None Include="Resources\documentation.png" />
+    <None Include="Resources\dcct_us.png" />
+    <None Include="Resources\us.png" />
+    <None Include="Resources\about.png" />
     <Content Include="save.ico" />
     <None Include="Resources\upload_2.png" />
     <None Include="Resources\white_bg.png" />

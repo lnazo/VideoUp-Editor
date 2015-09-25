@@ -217,7 +217,6 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\AxInterop.WMPLib
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
-C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.CropForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
@@ -227,3 +226,4 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe.mani
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.ConverterForm.resources

@@ -1,6 +1,6 @@
 ﻿namespace VideoUp
 {
-    partial class UploaderForm
+    partial class ConverterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploaderForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConverterForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.textBoxOutput = new System.Windows.Forms.RichTextBox();

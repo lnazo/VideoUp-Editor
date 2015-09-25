@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CropForm));
             this.pictureBoxVideo = new System.Windows.Forms.PictureBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@
             // 
             // pictureBoxVideo
             // 
-            this.pictureBoxVideo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(44)))), ((int)(((byte)(63)))));
             this.pictureBoxVideo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxVideo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxVideo.Location = new System.Drawing.Point(0, 0);
@@ -55,6 +56,7 @@
             // buttonConfirm
             // 
             this.buttonConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonConfirm.Font = new System.Drawing.Font("Geomanist", 9F);
             this.buttonConfirm.Location = new System.Drawing.Point(537, 406);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(75, 23);
@@ -66,6 +68,7 @@
             // buttonReset
             // 
             this.buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReset.Font = new System.Drawing.Font("Geomanist", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReset.Location = new System.Drawing.Point(456, 406);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(75, 23);
@@ -84,6 +87,7 @@
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.pictureBoxVideo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(227, 114);
             this.Name = "CropForm";
             this.Text = "Crop your video";

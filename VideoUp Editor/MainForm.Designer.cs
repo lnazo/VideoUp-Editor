@@ -63,7 +63,6 @@ namespace VideoUp
             this.startTimeValid = new System.Windows.Forms.Label();
             this.endTimeBox = new System.Windows.Forms.TextBox();
             this.startTimeBox = new System.Windows.Forms.TextBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.endTime = new System.Windows.Forms.Button();
             this.startTime = new System.Windows.Forms.Button();
             this.subtitleSection = new System.Windows.Forms.TabPage();
@@ -79,7 +78,6 @@ namespace VideoUp
             this.endSubTime = new System.Windows.Forms.Button();
             this.endSubBox = new System.Windows.Forms.TextBox();
             this.startSubBox = new System.Windows.Forms.TextBox();
-            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.infoSection = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -123,20 +121,22 @@ namespace VideoUp
             this.buttonBrowseOut = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.buttonBrowseIn = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.tabs.SuspendLayout();
             this.trimSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.subtitleSection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.infoSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.uploadSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -443,7 +443,7 @@ namespace VideoUp
             // pictureBox3
             // 
             this.pictureBox3.Image = global::VideoUp.Properties.Resources.trim;
-            this.pictureBox3.Location = new System.Drawing.Point(754, 150);
+            this.pictureBox3.Location = new System.Drawing.Point(646, 132);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(136, 138);
             this.pictureBox3.TabIndex = 17;
@@ -453,7 +453,7 @@ namespace VideoUp
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(635, 71);
+            this.label14.Location = new System.Drawing.Point(642, 72);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(382, 20);
             this.label14.TabIndex = 16;
@@ -512,17 +512,6 @@ namespace VideoUp
             this.startTimeBox.Name = "startTimeBox";
             this.startTimeBox.Size = new System.Drawing.Size(116, 25);
             this.startTimeBox.TabIndex = 11;
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.AllowDrop = true;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 17);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(602, 324);
-            this.axWindowsMediaPlayer1.TabIndex = 8;
             // 
             // endTime
             // 
@@ -708,17 +697,6 @@ namespace VideoUp
             this.startSubBox.Size = new System.Drawing.Size(116, 25);
             this.startSubBox.TabIndex = 30;
             // 
-            // axWindowsMediaPlayer2
-            // 
-            this.axWindowsMediaPlayer2.AllowDrop = true;
-            this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(15, 17);
-            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(602, 324);
-            this.axWindowsMediaPlayer2.TabIndex = 27;
-            // 
             // infoSection
             // 
             this.infoSection.BackColor = System.Drawing.SystemColors.Control;
@@ -754,7 +732,7 @@ namespace VideoUp
             // pictureBox4
             // 
             this.pictureBox4.Image = global::VideoUp.Properties.Resources.info;
-            this.pictureBox4.Location = new System.Drawing.Point(735, 134);
+            this.pictureBox4.Location = new System.Drawing.Point(705, 120);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(257, 271);
             this.pictureBox4.TabIndex = 29;
@@ -768,8 +746,8 @@ namespace VideoUp
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(324, 40);
             this.label19.TabIndex = 28;
-            this.label19.Text = "Add video information. Also select resolution,\r\nand if sound should be kept or no" +
-    "t.";
+            this.label19.Text = "Add video information. Also select resolution,\r\nand select if sound should be kep" +
+    "t or not.";
             // 
             // label20
             // 
@@ -825,7 +803,7 @@ namespace VideoUp
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(451, 77);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 17);
+            this.label8.Size = new System.Drawing.Size(36, 17);
             this.label8.TabIndex = 22;
             this.label8.Text = "Trim:";
             // 
@@ -870,7 +848,6 @@ namespace VideoUp
             this.boxCropTo.Name = "boxCropTo";
             this.boxCropTo.Size = new System.Drawing.Size(71, 25);
             this.boxCropTo.TabIndex = 18;
-            this.boxCropTo.Text = "00:00:00";
             // 
             // boxCropFrom
             // 
@@ -881,7 +858,6 @@ namespace VideoUp
             this.boxCropFrom.Name = "boxCropFrom";
             this.boxCropFrom.Size = new System.Drawing.Size(68, 25);
             this.boxCropFrom.TabIndex = 17;
-            this.boxCropFrom.Text = "00:00:00";
             // 
             // resBox
             // 
@@ -997,7 +973,7 @@ namespace VideoUp
             // pictureBox5
             // 
             this.pictureBox5.Image = global::VideoUp.Properties.Resources.upload_2;
-            this.pictureBox5.Location = new System.Drawing.Point(783, 117);
+            this.pictureBox5.Location = new System.Drawing.Point(695, 127);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(129, 132);
             this.pictureBox5.TabIndex = 28;
@@ -1007,11 +983,11 @@ namespace VideoUp
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(684, 78);
+            this.label22.Location = new System.Drawing.Point(691, 82);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(261, 20);
+            this.label22.Size = new System.Drawing.Size(232, 20);
             this.label22.TabIndex = 27;
-            this.label22.Text = "Determine the video to be uploaded";
+            this.label22.Text = "Select the video to be uploaded";
             // 
             // label23
             // 
@@ -1212,6 +1188,28 @@ namespace VideoUp
             this.buttonBrowseIn.UseVisualStyleBackColor = true;
             this.buttonBrowseIn.Click += new System.EventHandler(this.buttonBrowseIn_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.AllowDrop = true;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 17);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(602, 324);
+            this.axWindowsMediaPlayer1.TabIndex = 8;
+            // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.AllowDrop = true;
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(15, 17);
+            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(602, 324);
+            this.axWindowsMediaPlayer2.TabIndex = 27;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.buttonGo;
@@ -1247,10 +1245,8 @@ namespace VideoUp
             this.trimSection.ResumeLayout(false);
             this.trimSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.subtitleSection.ResumeLayout(false);
             this.subtitleSection.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.infoSection.ResumeLayout(false);
             this.infoSection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1259,6 +1255,8 @@ namespace VideoUp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

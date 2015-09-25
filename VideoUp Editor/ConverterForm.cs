@@ -21,7 +21,7 @@ namespace VideoUp
         private bool _cancelMultipass;
 
         private MainForm _owner;
-        private double trim, timeLeft, endTime;
+        private double trim, timeLeft, duration;
         private string frameNum;
 
         public UploaderForm(MainForm mainForm, string[] args)
@@ -36,9 +36,58 @@ namespace VideoUp
         {
             if (args.Data != null)
             {
+                if (args.Data.Contains("Duration"))
+                {
+                    duration = TimeSpan.Parse(args.Data.Substring(11, 11)).TotalSeconds;
+                }
+            }
+
+            if (args.Data != null)
+            {
+                //!string.IsNullOrWhiteSpace(_owner.boxCropTo.Text)
                 //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
-                if (_owner.boxCropTo.Text.Equals("00:00:00"))
-                    textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nBusy transcoding...")));
+                if (string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
+                {
+                    if (args.Data.Contains("frame"))
+                    {
+                        frameNum = Regex.Match(args.Data, @"\d+").Value;
+                        timeLeft = (Double.Parse(frameNum) / (duration * 25)) * 100;
+                        if (timeLeft <= 100)
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        else
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
+                    }
+                }
+
+                else if (string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && !string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
+                {
+                    trim = duration - TimeSpan.Parse(_owner.boxCropFrom.Text).TotalSeconds;
+                    trim = Math.Abs(trim);
+                    if (args.Data.Contains("frame"))
+                    {
+                        frameNum = Regex.Match(args.Data, @"\d+").Value;
+                        timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
+                        if (timeLeft <= 100)
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        else
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
+                    }
+                }
+
+                else if (!string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
+                {
+                    trim = TimeSpan.Parse(_owner.boxCropTo.Text).TotalSeconds;
+                    trim = Math.Abs(trim);
+                    if (args.Data.Contains("frame"))
+                    {
+                        frameNum = Regex.Match(args.Data, @"\d+").Value;
+                        timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
+                        if (timeLeft <= 100)
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        else
+                            textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
+                    }
+                }
 
                 else
                 {
@@ -153,8 +202,8 @@ namespace VideoUp
                     textBoxOutput.AppendText("\n\nConversion cancelled.");
                 else
                 {
-                    textBoxOutput.AppendText(string.Format("\n\nAn error occurred with the code {0}. Oops.", process.ExitCode));
-                    textBoxOutput.AppendText("\nPost the error on the VideoUp help page.");
+                    textBoxOutput.AppendText(string.Format("\n\nOops. An error occurred with the code {0}.", process.ExitCode));
+                    textBoxOutput.AppendText("\nIf this is an uknown issue, post the error on the VideoUp help page.");
                 }
                 pictureBox.BackgroundImage = Properties.Resources.cross;
 

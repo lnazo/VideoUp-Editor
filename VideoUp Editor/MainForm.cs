@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
+using System.Collections;
 
 namespace VideoUp
 {
@@ -26,7 +27,6 @@ namespace VideoUp
         private TimeSpan endTimes = new TimeSpan(10, 10, 10);
         private TimeSpan startTimesSub = new TimeSpan(00, 00, 00);
         private TimeSpan endTimesSub = new TimeSpan(10, 10, 10);
-        private int count = 1;
 
         private string _autoOutput;
         private string _autoTitle;
@@ -132,16 +132,12 @@ namespace VideoUp
            
             string fullPath = Path.GetDirectoryName(path);
             axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
-            axWindowsMediaPlayer2.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-            axWindowsMediaPlayer2.Ctlcontrols.stop();
+            //axWindowsMediaPlayer1.Ctlcontrols.stop();
 
             if (!textBoxIn.Text.Equals(""))
             {
                 startTime.Enabled = true;
                 endTime.Enabled = true;
-                startSubTime.Enabled = true;
-                endSubTime.Enabled = true;
             }
 
             string name = Path.GetFileNameWithoutExtension(path);
@@ -457,7 +453,7 @@ namespace VideoUp
                 subFile = string.Format("-vf \"subtitles='{0}'\"", subFile);
                 subFile = @subFile.Replace(@"\", @"\\");
                 subFile = subFile.Insert(17, "\\");
-                Console.WriteLine(subFile);
+                //Console.WriteLine(subFile);
             }
 
             string audioEnabled = boxAudio.Checked ? "" : "-an";
@@ -590,66 +586,6 @@ namespace VideoUp
                 endTimeValid.Visible = true;
         }
 
-        private void enterSub_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(startSubBox.Text) && !string.IsNullOrWhiteSpace(endSubBox.Text) && !string.IsNullOrWhiteSpace(subTextBox.Text))
-            {
-                infoBox.AppendText(count.ToString());
-                Console.WriteLine("Count: " + count);
-                infoBox.AppendText("\n");
-                infoBox.AppendText(startSubBox.Text + ",000" + " --> " + endSubBox.Text + ",000");
-                infoBox.AppendText("\n");
-                infoBox.AppendText(subTextBox.Text);
-                infoBox.AppendText("\n");
-                infoBox.AppendText("\n");
-
-                startSubBox.Text = "";
-                endSubBox.Text = "";
-                startTimesSub = new TimeSpan(0, 0, 0);
-                endTimesSub = new TimeSpan(10, 10, 10);
-                count++;
-            }
-        }
-
-        private void startSubTime_Click_1(object sender, EventArgs e)
-        {
-            startTimesSub = TimeSpan.Parse(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Insert(0, "00:"));
-            if (startTimesSub < endTimesSub)
-            {
-                startSubMsg.Visible = false;
-                startSubBox.Text = startTimesSub.ToString();
-            }
-            else
-                startSubMsg.Visible = true;
-        }
-
-        private void endSubTime_Click_1(object sender, EventArgs e)
-        {
-            endTimesSub = TimeSpan.Parse(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Insert(0, "00:"));
-            if (endTimesSub > startTimesSub)
-            {
-                endSubMsg.Visible = false;
-                endSubBox.Text = endTimesSub.ToString();
-            }
-            else
-                endSubMsg.Visible = true;
-        }
-
-        private void saveSub_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "srt File|*.srt";
-            saveFileDialog1.Title = "Save subtitle file";
-
-            DialogResult result = saveFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                string name = saveFileDialog1.FileName;
-                File.WriteAllText(name, infoBox.Text);
-            }
-            subTextBox.Text = "";
-        }
-
         private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
@@ -681,7 +617,7 @@ namespace VideoUp
                 string content = textBoxIn.Text + "\n" + textBoxOut.Text + "\n" +
                 boxMetadataTitle.Text + "\n" + boxMetadataAuthor.Text + "\n" + startTimeBox.Text + "\n" + endTimeBox.Text
                 + "\n" + resBox.Text + "\n" + boxCropFrom.Text + "\n" + boxCropTo.Text + "\n" + textBox1.Text + "\n"
-                + dateTimeMetadata.Text + "\n" + boxMetadataDesc.Text + "\n" + infoBox.Text;
+                + dateTimeMetadata.Text + "\n" + boxMetadataDesc.Text + "\n"; //+ infoBox.Text;
                 File.WriteAllText(name, content);
                 MessageBox.Show("Project Saved");
             }
@@ -699,9 +635,7 @@ namespace VideoUp
                 System.IO.StreamReader(theDialog.FileName);
                 textBoxIn.Text = sr.ReadLine();
                 axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-                axWindowsMediaPlayer1.Ctlcontrols.stop();
-                axWindowsMediaPlayer2.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-                axWindowsMediaPlayer2.Ctlcontrols.stop();
+                //axWindowsMediaPlayer1.Ctlcontrols.stop();
 
                 textBoxOut.Text = sr.ReadLine();
                 boxMetadataTitle.Text = sr.ReadLine();
@@ -717,7 +651,7 @@ namespace VideoUp
 
                 dateTimeMetadata.Text = sr.ReadLine();
                 boxMetadataDesc.Text = sr.ReadLine();
-                infoBox.Text = sr.ReadLine();
+                //infoBox.Text = sr.ReadLine();
                 sr.Close();
             }
         }
@@ -742,7 +676,7 @@ namespace VideoUp
 
             dateTimeMetadata.Text = "";
             boxMetadataDesc.Text = "";
-            infoBox.Text = "";
+            //infoBox.Text = "";
         }
 
         private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -763,11 +697,17 @@ namespace VideoUp
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string info = "Copyright © 2015. \nCS Honours Project (Monty & Luba). \nDeveloped for the DCCT."
-            + "\n\nReference tools and software: FFmpeg, MkvMerge, DropIt, WebMConverter";
+            string info = "Copyright © 2015 \nCS Honours Project (Monty & Luba) \nDeveloped for the DCCT"
+            + "\n\nReference tools and software: \nFFmpeg \nMkvMerge \nDropIt \nWebMConverter";
 
             MessageBox.Show(info, "VideoUp Application",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void createSubtitlesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new SubtitleForm(this, @textBoxIn.Text.Replace(@"\\", @"\"));
+            form.ShowDialog();
         }
     }
 }

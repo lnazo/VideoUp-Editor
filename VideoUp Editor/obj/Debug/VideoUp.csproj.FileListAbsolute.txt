@@ -150,7 +150,6 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\bin\Debug\AxInterop.W
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\Interop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csproj.ResolveComReference.cache
-C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.UploaderForm.resources
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.CropForm.resources
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.MainForm.resources
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Properties.Resources.resources
@@ -227,3 +226,5 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.applicat
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.ConverterForm.resources
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.ConverterForm.resources
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.SubtitleForm.resources

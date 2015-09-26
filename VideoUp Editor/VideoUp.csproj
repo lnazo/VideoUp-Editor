@@ -4,7 +4,7 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>8812071d</NuGetPackageImportStamp>
-    <PublishUrl>C:\Users\Luba\Desktop\VideoUp\</PublishUrl>
+    <PublishUrl>C:\Users\nzxlub001\Desktop\videoup-setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -14,7 +14,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -191,6 +191,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubtitleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubtitleForm.Designer.cs">
+      <DependentUpon>SubtitleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Temp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubtitleForm.resx">
+      <DependentUpon>SubtitleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Temp.resx">
       <DependentUpon>Temp.cs</DependentUpon>
     </EmbeddedResource>

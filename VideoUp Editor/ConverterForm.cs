@@ -145,7 +145,7 @@ namespace VideoUp
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
                                                                               {
                                                                                   if (_panic) return; //This should stop that one exception when closing the converter
-                                                                                  textBoxOutput.AppendText("\n--- The video conversion is done ---");
+                                                                                  textBoxOutput.Text = ("\n--- The video conversion is done ---");
                                                                                   buttonCancel.Enabled = false;
 
                                                                                   _timer = new Timer();

@@ -682,7 +682,7 @@ namespace VideoUp
         private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // check if it works on any PC
-            Process.Start(@"C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\Documents\UserGuide.pdf");
+            Process.Start(@"https://docs.google.com/document/d/113OsjPjqSicUW_3b3dAk0sk5gadAvkKaEBrUbZu9lEU/edit?usp=sharing");
         }
 
         private void dCCTWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -692,7 +692,7 @@ namespace VideoUp
 
         private void projectWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://docs.google.com/document/d/113OsjPjqSicUW_3b3dAk0sk5gadAvkKaEBrUbZu9lEU/edit?usp=sharing");
+            Process.Start("http://people.cs.uct.ac.za/~nzxlub001/");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

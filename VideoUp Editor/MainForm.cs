@@ -692,7 +692,7 @@ namespace VideoUp
 
         private void projectWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("http://people.cs.uct.ac.za/~nzxlub001/");
+            Process.Start("https://docs.google.com/document/d/113OsjPjqSicUW_3b3dAk0sk5gadAvkKaEBrUbZu9lEU/edit?usp=sharing");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

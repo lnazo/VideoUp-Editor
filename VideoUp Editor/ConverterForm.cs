@@ -114,7 +114,7 @@ namespace VideoUp
 
         private void ConverterForm_Load(object sender, EventArgs e)
         {
-            textBoxOutput.Text = ("The video is busy converting. Please wait...");
+            textBoxOutput.Text = ("Conversion has begun. Please wait...");
 
             string argument = null;
            _multipass = true;
@@ -145,7 +145,7 @@ namespace VideoUp
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
                                                                               {
                                                                                   if (_panic) return; //This should stop that one exception when closing the converter
-                                                                                  textBoxOutput.Text = ("\n--- The video conversion is done ---");
+                                                                                  //textBoxOutput.Text = ("\n--- The video conversion is done ---");
                                                                                   buttonCancel.Enabled = false;
 
                                                                                   _timer = new Timer();
@@ -203,12 +203,13 @@ namespace VideoUp
                 else
                 {
                     textBoxOutput.AppendText(string.Format("\n\nOops. An error occurred with the code {0}.", process.ExitCode));
-                    textBoxOutput.AppendText("\nIf this is an uknown issue, post the error on the VideoUp help page.");
+                    textBoxOutput.AppendText("\nPlease check that your: \n(1) Subtitle file is correct \nYour video is working"
+                    + " outside the application \n(3) Your subtitles are not longer than the video.");
                 }
                 pictureBox.BackgroundImage = Properties.Resources.cross;
 
                 if (process.ExitCode == -1073741819) //This error keeps happening for me if I set threads to anything above 1, might happen for other people too
-                    MessageBox.Show("FFmpeg crashed because of a thread error. Set the number of threads to 1.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("FFmpeg crashed because of a thread error. Please try again.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

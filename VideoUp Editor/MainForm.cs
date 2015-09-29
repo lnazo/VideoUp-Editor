@@ -560,30 +560,44 @@ namespace VideoUp
 
         private void startTime_Click(object sender, EventArgs e)
         {
-            startTimes = TimeSpan.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString.Insert(0, "00:"));
-
-            if (startTimes <= endTimes)
+            if (!(axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped))
             {
-                startTimeValid.Visible = false;
-                startTimeBox.Text = startTimes.ToString();
-                boxCropFrom.Text = startTimes.ToString();
+                startTimes = TimeSpan.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+
+                if (startTimes < endTimes)
+                {
+                    startTimeValid.Visible = false;
+                    startTimeBox.Text = startTimes.ToString();
+                    boxCropFrom.Text = startTimes.ToString();
+                }
+
+                else if (startTimes == endTimes)
+                    startTimeValid.Visible = true;
+
+                else
+                    startTimeValid.Visible = true;
             }
-            else
-                startTimeValid.Visible = true;
         }
 
         private void endTime_Click(object sender, EventArgs e)
         {
-            endTimes = TimeSpan.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString.Insert(0, "00:"));
-
-            if (endTimes >= startTimes)
+            if (!(axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped))
             {
-                endTimeValid.Visible = false;
-                endTimeBox.Text = endTimes.ToString();
-                boxCropTo.Text = endTimes.ToString();
+                endTimes = TimeSpan.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+
+                if (endTimes > startTimes)
+                {
+                    endTimeValid.Visible = false;
+                    endTimeBox.Text = endTimes.ToString();
+                    boxCropTo.Text = endTimes.ToString();
+                }
+
+                else if (endTimes == startTimes)
+                    endTimeValid.Visible = true;
+
+                else
+                    endTimeValid.Visible = true;
             }
-            else
-                endTimeValid.Visible = true;
         }
 
         private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -617,7 +631,8 @@ namespace VideoUp
                 string content = textBoxIn.Text + "\n" + textBoxOut.Text + "\n" +
                 boxMetadataTitle.Text + "\n" + boxMetadataAuthor.Text + "\n" + startTimeBox.Text + "\n" + endTimeBox.Text
                 + "\n" + resBox.Text + "\n" + boxCropFrom.Text + "\n" + boxCropTo.Text + "\n" + textBox1.Text + "\n"
-                + dateTimeMetadata.Text + "\n" + boxMetadataDesc.Text + "\n"; //+ infoBox.Text;
+                + dateTimeMetadata.Text + "\n" + boxMetadataDesc.Text + "\n" + vidNameUpload.Text + "\n" + textBox2.Text + "\n"
+                + textBox4.Text;
                 File.WriteAllText(name, content);
                 MessageBox.Show("Project Saved");
             }
@@ -646,12 +661,19 @@ namespace VideoUp
                 boxCropFrom.Text = sr.ReadLine();
                 boxCropTo.Text = sr.ReadLine();
                 buttonSubBrowse.Enabled = true;
-                textBox1.Enabled = true;
                 textBox1.Text = sr.ReadLine();
 
                 dateTimeMetadata.Text = sr.ReadLine();
                 boxMetadataDesc.Text = sr.ReadLine();
-                //infoBox.Text = sr.ReadLine();
+                vidNameUpload.Text = sr.ReadLine();
+                textBox2.Text = sr.ReadLine();
+                textBox4.Text = sr.ReadLine();
+
+                startTime.Enabled = true;
+                endTime.Enabled = true;
+                radioSubNone.Checked = false;
+                radioSubExternal.Checked = true;
+
                 sr.Close();
             }
         }
@@ -673,6 +695,9 @@ namespace VideoUp
             textBox1.Text = "";
             buttonSubBrowse.Enabled = false;
             textBox1.Enabled = false;
+            vidNameUpload.Text = "";
+            textBox2.Text = "";
+            textBox4.Text = "";
 
             dateTimeMetadata.Text = "";
             boxMetadataDesc.Text = "";
@@ -708,6 +733,23 @@ namespace VideoUp
         {
             var form = new SubtitleForm(this, @textBoxIn.Text.Replace(@"\\", @"\"));
             form.ShowDialog();
+        }
+
+        private void radioSubNone_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioSubNone.Checked)
+            {
+                textBox1.Text = "";
+                radioSubExternal.Checked = false;
+                buttonSubBrowse.Enabled = false;
+            }
+
+            else
+            {
+                radioSubNone.Checked = false;
+                radioSubExternal.Checked = true;
+                buttonSubBrowse.Enabled = true;
+            }
         }
     }
 }

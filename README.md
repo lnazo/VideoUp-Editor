@@ -28,10 +28,20 @@ Requirements
 ------------
 * .NET Framework 4.0 and above.
 
-Screenshot (current version)
+Screenshot
 ----------------------------
 
-![videoup_2.0](https://github.com/lnazo/VideoUp-Editor/blob/master/VideoUp%20Editor/videoup_img.jpg)
+![videoup_1.0.4](https://github.com/lnazo/VideoUp-Editor/blob/master/VideoUp%20Editor/Screenshots/videoup_img.jpg)
+
+Screenshot (updated version)
+----------------------------
+
+![videoup_1.0.5](https://github.com/lnazo/VideoUp-Editor/blob/master/VideoUp%20Editor/Screenshots/videoup_img1.jpg)
+
+Screenshot (subtitles)
+----------------------------
+
+![videoup_1.0.5](https://github.com/lnazo/VideoUp-Editor/blob/master/VideoUp%20Editor/Screenshots/videoup_subtitle_img.jpg)
 
 Reference tools and software
 ----------------------------

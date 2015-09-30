@@ -44,6 +44,7 @@
             this.start = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.end = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtitleMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subtitleGridView)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // startSubTime
             // 
+            this.startSubTime.Enabled = false;
             this.startSubTime.Location = new System.Drawing.Point(424, 13);
             this.startSubTime.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.startSubTime.Name = "startSubTime";
@@ -95,6 +97,7 @@
             // 
             // endSubTime
             // 
+            this.endSubTime.Enabled = false;
             this.endSubTime.Location = new System.Drawing.Point(424, 53);
             this.endSubTime.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.endSubTime.Name = "endSubTime";
@@ -157,6 +160,9 @@
             // 
             // subtitleGridView
             // 
+            this.subtitleGridView.AllowUserToAddRows = false;
+            this.subtitleGridView.AllowUserToResizeColumns = false;
+            this.subtitleGridView.AllowUserToResizeRows = false;
             this.subtitleGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.subtitleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.subtitleGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -168,6 +174,7 @@
             this.subtitleGridView.Name = "subtitleGridView";
             this.subtitleGridView.Size = new System.Drawing.Size(865, 235);
             this.subtitleGridView.TabIndex = 52;
+            this.subtitleGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.subtitleGridView_RowsRemoved);
             // 
             // num
             // 
@@ -196,11 +203,25 @@
             this.text.HeaderText = "Text";
             this.text.Name = "text";
             // 
+            // subtitleMsg
+            // 
+            this.subtitleMsg.AutoSize = true;
+            this.subtitleMsg.BackColor = System.Drawing.Color.Red;
+            this.subtitleMsg.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.subtitleMsg.Location = new System.Drawing.Point(511, 249);
+            this.subtitleMsg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subtitleMsg.Name = "subtitleMsg";
+            this.subtitleMsg.Size = new System.Drawing.Size(250, 13);
+            this.subtitleMsg.TabIndex = 53;
+            this.subtitleMsg.Text = "Check that start time, end time or subtitle not empty.";
+            this.subtitleMsg.Visible = false;
+            // 
             // SubtitleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 563);
+            this.Controls.Add(this.subtitleMsg);
             this.Controls.Add(this.subtitleGridView);
             this.Controls.Add(this.enterSubtitle);
             this.Controls.Add(this.saveSub);
@@ -242,5 +263,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn start;
         private System.Windows.Forms.DataGridViewTextBoxColumn end;
         private System.Windows.Forms.DataGridViewTextBoxColumn text;
+        private System.Windows.Forms.Label subtitleMsg;
     }
 }

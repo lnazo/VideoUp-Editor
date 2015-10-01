@@ -84,7 +84,7 @@ namespace Google.Apis.YouTube.Samples
           video.Snippet = new VideoSnippet();
           video.Snippet.Title = title;
           video.Snippet.Description = desc;
-          video.Snippet.Tags = new string[] {"deaf community of cape town", "dcct", "deaf community", "heathfield"};
+          video.Snippet.Tags = new string[] {"deaf community of cape town", "dcct", "deaf community", "heathfield", "cape town"};
           video.Snippet.CategoryId = "22"; // See https://developers.google.com/youtube/v3/docs/videoCategories/list
           video.Status = new VideoStatus();
           video.Status.PrivacyStatus = "unlisted";
@@ -105,7 +105,7 @@ namespace Google.Apis.YouTube.Samples
             switch (progress.Status)
             {
                 case UploadStatus.Uploading:
-                    MessageBox.Show(string.Format("{0:0} MB sent. \n Status: {1}", progress.BytesSent * 0.000001, progress.Status));
+                    MessageBox.Show(string.Format("{0:0} MB sent. \n Upload status: {1}", progress.BytesSent * 0.000001, progress.Status));
                     break;
 
                 case UploadStatus.Failed:
@@ -116,7 +116,7 @@ namespace Google.Apis.YouTube.Samples
 
         void videosInsertRequest_ResponseReceived(Video video)
         {
-            MessageBox.Show("The video upload is complte. Check your YouTube account.");
+            MessageBox.Show("The video upload is complete. Check your YouTube account.");
         }
     }
 }

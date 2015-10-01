@@ -798,7 +798,7 @@ namespace VideoUp
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(41, 75);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 17);
+            this.label8.Size = new System.Drawing.Size(37, 17);
             this.label8.TabIndex = 22;
             this.label8.Text = "Trim:";
             // 
@@ -1033,6 +1033,7 @@ namespace VideoUp
             this.uploadStatusBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.uploadStatusBox.Size = new System.Drawing.Size(211, 200);
             this.uploadStatusBox.TabIndex = 18;
+            this.uploadStatusBox.Visible = false;
             // 
             // buttonGo
             // 

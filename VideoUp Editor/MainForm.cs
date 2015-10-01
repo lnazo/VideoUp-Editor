@@ -431,6 +431,7 @@ namespace VideoUp
             string metadataTitle = "";
             if (!string.IsNullOrWhiteSpace(boxMetadataTitle.Text))
                 metadataTitle = string.Format("-metadata title=\"{0}\"", boxMetadataTitle.Text.Replace("\"", "\\\""));
+            vidNameUpload.Text = boxMetadataTitle.Text.Substring(boxMetadataTitle.Text.LastIndexOf(@"\") + 1);
 
             string metadataAuthor = "";
             if (!string.IsNullOrWhiteSpace(boxMetadataAuthor.Text))
@@ -536,7 +537,7 @@ namespace VideoUp
             path = textBox2.Text;
 
             if (string.IsNullOrWhiteSpace(title))
-                MessageBox.Show("Enter a name of the video");
+                MessageBox.Show("Enter a name for the video");
             if (string.IsNullOrWhiteSpace(desc))
                 MessageBox.Show("Enter a description for the video");
             if (string.IsNullOrWhiteSpace(path))
@@ -551,10 +552,10 @@ namespace VideoUp
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
 
-            uploadButton.Enabled = false;
+            //uploadButton.Enabled = false;
 
-            uploadStatusBox.AppendText("Upload process has begun\n");
-            uploadStatusBox.AppendText("\nPlease wait for status messages until the upload is complete");
+            //uploadStatusBox.AppendText("Upload process has begun\n");
+            //uploadStatusBox.AppendText("\nPlease wait for status messages until the upload is complete");
             //InitTimer();
         }
 

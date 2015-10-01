@@ -52,7 +52,7 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (duration * 25)) * 100;
-                        if (timeLeft <= 100)
+                        if (timeLeft < 100)
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
@@ -67,7 +67,7 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                        if (timeLeft <= 100)
+                        if (timeLeft < 100)
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
@@ -82,7 +82,7 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                        if (timeLeft <= 100)
+                        if (timeLeft < 100)
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
@@ -97,7 +97,7 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                        if (timeLeft <= 100)
+                        if (timeLeft < 100)
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));

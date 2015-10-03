@@ -132,7 +132,6 @@ namespace VideoUp
            
             string fullPath = Path.GetDirectoryName(path);
             axWindowsMediaPlayer1.URL = @textBoxIn.Text.Replace(@"\\", @"\");
-            //axWindowsMediaPlayer1.Ctlcontrols.stop();
 
             if (!textBoxIn.Text.Equals(""))
             {
@@ -751,6 +750,12 @@ namespace VideoUp
                 radioSubExternal.Checked = true;
                 buttonSubBrowse.Enabled = true;
             }
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            var form = new HelpForm(this);
+            form.ShowDialog();
         }
     }
 }

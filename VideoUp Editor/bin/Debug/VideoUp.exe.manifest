@@ -307,14 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="1552896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoUp.exe" size="1934336">
       <assemblyIdentity name="VideoUp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>15EB2Ar8BlTSGrb7fYGq4tyGHv0=</dsig:DigestValue>
+        <dsig:DigestValue>MM9Rjf2CV7Oe5IkDHlGRPjHM3zY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2110,6 +2110,51 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>PMyj+zHfTqYgKyLgTNogcaoLq98=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\Info video.mp4" size="18882152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/7KaAm3nxPU+ZbUGqBprBhSWDCs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\Open Save video.mp4" size="12853796">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Fp3QpNpkn+fjOf7GP1HWkw6zDxw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\Subtitle video.mp4" size="23786201">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p3hDdiNb7AnWmnrKKF7VvxrHA3E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\Trim video.mp4" size="6390921">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aPk33zFveZJbX9LZwd7KTAnGOxU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\Upload video.mp4" size="12120295">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZHFjQPRJlsBW3FHFrpj4K1WVSLY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logo.ico" size="370070">

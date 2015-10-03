@@ -112,8 +112,8 @@ namespace VideoUp
             this.uploadStatusBox = new System.Windows.Forms.TextBox();
             this.buttonGo = new System.Windows.Forms.Button();
             this.buttonBrowseIn = new System.Windows.Forms.Button();
-            this.buttonBrowseOut = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
+            this.buttonBrowseOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.tabs.SuspendLayout();
@@ -373,8 +373,8 @@ namespace VideoUp
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
+            this.helpToolStripMenuItem.Text = "About";
             // 
             // documentationToolStripMenuItem
             // 
@@ -1067,6 +1067,21 @@ namespace VideoUp
             this.buttonBrowseIn.UseVisualStyleBackColor = true;
             this.buttonBrowseIn.Click += new System.EventHandler(this.buttonBrowseIn_Click);
             // 
+            // helpButton
+            // 
+            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.helpButton.Image = global::VideoUp.Properties.Resources.help;
+            this.helpButton.Location = new System.Drawing.Point(977, 52);
+            this.helpButton.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(91, 73);
+            this.helpButton.TabIndex = 11;
+            this.helpButton.Text = "Help";
+            this.helpButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            // 
             // buttonBrowseOut
             // 
             this.buttonBrowseOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1083,20 +1098,6 @@ namespace VideoUp
             this.buttonBrowseOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBrowseOut.UseVisualStyleBackColor = true;
             this.buttonBrowseOut.Click += new System.EventHandler(this.buttonBrowseOut_Click);
-            // 
-            // helpButton
-            // 
-            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.helpButton.Image = global::VideoUp.Properties.Resources.help;
-            this.helpButton.Location = new System.Drawing.Point(977, 52);
-            this.helpButton.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(91, 73);
-            this.helpButton.TabIndex = 11;
-            this.helpButton.Text = "Help";
-            this.helpButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.helpButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

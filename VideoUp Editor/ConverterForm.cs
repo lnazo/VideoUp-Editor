@@ -23,8 +23,9 @@ namespace VideoUp
         private MainForm _owner;
         private double trim, timeLeft, duration;
         private double timeLeftTemp = 0;
+        static int wholenum = 0;
         private string frameNum;
-
+        private delegate void EventHandle();
         public ConverterForm(MainForm mainForm, string[] args)
         {
             InitializeComponent();
@@ -56,11 +57,22 @@ namespace VideoUp
                         if (timeLeftTemp < timeLeft)
                         {
                             timeLeftTemp = timeLeft;
+                            if (wholenum != (int)timeLeft)
+                            {
+
+                                this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
+
+                                wholenum = (int)timeLeft;
+                            }
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         }
                         else
+                        {
+                             
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
-                    }
+                        }
+                        
+                        }
                 }
 
                 else if (string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && !string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
@@ -74,6 +86,14 @@ namespace VideoUp
                         if (timeLeftTemp < timeLeft)
                         {
                             timeLeftTemp = timeLeft;
+                            if (wholenum != (int)timeLeft)
+                            {
+
+                                this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
+
+                                wholenum = (int)timeLeft;
+                            }
+                            
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         }
 
@@ -93,7 +113,15 @@ namespace VideoUp
                         if (timeLeftTemp < timeLeft)
                         {
                             timeLeftTemp = timeLeft;
+                            if (wholenum != (int)timeLeft)
+                            {
+
+                                this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
+
+                                wholenum = (int)timeLeft;
+                            }
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                           
                         }
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
@@ -111,11 +139,22 @@ namespace VideoUp
                         if (timeLeftTemp < timeLeft)
                         {
                             timeLeftTemp = timeLeft;
+                            if (wholenum != (int)timeLeft)
+                            {
+                                 
+                                this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
+                                
+                                wholenum = (int)timeLeft;
+                            }
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+
                         }
                         else
+                        {
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
-                    }
+                            //progressBar1.Increment(100);
+                        }                   
+                        }
                 }
             }
         }
@@ -159,7 +198,7 @@ namespace VideoUp
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
                                                                               {
                                                                                   if (_panic) return; //This should stop that one exception when closing the converter
-                                                                                  //textBoxOutput.Text = ("\n--- The video conversion is done ---");
+                                                                                  //textBoxOutput.Text = ("\n--- The coersion is done ---");
                                                                                   buttonCancel.Enabled = false;
 
                                                                                   _timer = new Timer();
@@ -227,6 +266,8 @@ namespace VideoUp
             }
             else
             {
+
+                progressBar1.Visible = false;
                 textBoxOutput.AppendText("\n\nVideo is ready.");
                 pictureBox.BackgroundImage = Properties.Resources.tick;
 

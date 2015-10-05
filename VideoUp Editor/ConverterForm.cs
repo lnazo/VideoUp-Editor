@@ -22,6 +22,7 @@ namespace VideoUp
 
         private MainForm _owner;
         private double trim, timeLeft, duration;
+        private double timeLeftTemp = 0;
         private string frameNum;
 
         public ConverterForm(MainForm mainForm, string[] args)
@@ -52,8 +53,11 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (duration * 25)) * 100;
-                        if (timeLeft < 100)
+                        if (timeLeftTemp < timeLeft)
+                        {
+                            timeLeftTemp = timeLeft;
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        }
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
                     }
@@ -67,8 +71,12 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                        if (timeLeft < 100)
+                        if (timeLeftTemp < timeLeft)
+                        {
+                            timeLeftTemp = timeLeft;
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        }
+
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
                     }
@@ -82,8 +90,11 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                        if (timeLeft < 100)
+                        if (timeLeftTemp < timeLeft)
+                        {
+                            timeLeftTemp = timeLeft;
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        }
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
                     }
@@ -97,8 +108,11 @@ namespace VideoUp
                     {
                         frameNum = Regex.Match(args.Data, @"\d+").Value;
                         timeLeft = (Double.Parse(frameNum) / (trim * 25)) * 100;
-                        if (timeLeft < 100)
+                        if (timeLeftTemp < timeLeft)
+                        {
+                            timeLeftTemp = timeLeft;
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
+                        }
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
                     }

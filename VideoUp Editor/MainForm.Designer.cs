@@ -61,6 +61,7 @@ namespace VideoUp
             this.tabs = new System.Windows.Forms.TabControl();
             this.trimSection = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.trimClickHere = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.startTime = new System.Windows.Forms.Button();
@@ -72,6 +73,7 @@ namespace VideoUp
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.infoSection = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.infoClickHere = new System.Windows.Forms.PictureBox();
             this.radioSubExternal = new System.Windows.Forms.RadioButton();
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.radioSubNone = new System.Windows.Forms.RadioButton();
@@ -99,6 +101,7 @@ namespace VideoUp
             this.label5 = new System.Windows.Forms.Label();
             this.uploadSection = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.uploadClickHere = new System.Windows.Forms.PictureBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -114,20 +117,25 @@ namespace VideoUp
             this.buttonBrowseIn = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.buttonBrowseOut = new System.Windows.Forms.Button();
+            this.subtitleClickHere = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackThreads)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.tabs.SuspendLayout();
             this.trimSection.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trimClickHere)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.infoSection.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoClickHere)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.uploadSection.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uploadClickHere)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subtitleClickHere)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -473,6 +481,7 @@ namespace VideoUp
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.trimClickHere);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.startTime);
@@ -487,6 +496,17 @@ namespace VideoUp
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trim";
+            // 
+            // trimClickHere
+            // 
+            this.trimClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trimClickHere.Image = global::VideoUp.Properties.Resources.click_here;
+            this.trimClickHere.Location = new System.Drawing.Point(201, 183);
+            this.trimClickHere.Name = "trimClickHere";
+            this.trimClickHere.Size = new System.Drawing.Size(64, 21);
+            this.trimClickHere.TabIndex = 19;
+            this.trimClickHere.TabStop = false;
+            this.trimClickHere.Click += new System.EventHandler(this.trimClickHere_Click);
             // 
             // label13
             // 
@@ -600,6 +620,8 @@ namespace VideoUp
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.subtitleClickHere);
+            this.groupBox4.Controls.Add(this.infoClickHere);
             this.groupBox4.Controls.Add(this.radioSubExternal);
             this.groupBox4.Controls.Add(this.buttonSubBrowse);
             this.groupBox4.Controls.Add(this.radioSubNone);
@@ -623,6 +645,17 @@ namespace VideoUp
             this.groupBox4.TabIndex = 31;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Video File";
+            // 
+            // infoClickHere
+            // 
+            this.infoClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.infoClickHere.Image = global::VideoUp.Properties.Resources.click_here;
+            this.infoClickHere.Location = new System.Drawing.Point(196, 185);
+            this.infoClickHere.Name = "infoClickHere";
+            this.infoClickHere.Size = new System.Drawing.Size(64, 21);
+            this.infoClickHere.TabIndex = 34;
+            this.infoClickHere.TabStop = false;
+            this.infoClickHere.Click += new System.EventHandler(this.infoClickHere_Click);
             // 
             // radioSubExternal
             // 
@@ -904,6 +937,7 @@ namespace VideoUp
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.uploadClickHere);
             this.groupBox5.Controls.Add(this.label32);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.pictureBox1);
@@ -921,6 +955,14 @@ namespace VideoUp
             this.groupBox5.TabIndex = 27;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Upload";
+            // 
+            // uploadClickHere
+            // 
+            this.uploadClickHere.Location = new System.Drawing.Point(0, 0);
+            this.uploadClickHere.Name = "uploadClickHere";
+            this.uploadClickHere.Size = new System.Drawing.Size(100, 50);
+            this.uploadClickHere.TabIndex = 0;
+            this.uploadClickHere.TabStop = false;
             // 
             // label32
             // 
@@ -1099,6 +1141,17 @@ namespace VideoUp
             this.buttonBrowseOut.UseVisualStyleBackColor = true;
             this.buttonBrowseOut.Click += new System.EventHandler(this.buttonBrowseOut_Click);
             // 
+            // subtitleClickHere
+            // 
+            this.subtitleClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.subtitleClickHere.Image = global::VideoUp.Properties.Resources.click_here;
+            this.subtitleClickHere.Location = new System.Drawing.Point(196, 277);
+            this.subtitleClickHere.Name = "subtitleClickHere";
+            this.subtitleClickHere.Size = new System.Drawing.Size(64, 21);
+            this.subtitleClickHere.TabIndex = 55;
+            this.subtitleClickHere.TabStop = false;
+            this.subtitleClickHere.Click += new System.EventHandler(this.subtitleClickHere_Click);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.buttonGo;
@@ -1132,18 +1185,22 @@ namespace VideoUp
             this.trimSection.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trimClickHere)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.infoSection.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoClickHere)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.uploadSection.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uploadClickHere)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subtitleClickHere)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1235,6 +1292,10 @@ namespace VideoUp
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RadioButton radioSubExternal;
         private System.Windows.Forms.RadioButton radioSubNone;
+        private System.Windows.Forms.PictureBox trimClickHere;
+        private System.Windows.Forms.PictureBox infoClickHere;
+        private System.Windows.Forms.PictureBox uploadClickHere;
+        private System.Windows.Forms.PictureBox subtitleClickHere;
     }
 }
 

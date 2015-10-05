@@ -11,9 +11,11 @@ namespace VideoUp
 {
     public partial class HelpForm : Form
     {
-        public HelpForm(MainForm mainForm)
+        public HelpForm(MainForm mainFormm, string video)
         {
             InitializeComponent();
+            if (video != null)
+                helpMediaPlayer.URL = video;
         }
 
         private void openSaveButton_Click(object sender, EventArgs e)

@@ -507,6 +507,7 @@
     <None Include="Resources\subtitle_help.png" />
     <None Include="Resources\info_help.png" />
     <None Include="Resources\upload_help.png" />
+    <None Include="Resources\click_here.png" />
     <Content Include="save.ico" />
     <None Include="Resources\upload_2.png" />
     <None Include="Resources\white_bg.png" />

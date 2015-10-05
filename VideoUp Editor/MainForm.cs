@@ -754,7 +754,31 @@ namespace VideoUp
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            var form = new HelpForm(this);
+            var form = new HelpForm(this, null);
+            form.ShowDialog();
+        }
+
+        private void trimClickHere_Click(object sender, EventArgs e)
+        {
+            var form = new HelpForm(this, @"Help\\Trim video.mp4");
+            form.ShowDialog();
+        }
+
+        private void infoClickHere_Click(object sender, EventArgs e)
+        {
+            var form = new HelpForm(this, @"Help\\Info video.mp4");
+            form.ShowDialog();
+        }
+
+        private void subtitleClickHere_Click(object sender, EventArgs e)
+        {
+            var form = new HelpForm(this, @"Help\\Subtitle video.mp4");
+            form.ShowDialog();
+        }
+
+        private void uploadClickHere_Click(object sender, EventArgs e)
+        {
+            var form = new HelpForm(this, @"Help\\Upload video.mp4");
             form.ShowDialog();
         }
     }

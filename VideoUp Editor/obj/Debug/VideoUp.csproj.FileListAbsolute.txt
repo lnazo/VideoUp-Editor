@@ -232,3 +232,4 @@ C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Subtitle
 C:\Users\Luba\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.HelpForm.resources
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.Temp2.resources

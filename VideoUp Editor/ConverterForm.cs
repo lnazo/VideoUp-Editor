@@ -59,20 +59,15 @@ namespace VideoUp
                             timeLeftTemp = timeLeft;
                             if (wholenum != (int)timeLeft)
                             {
-
                                 this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
-
                                 wholenum = (int)timeLeft;
                             }
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         }
                         else
-                        {
-                             
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
-                        }
                         
-                        }
+                    }
                 }
 
                 else if (string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && !string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
@@ -88,15 +83,11 @@ namespace VideoUp
                             timeLeftTemp = timeLeft;
                             if (wholenum != (int)timeLeft)
                             {
-
                                 this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
-
                                 wholenum = (int)timeLeft;
                             }
-                            
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
                         }
-
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
                     }
@@ -115,13 +106,10 @@ namespace VideoUp
                             timeLeftTemp = timeLeft;
                             if (wholenum != (int)timeLeft)
                             {
-
                                 this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
-
                                 wholenum = (int)timeLeft;
                             }
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
-                           
                         }
                         else
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
@@ -140,21 +128,18 @@ namespace VideoUp
                         {
                             timeLeftTemp = timeLeft;
                             if (wholenum != (int)timeLeft)
-                            {
-                                 
+                            {  
                                 this.Invoke(new Action(() => this.progressBar1.Value = wholenum));
-                                
                                 wholenum = (int)timeLeft;
                             }
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\n" + String.Format("{0:0}", timeLeft) + "%")));
-
                         }
                         else
                         {
                             textBoxOutput.Invoke((Action)(() => textBoxOutput.Text = ("\nFinalising video...")));
                             //progressBar1.Increment(100);
                         }                   
-                        }
+                    }
                 }
             }
         }
@@ -266,7 +251,6 @@ namespace VideoUp
             }
             else
             {
-
                 progressBar1.Visible = false;
                 textBoxOutput.AppendText("\n\nVideo is ready.");
                 pictureBox.BackgroundImage = Properties.Resources.tick;

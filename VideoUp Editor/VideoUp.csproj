@@ -209,6 +209,12 @@
     <Compile Include="Temp.Designer.cs">
       <DependentUpon>Temp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Temp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temp2.Designer.cs">
+      <DependentUpon>Temp2.cs</DependentUpon>
+    </Compile>
     <Compile Include="UploadVideo.cs" />
     <EmbeddedResource Include="ConverterForm.resx">
       <DependentUpon>ConverterForm.cs</DependentUpon>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Temp.resx">
       <DependentUpon>Temp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temp2.resx">
+      <DependentUpon>Temp2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />

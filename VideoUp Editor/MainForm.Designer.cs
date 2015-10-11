@@ -621,7 +621,6 @@ namespace VideoUp
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.subtitleClickHere);
-            this.groupBox4.Controls.Add(this.infoClickHere);
             this.groupBox4.Controls.Add(this.radioSubExternal);
             this.groupBox4.Controls.Add(this.buttonSubBrowse);
             this.groupBox4.Controls.Add(this.radioSubNone);
@@ -661,7 +660,7 @@ namespace VideoUp
             // 
             this.infoClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoClickHere.Image = global::VideoUp.Properties.Resources.click_here;
-            this.infoClickHere.Location = new System.Drawing.Point(196, 185);
+            this.infoClickHere.Location = new System.Drawing.Point(86, 277);
             this.infoClickHere.Name = "infoClickHere";
             this.infoClickHere.Size = new System.Drawing.Size(64, 21);
             this.infoClickHere.TabIndex = 34;
@@ -715,7 +714,6 @@ namespace VideoUp
             this.label11.Size = new System.Drawing.Size(60, 17);
             this.label11.TabIndex = 30;
             this.label11.Text = "Subtitles:";
-            this.label11.Visible = false;
             // 
             // label6
             // 
@@ -849,6 +847,7 @@ namespace VideoUp
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.infoClickHere);
             this.groupBox2.Controls.Add(this.boxMetadataTitle);
             this.groupBox2.Controls.Add(this.boxMetadataAuthor);
             this.groupBox2.Controls.Add(this.dateTimeMetadata);
@@ -858,7 +857,7 @@ namespace VideoUp
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(28, 32);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(380, 273);
+            this.groupBox2.Size = new System.Drawing.Size(380, 322);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Metadata";
@@ -875,7 +874,7 @@ namespace VideoUp
             // boxMetadataTitle
             // 
             this.boxMetadataTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataTitle.Location = new System.Drawing.Point(86, 30);
+            this.boxMetadataTitle.Location = new System.Drawing.Point(86, 25);
             this.boxMetadataTitle.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.boxMetadataTitle.Name = "boxMetadataTitle";
             this.boxMetadataTitle.Size = new System.Drawing.Size(243, 25);
@@ -884,7 +883,7 @@ namespace VideoUp
             // boxMetadataAuthor
             // 
             this.boxMetadataAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataAuthor.Location = new System.Drawing.Point(86, 64);
+            this.boxMetadataAuthor.Location = new System.Drawing.Point(86, 63);
             this.boxMetadataAuthor.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.boxMetadataAuthor.Name = "boxMetadataAuthor";
             this.boxMetadataAuthor.Size = new System.Drawing.Size(243, 25);
@@ -901,7 +900,7 @@ namespace VideoUp
             // boxMetadataDesc
             // 
             this.boxMetadataDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxMetadataDesc.Location = new System.Drawing.Point(86, 155);
+            this.boxMetadataDesc.Location = new System.Drawing.Point(86, 152);
             this.boxMetadataDesc.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.boxMetadataDesc.Multiline = true;
             this.boxMetadataDesc.Name = "boxMetadataDesc";

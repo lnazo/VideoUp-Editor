@@ -241,7 +241,7 @@ namespace VideoUp
                 else
                 {
                     textBoxOutput.AppendText(string.Format("\n\nOops. An error occurred with the code {0}.", process.ExitCode));
-                    textBoxOutput.AppendText("\nPlease check that your: \n(1) Subtitle file is correct \nYour video is working"
+                    textBoxOutput.AppendText("\nPlease check that your: \n(1) Subtitle file is correct \n(2)Your video is working"
                     + " outside the application \n(3) Your subtitles are not longer than the video.");
                 }
                 pictureBox.BackgroundImage = Properties.Resources.cross;

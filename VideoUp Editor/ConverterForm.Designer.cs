@@ -97,6 +97,7 @@
             this.textBoxOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxOutput.Location = new System.Drawing.Point(6, 6);
             this.textBoxOutput.Name = "textBoxOutput";
+            this.textBoxOutput.ReadOnly = true;
             this.textBoxOutput.Size = new System.Drawing.Size(326, 155);
             this.textBoxOutput.TabIndex = 9;
             this.textBoxOutput.Text = "";

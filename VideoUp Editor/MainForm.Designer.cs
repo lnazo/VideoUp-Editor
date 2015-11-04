@@ -74,7 +74,6 @@ namespace VideoUp
             this.infoSection = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.subtitleClickHere = new System.Windows.Forms.PictureBox();
-            this.infoClickHere = new System.Windows.Forms.PictureBox();
             this.radioSubExternal = new System.Windows.Forms.RadioButton();
             this.buttonSubBrowse = new System.Windows.Forms.Button();
             this.radioSubNone = new System.Windows.Forms.RadioButton();
@@ -93,6 +92,7 @@ namespace VideoUp
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.infoClickHere = new System.Windows.Forms.PictureBox();
             this.boxMetadataTitle = new System.Windows.Forms.TextBox();
             this.boxMetadataAuthor = new System.Windows.Forms.TextBox();
             this.dateTimeMetadata = new System.Windows.Forms.DateTimePicker();
@@ -129,9 +129,9 @@ namespace VideoUp
             this.infoSection.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subtitleClickHere)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infoClickHere)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoClickHere)).BeginInit();
             this.uploadSection.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uploadClickHere)).BeginInit();
@@ -451,7 +451,7 @@ namespace VideoUp
             this.textBox1.Location = new System.Drawing.Point(82, 244);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 25);
+            this.textBox1.Size = new System.Drawing.Size(122, 25);
             this.textBox1.TabIndex = 7;
             // 
             // tabs
@@ -640,7 +640,7 @@ namespace VideoUp
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(461, 32);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(573, 357);
+            this.groupBox4.Size = new System.Drawing.Size(585, 357);
             this.groupBox4.TabIndex = 31;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Video File";
@@ -655,17 +655,6 @@ namespace VideoUp
             this.subtitleClickHere.TabIndex = 55;
             this.subtitleClickHere.TabStop = false;
             this.subtitleClickHere.Click += new System.EventHandler(this.subtitleClickHere_Click);
-            // 
-            // infoClickHere
-            // 
-            this.infoClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.infoClickHere.Image = global::VideoUp.Properties.Resources.click_here;
-            this.infoClickHere.Location = new System.Drawing.Point(86, 277);
-            this.infoClickHere.Name = "infoClickHere";
-            this.infoClickHere.Size = new System.Drawing.Size(64, 21);
-            this.infoClickHere.TabIndex = 34;
-            this.infoClickHere.TabStop = false;
-            this.infoClickHere.Click += new System.EventHandler(this.infoClickHere_Click);
             // 
             // radioSubExternal
             // 
@@ -683,7 +672,7 @@ namespace VideoUp
             this.buttonSubBrowse.Enabled = false;
             this.buttonSubBrowse.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.buttonSubBrowse.ForeColor = System.Drawing.Color.Black;
-            this.buttonSubBrowse.Location = new System.Drawing.Point(196, 240);
+            this.buttonSubBrowse.Location = new System.Drawing.Point(220, 240);
             this.buttonSubBrowse.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonSubBrowse.Name = "buttonSubBrowse";
             this.buttonSubBrowse.Size = new System.Drawing.Size(64, 30);
@@ -733,16 +722,16 @@ namespace VideoUp
             "1280x720",
             "854x480",
             "640x360"});
-            this.resBox.Location = new System.Drawing.Point(82, 26);
+            this.resBox.Location = new System.Drawing.Point(82, 25);
             this.resBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.resBox.Name = "resBox";
-            this.resBox.Size = new System.Drawing.Size(178, 25);
+            this.resBox.Size = new System.Drawing.Size(209, 25);
             this.resBox.TabIndex = 16;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::VideoUp.Properties.Resources.info;
-            this.pictureBox4.Location = new System.Drawing.Point(310, 72);
+            this.pictureBox4.Location = new System.Drawing.Point(322, 72);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(257, 271);
             this.pictureBox4.TabIndex = 29;
@@ -752,7 +741,7 @@ namespace VideoUp
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(298, 12);
+            this.label20.Location = new System.Drawing.Point(310, 21);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(269, 42);
             this.label20.TabIndex = 27;
@@ -765,23 +754,23 @@ namespace VideoUp
             this.boxCropFrom.Location = new System.Drawing.Point(82, 72);
             this.boxCropFrom.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.boxCropFrom.Name = "boxCropFrom";
-            this.boxCropFrom.Size = new System.Drawing.Size(68, 25);
+            this.boxCropFrom.Size = new System.Drawing.Size(89, 25);
             this.boxCropFrom.TabIndex = 17;
             // 
             // boxCropTo
             // 
             this.boxCropTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.boxCropTo.Enabled = false;
-            this.boxCropTo.Location = new System.Drawing.Point(189, 72);
+            this.boxCropTo.Location = new System.Drawing.Point(201, 72);
             this.boxCropTo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.boxCropTo.Name = "boxCropTo";
-            this.boxCropTo.Size = new System.Drawing.Size(71, 25);
+            this.boxCropTo.Size = new System.Drawing.Size(90, 25);
             this.boxCropTo.TabIndex = 18;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(163, 80);
+            this.label12.Location = new System.Drawing.Point(176, 80);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(20, 17);
             this.label12.TabIndex = 26;
@@ -789,28 +778,26 @@ namespace VideoUp
             // 
             // buttonOpenCrop
             // 
-            this.buttonOpenCrop.Location = new System.Drawing.Point(189, 114);
+            this.buttonOpenCrop.Location = new System.Drawing.Point(220, 114);
             this.buttonOpenCrop.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonOpenCrop.Name = "buttonOpenCrop";
             this.buttonOpenCrop.Size = new System.Drawing.Size(71, 30);
             this.buttonOpenCrop.TabIndex = 19;
             this.buttonOpenCrop.Text = "Crop...";
             this.buttonOpenCrop.UseVisualStyleBackColor = true;
-            this.buttonOpenCrop.Visible = false;
             this.buttonOpenCrop.Click += new System.EventHandler(this.buttonOpenCrop_Click);
             // 
             // labelCrop
             // 
             this.labelCrop.AutoSize = true;
             this.labelCrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCrop.Location = new System.Drawing.Point(103, 114);
+            this.labelCrop.Location = new System.Drawing.Point(82, 123);
             this.labelCrop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCrop.Name = "labelCrop";
             this.labelCrop.Size = new System.Drawing.Size(47, 12);
             this.labelCrop.TabIndex = 24;
             this.labelCrop.Text = "Don\'t crop";
             this.labelCrop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelCrop.Visible = false;
             // 
             // boxAudio
             // 
@@ -833,7 +820,6 @@ namespace VideoUp
             this.label10.Size = new System.Drawing.Size(67, 17);
             this.label10.TabIndex = 23;
             this.label10.Text = "Crop Size:";
-            this.label10.Visible = false;
             // 
             // label8
             // 
@@ -870,6 +856,17 @@ namespace VideoUp
             this.label1.Size = new System.Drawing.Size(35, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Title:";
+            // 
+            // infoClickHere
+            // 
+            this.infoClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.infoClickHere.Image = global::VideoUp.Properties.Resources.click_here;
+            this.infoClickHere.Location = new System.Drawing.Point(86, 277);
+            this.infoClickHere.Name = "infoClickHere";
+            this.infoClickHere.Size = new System.Drawing.Size(64, 21);
+            this.infoClickHere.TabIndex = 34;
+            this.infoClickHere.TabStop = false;
+            this.infoClickHere.Click += new System.EventHandler(this.infoClickHere_Click);
             // 
             // boxMetadataTitle
             // 
@@ -968,6 +965,7 @@ namespace VideoUp
             // 
             // uploadClickHere
             // 
+            this.uploadClickHere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadClickHere.Image = global::VideoUp.Properties.Resources.click_here;
             this.uploadClickHere.Location = new System.Drawing.Point(267, 244);
             this.uploadClickHere.Name = "uploadClickHere";
@@ -1193,10 +1191,10 @@ namespace VideoUp
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subtitleClickHere)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infoClickHere)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoClickHere)).EndInit();
             this.uploadSection.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();

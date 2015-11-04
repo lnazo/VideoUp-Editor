@@ -205,7 +205,7 @@ namespace VideoUp
             _mousePos = new Point(e.X, e.Y);
             _insideRectangle = _rectangle.Contains(e.X / (float)pictureBoxVideo.Width, e.Y / (float)pictureBoxVideo.Height);
 
-            if (_held)
+           if (_held)
             {
                 //Here we change the size of the rectangle if the mouse is actually held down
 
@@ -259,7 +259,7 @@ namespace VideoUp
                 if (newHeight != 0)
                     _rectangle.Height = newHeight;
             }
-
+            
             pictureBoxVideo.Invalidate();
         }
 

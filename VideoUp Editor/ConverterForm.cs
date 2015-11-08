@@ -26,14 +26,23 @@ namespace VideoUp
         static int wholenum = 0;
         private string frameNum;
         private delegate void EventHandle();
+
+        /// <summary>
+        /// Fetches the information about a video file from the MainForm.cs class
+        /// </summary>
+        /// <param name="mainForm">the object that opens this class.>/param>
         public ConverterForm(MainForm mainForm, string[] args)
         {
             InitializeComponent();
 
+            // FFMpeg command arguments from MainForm.class
             _arguments = args;
             _owner = mainForm;
         }
 
+        /// <summary>
+        /// Handles the video conversion on screen
+        /// </summary>
         private void ProcessOnErrorDataReceived(object sender, DataReceivedEventArgs args)
         {
             if (args.Data != null)
@@ -48,6 +57,8 @@ namespace VideoUp
             {
                 //!string.IsNullOrWhiteSpace(_owner.boxCropTo.Text)
                 //textBoxOutput.Invoke((Action)(() => textBoxOutput.AppendText("\n" + args.Data)));
+
+                // if there's no start or end time, convert the entire video
                 if (string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
                 {
                     if (args.Data.Contains("frame"))
@@ -70,6 +81,7 @@ namespace VideoUp
                     }
                 }
 
+                // if there's no end time, convert until the end of the video
                 else if (string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && !string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
                 {
                     trim = duration - TimeSpan.Parse(_owner.boxCropFrom.Text).TotalSeconds;
@@ -93,6 +105,7 @@ namespace VideoUp
                     }
                 }
 
+                // if there's no start time, convert from the beginning of the video
                 else if (!string.IsNullOrWhiteSpace(_owner.boxCropTo.Text) && string.IsNullOrWhiteSpace(_owner.boxCropFrom.Text))
                 {
                     trim = TimeSpan.Parse(_owner.boxCropTo.Text).TotalSeconds;
@@ -116,6 +129,7 @@ namespace VideoUp
                     }
                 }
 
+                // if there's both a start and end time
                 else
                 {
                     trim = (TimeSpan.Parse(_owner.boxCropTo.Text) - TimeSpan.Parse(_owner.boxCropFrom.Text)).TotalSeconds;
@@ -144,6 +158,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Initiates the conversion process
+        /// </summary>
         private void ProcessOnOutputDataReceived(object sender, DataReceivedEventArgs args)
         {
             //if (args.Data != null)
@@ -162,12 +179,6 @@ namespace VideoUp
                 argument = _arguments[0];
             }
 
-            /*if (_multipass)
-                for (int i = 0; i < _arguments.Length; i++)
-                    textBoxOutput.AppendText(string.Format("\nArguments for pass {0}: {1}", i + 1, _arguments[i]));
-            else
-                textBoxOutput.AppendText("\nArguments: " + argument);*/
-
             if (_multipass)
                 MultiPass(_arguments);
             else
@@ -182,8 +193,7 @@ namespace VideoUp
             _ffmpegProcess.Process.OutputDataReceived += ProcessOnOutputDataReceived;
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
                                                                               {
-                                                                                  if (_panic) return; //This should stop that one exception when closing the converter
-                                                                                  //textBoxOutput.Text = ("\n--- The coersion is done ---");
+                                                                                  if (_panic) return;
                                                                                   buttonCancel.Enabled = false;
 
                                                                                   _timer = new Timer();
@@ -205,15 +215,13 @@ namespace VideoUp
             _ffmpegProcess.Process.OutputDataReceived += ProcessOnOutputDataReceived;
             _ffmpegProcess.Process.Exited += (o, args) => textBoxOutput.Invoke((Action)(() =>
             {
-                if (_panic) return; //This should stop that one exception when closing the converter
+                if (_panic) return;
                 textBoxOutput.AppendText("\n--- Back-end done converting video ---");
 
                 currentPass++;
                 if (currentPass < passes && !_cancelMultipass)
                 {
-                    //textBoxOutput.AppendText(string.Format("\n--- ENTERING PASS {0} ---", currentPass + 1));
-
-                    MultiPass(arguments); //Sort of recursion going on here, be careful with stack overflows and shit
+                    MultiPass(arguments);
                     return;
                 }
 
@@ -228,6 +236,9 @@ namespace VideoUp
             _ffmpegProcess.Start();
         }
 
+        /// <summary>
+        /// Handles what happens at the end of a video conversion; successful or not.
+        /// </summary>
         private void Exited(object sender, EventArgs eventArgs)
         {
             _timer.Stop();
@@ -246,7 +257,7 @@ namespace VideoUp
                 }
                 pictureBox.BackgroundImage = Properties.Resources.cross;
 
-                if (process.ExitCode == -1073741819) //This error keeps happening for me if I set threads to anything above 1, might happen for other people too
+                if (process.ExitCode == -1073741819
                     MessageBox.Show("FFmpeg crashed because of a thread error. Please try again.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -265,11 +276,15 @@ namespace VideoUp
             _ended = true;
         }
 
+        /// <summary>
+        /// Stops conversion if the user cancels
+        /// </summary>
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             _cancelMultipass = true;
 
-            if (!_ended || _panic) //Prevent stack overflow
+            // prevents stack overflow
+            if (!_ended || _panic)
             {
                 if (!_ffmpegProcess.Process.HasExited)
                     _ffmpegProcess.Process.Kill();
@@ -280,18 +295,26 @@ namespace VideoUp
 
         private void ConverterForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _panic = true; //Shut down while avoiding exceptions
+            // shuts down to avoid exceptions
+            _panic = true;
             buttonCancel_Click(sender, e);
         }
 
+        /// <summary>
+        /// Disposes the ffmpeg process when this form is closed
+        /// </summary>
         private void ConverterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _ffmpegProcess.Process.Dispose();
         }
 
+        /// <summary>
+        /// Plays the video if the user chooses to do so after conversion
+        /// </summary>
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            Process.Start(_owner.textBoxOut.Text); //Play result video
+            // plays result video
+            Process.Start(_owner.textBoxOut.Text);
         }
     }
 }

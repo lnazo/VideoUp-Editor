@@ -15,23 +15,21 @@ namespace VideoUp
 {
     public partial class CropForm : Form
     {
-
         private Corner _heldCorner = Corner.None;
         private bool _held;
 
-        private bool _insideForm; //Is the cursor inside the picturebox?
-        private bool _insideRectangle; //Is the cursor inside the cropping rectangle?
+        private bool _insideForm;
+        private bool _insideRectangle;
         private Point _mousePos;
-        private Point _mouseOffset; //This is in pixels, not a float
+        private Point _mouseOffset;
 
         public static readonly RectangleF FullCrop = new RectangleF(0, 0, 1, 1);
-        private RectangleF _rectangle; //Rectangle is in [0-1, 0-1] format, this should make scaling easier
+        private RectangleF _rectangle;
 
-        private const int MaxDistance = 6; //Max distance to mouse from corner dots
+        private const int MaxDistance = 6;
         private Font _font = new Font(FontFamily.GenericSansSerif, 11f);
 
         private FFmpeg _ffmpegProcess;
-        //private Process _process;
         private MainForm _owner;
 
         private string _previewFile = Path.Combine(Environment.CurrentDirectory, "tempPreview.png");
@@ -48,10 +46,15 @@ namespace VideoUp
             None,
         }
 
+        /// <summary>
+        /// Fetches the cropping information for a video file from the MainForm.cs class
+        /// </summary>
+        /// <param name="mainForm">the object that opens this class.>/param>
         public CropForm(MainForm mainForm)
         {
             _owner = mainForm;
-            _rectangle = new RectangleF(0.25f, 0.25f, 0.5f, 0.5f); //Make sure the user knows where the dots are
+            // ensures the user knows where the dots are
+            _rectangle = new RectangleF(0.25f, 0.25f, 0.5f, 0.5f);
 
             InitializeComponent();
 
@@ -59,11 +62,17 @@ namespace VideoUp
                 _rectangle = mainForm.CroppingRectangle;
         }
 
+        /// <summary>
+        /// Loads the crop form with a preview
+        /// </summary>
         private void CropForm_Load(object sender, EventArgs e)
         {
-            GeneratePreview(); //Make sure everything is loaded before doing this?
+            GeneratePreview();
         }
 
+        /// <summary>
+        /// Generates a preview based on user specification
+        /// </summary>
         private void GeneratePreview()
         {
             string argument = ConstructArguments();
@@ -78,53 +87,51 @@ namespace VideoUp
             _ffmpegProcess.Process.OutputDataReceived += (sender, args) => Console.WriteLine(args.Data);
 
             _ffmpegProcess.Process.Exited += (o, args) => pictureBoxVideo.Invoke((Action)(() =>
-                                                                                {
-                                                                                    _generating = false;
+            {
+                _generating = false;
 
-                                                                                    int exitCode = _ffmpegProcess.Process.ExitCode;
+                int exitCode = _ffmpegProcess.Process.ExitCode;
 
-                                                                                    if (exitCode != 0)
-                                                                                    {
-                                                                                        _message = string.Format("Oops. An error occurred with the code {0}..", exitCode);
-                                                                                        return;
-                                                                                    }
+                if (exitCode != 0)
+                {
+                    _message = string.Format("An error occurred with the code {0} ", exitCode);
+                    return;
+                }
 
-                                                                                    if (!File.Exists(_previewFile))
-                                                                                    {
-                                                                                        _message = "The preview file did not generate. Check this:\n- Is the input time actually smaller than the length than the input video?";
-                                                                                        return;
-                                                                                    }
+                if (!File.Exists(_previewFile))
+                {
+                    _message = "The preview file did not generate. Please check your inputs";
+                    return;
+                }
 
-                                                                                    try
-                                                                                    {
-                                                                                        //_image = Image.FromFile(_previewFile); //Thank you for not releasing the lock on the file afterwards, Microsoft
+                try
+                {
+                    using (FileStream stream = new FileStream(_previewFile, FileMode.Open, FileAccess.Read))
+                        _image = Image.FromStream(stream);
 
-                                                                                        using (FileStream stream = new FileStream(_previewFile, FileMode.Open, FileAccess.Read))
-                                                                                            _image = Image.FromStream(stream);
+                    pictureBoxVideo.BackgroundImage = _image;
+                    File.Delete(_previewFile);
 
-                                                                                        pictureBoxVideo.BackgroundImage = _image;
-                                                                                        File.Delete(_previewFile);
+                    _owner.AssumedInputSize = _image.Size;
 
-                                                                                        _owner.AssumedInputSize = _image.Size; //We assume the size of the preview will also be the size of the input used for the conversion
-
-                                                                                        float aspectRatio = _image.Width / (float)_image.Height;
-                                                                                        ClientSize = new Size((int)(ClientSize.Height * aspectRatio), ClientSize.Height);
-                                                                                    }
-                                                                                    catch (Exception e)
-                                                                                    {
-                                                                                        _message = e.ToString();
-                                                                                    }
-                                                                                }));
+                    float aspectRatio = _image.Width / (float)_image.Height;
+                    ClientSize = new Size((int)(ClientSize.Height * aspectRatio), ClientSize.Height);
+                }
+                catch (Exception e)
+                {
+                    _message = e.ToString();
+                }
+            }));
 
             _ffmpegProcess.Process.Start();
         }
 
+        /// <summary>
+        /// Constructs arguments based on user specification
+        /// </summary>
         private string ConstructArguments()
         {
             string template = "{1} -i \"{0}\" -f image2 -vframes 1 -y \"{2}\"";
-            //{0} is input video
-            //{1} is -ss TIME or blank (inaccurate but fast because it's before -i)
-            //{2} is output image
 
             string input = _owner.textBoxIn.Text;
             if (string.IsNullOrWhiteSpace(input))
@@ -145,32 +152,34 @@ namespace VideoUp
             }
             catch (Exception)
             {
-                //ParseTime will throw if the time is invalid, in this case we just set the time to zero if that happens
+                
             }
-
 
             _message = string.Format("Preview {0}", TimeSpan.FromSeconds(time));
             if (time == 0.0f)
                 _message += "\nTo preview at a different time, change trim start time";
-            //We can actually allow invalid times here: we just use the preview from the very start of the video (0.0) in that case
 
             return string.Format(template, input, "-ss " + time, _previewFile);
         }
 
+        /// <summary>
+        /// Checks distance from rectangle corner point to the mouse, and then selects the one with the smallest
+        /// distance that will be dragged along with the mouse
+        /// </summary>
         private void pictureBoxVideo_MouseDown(object sender, MouseEventArgs e)
         {
-            //This checks the distance from the rectangle corner point to the mouse, and then selects the one with the smallest distance
-            //That one will be dragged along with the mouse
-
             var closest = GetClosestPointDistance(new Point(e.X, e.Y));
 
-            if (closest.Value < MaxDistance * MaxDistance) //Comparing squared distance
+            // Comparing squared distance
+            if (closest.Value < MaxDistance * MaxDistance)
             {
                 _heldCorner = closest.Key;
                 _held = true;
 
             }
-            else if (_insideRectangle) //Or, if there's no closest dot and the mouse is inside the cropping rectangle, drag the entire rectangle
+
+            // If there's no closest dot and the mouse is inside the cropping rectangle, drag the entire rectangle
+            else if (_insideRectangle)
             {
                 _mouseOffset = new Point((int)(_rectangle.X * pictureBoxVideo.Width - e.X), (int)(_rectangle.Y * pictureBoxVideo.Height - e.Y));
                 _heldCorner  = Corner.None;
@@ -181,6 +190,9 @@ namespace VideoUp
             pictureBoxVideo.Invalidate();
         }
 
+        /// <summary>
+        /// Calculates distance between points
+        /// </summary>
         private KeyValuePair<Corner, float> GetClosestPointDistance(Point e)
         {
             var distances = new Dictionary<Corner, float>();
@@ -193,6 +205,10 @@ namespace VideoUp
 
         }
 
+        /// <summary>
+        /// Checks distance from rectangle corner point to the mouse, and then selects the one with the smallest
+        /// distance that will be dragged along with the mouse
+        /// </summary>
         private void pictureBoxVideo_MouseUp(object sender, MouseEventArgs e)
         {
             _held = false;
@@ -207,9 +223,9 @@ namespace VideoUp
 
            if (_held)
             {
-                //Here we change the size of the rectangle if the mouse is actually held down
+                // Change the size of the rectangle if the mouse is actually held down
 
-                //Clamp mouse pos to picture box, that way you shouldn't be able to move the cropping rectangle out of bounds
+                // Clamp mouse position to picture box in order to prevent moving the cropping rectangle out of bounds
                 Point min = new Point(0, 0);
                 Point max = new Point(pictureBoxVideo.Size);
                 float clampedMouseX = Math.Max(min.X, Math.Min(max.X, e.X));
@@ -243,8 +259,8 @@ namespace VideoUp
                         newHeight = _rectangle.Height + (clampedMouseY / (float)pictureBoxVideo.Height - _rectangle.Bottom);
                         break;
 
-                    case Corner.None: //Drag entire rectangle
-                        //This is a special case, because the mouse needs to be clamped according to rectangle size too!
+                    // drag entire rectangle
+                    case Corner.None:
                         float actualRectW = _rectangle.Width * pictureBoxVideo.Width;
                         float actualRectH = _rectangle.Height * pictureBoxVideo.Height;
                         clampedMouseX = Math.Max(min.X - _mouseOffset.X, Math.Min(max.X - _mouseOffset.X - actualRectW, e.X));
@@ -267,9 +283,6 @@ namespace VideoUp
         {
             var g = e.Graphics;
 
-            //g.SmoothingMode = SmoothingMode.HighQuality;
-            //TODO: this is really slow for some reason. Investigate using profiling or something.
-
             var edgePen = new Pen(Color.White, 1f);
             var dotBrush = new SolidBrush(Color.White);
             var outsideBrush = new HatchBrush(HatchStyle.Percent50, Color.Transparent);
@@ -281,16 +294,14 @@ namespace VideoUp
             var w = _rectangle.Width * maxW;
             var h = _rectangle.Height * maxH;
 
-            //Darken background
             g.FillRectangle(outsideBrush, 0, 0, maxW, y);
             g.FillRectangle(outsideBrush, 0, y, x, h);
             g.FillRectangle(outsideBrush, x + w, y, maxW - (x + w), h);
             g.FillRectangle(outsideBrush, 0, y + h, maxW, maxH);
 
-            //Edge
             g.DrawRectangle(edgePen, x, y, w, h);
 
-            if (_insideForm) //Draw corner dots if mouse is inside the picture box
+            if (_insideForm)
             {
                 float diameter = 6;
                 float diameterEdge = diameter * 2;
@@ -301,10 +312,11 @@ namespace VideoUp
                 g.FillEllipse(dotBrush, x + w - diameter / 2, y + h - diameter / 2, diameter, diameter);
 
                 var closest = GetClosestPointDistance(_mousePos);
-                if (closest.Value < MaxDistance * MaxDistance)  //Comparing squared distance to avoid worthless square roots
+
+                // Comparing squared distance to avoid worthless square roots
+                if (closest.Value < MaxDistance * MaxDistance)
                 {
                     Cursor = Cursors.Hand;
-                    //Draw outlines on the dots to indicate they can be selected and moved
                     if (closest.Key == Corner.TopLeft) g.DrawEllipse(edgePen, x - diameterEdge / 2, y - diameterEdge / 2, diameterEdge, diameterEdge);
                     if (closest.Key == Corner.TopRight) g.DrawEllipse(edgePen, x + w - diameterEdge / 2, y - diameterEdge / 2, diameterEdge, diameterEdge);
                     if (closest.Key == Corner.BottomLeft) g.DrawEllipse(edgePen, x - diameterEdge / 2, y + h - diameterEdge / 2, diameterEdge, diameterEdge);
@@ -312,11 +324,9 @@ namespace VideoUp
                 }
                 else if (_insideRectangle)
                     Cursor = Cursors.SizeAll;
-                else if (Cursor != Cursors.Default) //Reduntant???
+                else if (Cursor != Cursors.Default)
                     Cursor = Cursors.Default;
             }
-
-            //Draw a shadow below the text so it's still readable on a white/black background
 
             if (_generating)
             {
@@ -361,7 +371,7 @@ namespace VideoUp
                 return;
             }
 
-            float tolerance = 0.1f; //Account for float inprecision
+            float tolerance = 0.1f;
 
             if (_rectangle.Left < 0 - tolerance || _rectangle.Top < 0 - tolerance || _rectangle.Right > 1 + tolerance || _rectangle.Bottom > 1 + tolerance)
             {

@@ -8,11 +8,15 @@ using System.Windows.Forms;
 
 namespace VideoUp
 {
-    class FFmpeg //Wrapper class to run the FFmpeg process
+    class FFmpeg
     {
         public string FFmpegPath = Path.Combine(Environment.CurrentDirectory, "ffmpeg/ffmpeg.exe");
         public Process Process;
 
+        /// <summary>
+        /// Fetches and uses the FFmpeg command constructed in the MainForm.cs class
+        /// </summary>
+        /// <param name="argument">the object that contains the FFmpeg command.>/param>
         public FFmpeg(string argument)
         {
             Process = new Process();
@@ -21,21 +25,17 @@ namespace VideoUp
             info.RedirectStandardInput = true;
             info.RedirectStandardOutput = true;
             info.RedirectStandardError = true;
-            info.UseShellExecute = false; //Required to redirect IO streams
-            info.CreateNoWindow = true; //Hide console
+            info.UseShellExecute = false; // Required to redirect IO streams
+            info.CreateNoWindow = true; // Hide console
             info.Arguments = argument;
 
             Process.StartInfo = info;
-            Process.EnableRaisingEvents = true; //!!!!
-
-            //Do the following calling start!
-            // Process.ErrorDataReceived += stuff;
-            // Process.OutputDataReceived += stuff;
-            // Process.Exited += stuff
-
-            //Start();
+            Process.EnableRaisingEvents = true;
         }
 
+        /// <summary>
+        /// Starts the process
+        /// </summary>
         public void Start()
         {
             Process.Start();

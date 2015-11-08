@@ -10,6 +10,11 @@ namespace VideoUp
         private TimeSpan endTimesSub = new TimeSpan(10, 10, 10);
         private int subtitleCount = 1;
 
+        /// <summary>
+        /// Fetches the information about a video file from the MainForm.cs class
+        /// </summary>
+        /// <param name="mainForm">the object that opens this class.>/param>
+        /// <param name="video">the video file from the Main.cs class.>/param>
         public SubtitleForm(MainForm mainForm, string video)
         {
             InitializeComponent();
@@ -17,6 +22,9 @@ namespace VideoUp
             Load += new EventHandler(SubtitleForm_Load);
         }
 
+        /// <summary>
+        /// Opens the video file in the media player when this class loads
+        /// </summary>
         private void SubtitleForm_Load(object sender, EventArgs e)
         {
             if (!(axWindowsMediaPlayer2.playState == WMPLib.WMPPlayState.wmppsUndefined))
@@ -26,11 +34,15 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Sets the start time for the subtitle
+        /// </summary>
         private void startSubTime_Click(object sender, EventArgs e)
         {
             if (!(axWindowsMediaPlayer2.playState == WMPLib.WMPPlayState.wmppsStopped))
             {
                 startTimesSub = TimeSpan.Parse(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+                // checks if the start time is less than the end time
                 if (startTimesSub < endTimesSub)
                 {
                     startSubMsg.Visible = false;
@@ -45,11 +57,15 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Sets the end time for the subtitle
+        /// </summary>
         private void endSubTime_Click(object sender, EventArgs e)
         {
             if (!(axWindowsMediaPlayer2.playState == WMPLib.WMPPlayState.wmppsStopped))
             {
                 endTimesSub = TimeSpan.Parse(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString.Insert(0, "00:"));
+                // checks if the end time is greater than the start time
                 if (endTimesSub > startTimesSub)
                 {
                     endSubMsg.Visible = false;
@@ -64,10 +80,14 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Adds the subtitle to the subtitle grid, and clears the subtitle box
+        /// </summary>
         private void enterSubtitle_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(startSubBox.Text) && !string.IsNullOrWhiteSpace(endSubBox.Text) && !string.IsNullOrWhiteSpace(infoBox.Text))
             {
+                // adds the start time, end tme, and subtitle into the subtitle grid
                 subtitleGridView.Rows.Add(subtitleCount.ToString(), startSubBox.Text, endSubBox.Text, infoBox.Text);
                 subtitleMsg.Visible = false;
 
@@ -83,13 +103,20 @@ namespace VideoUp
                 subtitleMsg.Visible = true;
         }
 
+        /// <summary>
+        /// Checks when rows have been removed from the subtitle grid, and calls the updateSubtitles() method
+        /// </summary>
         private void subtitleGridView_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             updateSubtitles();
         }
 
+        /// <summary>
+        /// Updates the subtitle grid when a subtitle has been added or removed
+        /// </summary>
         private void updateSubtitles()
         {
+            // if there's only one subtitle in the grid, don't do anything to it
             if (subtitleGridView.RowCount == 1)
             {
                 if (subtitleGridView.Rows[0].Cells[0].Value != null)
@@ -105,6 +132,7 @@ namespace VideoUp
                 {
                     if (subtitleGridView.Rows[rows].Cells[0].Value != null)
                     {
+                        // if a subtitle is added, make sure the index reflects this
                         if (int.Parse(subtitleGridView.Rows[0].Cells[0].Value.ToString()) != 1)
                         {
                             for (int row = 0; row < subtitleGridView.Rows.Count; row++)
@@ -117,6 +145,7 @@ namespace VideoUp
                             }
                         }
 
+                        // if a subtitle is removed, make sure the index is updated
                         if (int.Parse(subtitleGridView.Rows[rows].Cells[0].Value.ToString()) - int.Parse(subtitleGridView.Rows[rows - 1].Cells[0].Value.ToString()) != 1)
                         {
                             subtitleGridView.Rows[rows].Cells[0].Value = (int.Parse((subtitleGridView.Rows[rows].Cells[0].Value).ToString()) - 1).ToString();
@@ -128,6 +157,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Saves a subtitle to a file specified by the user
+        /// </summary>
         private void saveSub_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();

@@ -36,6 +36,12 @@ namespace Google.Apis.YouTube.Samples
     {
         private string videoTitle, videoDesc, videoPath;
 
+        /// <summary>
+        /// Fetches the information about a video file from the MainForm.cs class
+        /// </summary>
+        /// <param name="title">the name of a video file.>/param>
+        /// <param name="desc">the description of a video file.>/param>
+        /// <param name="path">the directory path of a video file.>/param>
         public void passValues(string title, string desc, string path)
         {
             videoTitle = title;
@@ -43,13 +49,16 @@ namespace Google.Apis.YouTube.Samples
             videoPath = path;
         }
 
+        /// <summary>
+        /// Initiates the upload process
+        /// </summary>
         [STAThread]
         public void startUpload()
         {
             try
             {
                 //new UploadVideo().Run(videoTitle, videoDesc, videoPath).Wait(); // leads to deadlock
-                new UploadVideo().Run(videoTitle, videoDesc, videoPath).ConfigureAwait(false);
+                new UploadVideo().Run(videoTitle, videoDesc, videoPath).ConfigureAwait(false); // handles deadlock
             }
             catch (AggregateException ex)
             {
@@ -60,10 +69,17 @@ namespace Google.Apis.YouTube.Samples
             }
         }
 
+        /// <summary>
+        /// Uploads the video to YouTube
+        /// </summary>
+        /// <param name="title">the name of a video file.>/param>
+        /// <param name="desc">the description of a video file.>/param>
+        /// <param name="path">the directory path of a video file.>/param>
         private async Task Run(string title, string desc, string path)
         {
             UserCredential credential;
       
+            // developer key
             using (var stream = new FileStream("client_secret.json", FileMode.Open, FileAccess.Read))
             {
                 credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
@@ -79,7 +95,8 @@ namespace Google.Apis.YouTube.Samples
             HttpClientInitializer = credential,
             ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
           });
-
+          
+          // information about the video that is uploaded to YouTube
           var video = new Video();
           video.Snippet = new VideoSnippet();
           video.Snippet.Title = title;
@@ -100,6 +117,10 @@ namespace Google.Apis.YouTube.Samples
             }
         }
 
+        /// <summary>
+        /// Tracks the progress of the video file being uploaded
+        /// </summary>
+        /// <param name="progress">the progress of the video file.>/param>
         void videosInsertRequest_ProgressChanged(Google.Apis.Upload.IUploadProgress progress)
         {
             switch (progress.Status)
@@ -114,6 +135,10 @@ namespace Google.Apis.YouTube.Samples
             }
         }
 
+        /// <summary>
+        /// Returns the response of the video upload
+        /// </summary>
+        /// <param name="video">the response of the video once the upload is complete.>/param>
         void videosInsertRequest_ResponseReceived(Video video)
         {
             MessageBox.Show("The video upload is complete. Check your YouTube account.");

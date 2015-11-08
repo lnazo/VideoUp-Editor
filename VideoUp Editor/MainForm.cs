@@ -33,9 +33,11 @@ namespace VideoUp
         private string _autoArguments;
         private bool _argumentError;
 
-        public Size AssumedInputSize; //This will get set as soon as the crop form generates an input file. It's assumed because the user could've changed the video after cropping.
-        //Might want to get a definite, reliable way to get the size of the input video.
+        public Size AssumedInputSize;
 
+        /// <summary>
+        /// Handles the cropping rectangle shown to the user
+        /// </summary>
         public RectangleF CroppingRectangle
         {
             get { return _croppingRectangle; }
@@ -54,6 +56,9 @@ namespace VideoUp
         }
         private RectangleF _croppingRectangle;
 
+        /// <summary>
+        /// Starts the form with the following ffmpeg command placeholders
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -88,6 +93,9 @@ namespace VideoUp
             //{5} is '-pass X' if 2-pass enabled, otherwise blank
         }
 
+        /// <summary>
+        /// Loads the form
+        /// </summary>
         private void MainForm_Load(object sender, EventArgs e)
         {
             resBox.SelectedIndex = 1;
@@ -95,23 +103,9 @@ namespace VideoUp
             trackThreads_Scroll(sender, e);
         }
 
-        public void InitTimer()
-        {
-            check = new Timer();
-            check.Tick += new EventHandler(check_Tick);
-            check.Interval = 1000;
-            check.Start();
-        }
-
-        private void check_Tick(object sender, EventArgs e)
-        {
-            /*uploadButton.Enabled = true;
-            vidNameUpload.Text = "";
-            textBox2.Text = "";
-            textBox4.Text = "";
-            uploadStatusBox.Text = "";*/
-        }
-
+        /// <summary>
+        /// Opens the video file specified by the user
+        /// </summary>
         private void buttonBrowseIn_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog dialog = new OpenFileDialog())
@@ -126,6 +120,10 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Sets the path of the directory where the video file is
+        /// </summary>
+        /// <param name="path">the directory of the video file.>/param>
         private void SetFile(string path)
         {
             textBoxIn.Text = path;
@@ -147,18 +145,27 @@ namespace VideoUp
             //textBox2.Text = textBoxOut.Text.Substring(textBoxOut.Text.LastIndexOf(@"\") + 1);
         }
 
+        /// <summary>
+        /// Handles drag and drop
+        /// </summary>
         private void HandleDragEnter(object sender, DragEventArgs e)
         {
             bool dataPresent = e.Data.GetDataPresent(DataFormats.FileDrop);
             e.Effect = dataPresent ? DragDropEffects.Copy : DragDropEffects.None;
         }
 
+        /// <summary>
+        /// Handles drag and drop
+        /// </summary>
         private void HandleDragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files) SetFile(file);
         }
 
+        /// <summary>
+        /// Sets the path of the directory where the video file will be saved
+        /// </summary>
         private void buttonBrowseOut_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog dialog = new SaveFileDialog())
@@ -172,6 +179,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Starts the conversion process
+        /// </summary>
         private void buttonGo_Click(object sender, EventArgs e)
         {
             string result = Convert();
@@ -182,6 +192,9 @@ namespace VideoUp
 
         char[] invalidChars = Path.GetInvalidPathChars();
 
+        /// <summary>
+        /// Starts the conversion process, and checks if the necessary information is at hand
+        /// </summary>
         private string Convert()
         {
             string input = textBoxIn.Text;
@@ -270,6 +283,9 @@ namespace VideoUp
             return null;
         }
 
+        /// <summary>
+        /// Adds subtitles to the application as a separate track
+        /// </summary>
         /*public void MkvMerge()
         {
             string inText = "\"" + textBoxOut.Text + "\"";
@@ -287,6 +303,9 @@ namespace VideoUp
             process.Start();
         }*/
 
+        /// <summary>
+        /// Calls DropIt to do file management
+        /// </summary>
         public void manageFiles()
         {
             string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
@@ -307,11 +326,12 @@ namespace VideoUp
             });*/
         }
 
+        /// <summary>
+        /// Checks trim time selected
+        /// </summary>
+        /// <param name="text">the trim time that has been set.>/param>
         public static float ParseTime(string text)
         {
-            //Try fo figure out if begin/end are correct
-            //1. if it contains a :, it's probably a time, try to convert using DateTime.Parse
-            //2. if not, try int.tryparse
 
             if (!string.IsNullOrWhiteSpace(text))
             {
@@ -333,6 +353,9 @@ namespace VideoUp
             return 0.0f;
         }
 
+        /// <summary>
+        /// Updates arguments of FFmpeg command
+        /// </summary>
         private void UpdateArguments(object sender, EventArgs e)
         {
             /*try
@@ -351,6 +374,9 @@ namespace VideoUp
             }*/
         }
 
+        /// <summary>
+        /// Generates the FFmpeg commands based on user input
+        /// </summary>
         private string GenerateArguments()
         {
             int width = 0;
@@ -413,12 +439,6 @@ namespace VideoUp
             if (width != 0 && height != 0)
                 size = string.Format("-vf scale={0}:{1}", width, height);
 
-            //Calculate bitrate yourself!
-            //1 megabyte = 8192 kilobits
-            //3 megabytes = 24576 kilobits -> this is the limit
-            //So if you have 60 seconds, the bitrate should be...
-            //24576/60 = 409.6 kilobits/sec
-
             int bitrate = 900;
             if (duration != 0 && limit != 0)
             {
@@ -427,6 +447,7 @@ namespace VideoUp
 
             int threads = trackThreads.Value;
 
+            // below is the metadata information
             string metadataTitle = "";
             if (!string.IsNullOrWhiteSpace(boxMetadataTitle.Text))
                 metadataTitle = string.Format("-metadata title=\"{0}\"", boxMetadataTitle.Text.Replace("\"", "\\\""));
@@ -460,6 +481,10 @@ namespace VideoUp
             return string.Format(_templateArguments, audioEnabled, bitrate, size, sizeCrop, threads, limitTo, subFile, metadataTitle, metadataAuthor, metadataYear, metadataDesc, metadataCopy);
         }
 
+        /// <summary>
+        /// Checks the trim time
+        /// </summary>
+        /// <param name="text">checks the trim time.>/param>
         private static string MakeParseFriendly(string text)
         {
             string pattern = @"^[0-5][0-9]:[0-5][0-9](\.[0-9]+)?$";
@@ -469,23 +494,35 @@ namespace VideoUp
             return text;
         }
 
+        /// <summary>
+        /// Checks threads involved
+        /// </summary>
         private void trackThreads_Scroll(object sender, EventArgs e)
         {
             labelThreads.Text = trackThreads.Value.ToString();
             UpdateArguments(sender, e);
         }
 
+        /// <summary>
+        /// Opens the crop form
+        /// </summary>
         private void buttonOpenCrop_Click(object sender, EventArgs e)
         {
             new CropForm(this).ShowDialog();
             UpdateArguments(sender, e);
         }
 
+        /// <summary>
+        /// Throws error if the format of the video is not playable by windows media player
+        /// </summary>
         private void axWindowsMediaPlayer1_MediaError(object sender, AxWMPLib._WMPOCXEvents_MediaErrorEvent e)
         {
             MessageBox.Show("The current format is not working. Please try again.");
         }
 
+        /// <summary>
+        /// Opens the video to be uploaded
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             uploadButton.Enabled = true;
@@ -501,6 +538,10 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Sets the path of the directory where the video file is
+        /// </summary>
+        /// <param name="path">the directory of the video file.>/param>
         private void SetFile1(string path)
         {
             //textBox2.Text = path.Substring(path.LastIndexOf(@"\") + 1);
@@ -521,6 +562,10 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Sets the path of the directory where the video file is
+        /// </summary>
+        /// <param name="path">the directory of the video file.>/param>
         private void SetbuttonSubBrowse(string path)
         {
             subtitleFile = path;
@@ -528,6 +573,9 @@ namespace VideoUp
             subFile = path;
         }
 
+        /// <summary>
+        /// Starts the uploading process
+        /// </summary>
         private void uploadButton_Click(object sender, EventArgs e)
         {
             string title, desc, path;
@@ -535,6 +583,7 @@ namespace VideoUp
             desc = textBox4.Text;
             path = textBox2.Text;
 
+            // checks if all information is there
             if (string.IsNullOrWhiteSpace(title))
                 MessageBox.Show("Enter a name for the video");
             if (string.IsNullOrWhiteSpace(desc))
@@ -550,14 +599,11 @@ namespace VideoUp
 
             uploadV.passValues(title, desc, path);
             uploadV.startUpload();
-
-            //uploadButton.Enabled = false;
-
-            //uploadStatusBox.AppendText("Upload process has begun\n");
-            //uploadStatusBox.AppendText("\nPlease wait for status messages until the upload is complete");
-            //InitTimer();
         }
 
+        /// <summary>
+        /// Sets the start time for trimming
+        /// </summary>
         private void startTime_Click(object sender, EventArgs e)
         {
             if (!(axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped))
@@ -579,6 +625,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Sets the end time for trimming
+        /// </summary>
         private void endTime_Click(object sender, EventArgs e)
         {
             if (!(axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped))
@@ -600,6 +649,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Opens DropIt from the navigation bar
+        /// </summary>
         private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //string text = textBoxOut.Text.Substring(0, textBoxOut.Text.LastIndexOf(@"\"));
@@ -613,11 +665,17 @@ namespace VideoUp
             process.Start();
         }
 
+        /// <summary>
+        /// Exits the application
+        /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Opens DropIt from the navigation bar
+        /// </summary>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
@@ -638,6 +696,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Opens the project file
+        /// </summary>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog theDialog = new OpenFileDialog();
@@ -678,6 +739,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Clears the current project
+        /// </summary>
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.currentPlaylist.clear();
@@ -704,22 +768,34 @@ namespace VideoUp
             //infoBox.Text = "";
         }
 
+        /// <summary>
+        /// Opens the user manual
+        /// </summary>
         private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // check if it works on any PC
             Process.Start(@"https://docs.google.com/document/d/113OsjPjqSicUW_3b3dAk0sk5gadAvkKaEBrUbZu9lEU/edit?usp=sharing");
         }
 
+        /// <summary>
+        /// Opens the DCCT website
+        /// </summary>
         private void dCCTWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.dcct.org.za/");
         }
 
+        /// <summary>
+        /// Opens project webpage
+        /// </summary>
         private void projectWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("http://people.cs.uct.ac.za/~nzxlub001/");
         }
 
+        /// <summary>
+        /// Opens the About Us page
+        /// </summary>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string info = "Copyright © 2015 \nCS Honours Project (Monty & Luba) \nDeveloped for the DCCT"
@@ -729,12 +805,18 @@ namespace VideoUp
             MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Opens the subtitle interface
+        /// </summary>
         private void createSubtitlesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new SubtitleForm(this, @textBoxIn.Text.Replace(@"\\", @"\"));
             form.ShowDialog();
         }
 
+        /// <summary>
+        /// Checks if a subtitle file is going to be added or not
+        /// </summary>
         private void radioSubNone_CheckedChanged(object sender, EventArgs e)
         {
             if (radioSubNone.Checked)
@@ -752,6 +834,9 @@ namespace VideoUp
             }
         }
 
+        /// <summary>
+        /// Opens the Help page
+        /// </summary>
         private void helpButton_Click(object sender, EventArgs e)
         {
             var form = new HelpForm(this, null);

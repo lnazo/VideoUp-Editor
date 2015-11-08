@@ -257,7 +257,7 @@ namespace VideoUp
                 }
                 pictureBox.BackgroundImage = Properties.Resources.cross;
 
-                if (process.ExitCode == -1073741819
+                if (process.ExitCode == -1073741819)
                     MessageBox.Show("FFmpeg crashed because of a thread error. Please try again.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

@@ -694,6 +694,7 @@ namespace VideoUp
                 File.WriteAllText(name, content);
                 MessageBox.Show("Project Saved");
             }
+            //SaveFile(project);
         }
 
         /// <summary>

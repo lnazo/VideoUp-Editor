@@ -233,3 +233,4 @@ C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.application
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.exe
 C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.pdb
+C:\Users\nzxlub001\Documents\VideoUp-Editor\VideoUp Editor\obj\Debug\VideoUp.csprojResolveAssemblyReference.cache
